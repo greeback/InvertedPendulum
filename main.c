@@ -59,7 +59,7 @@ void Init()
   TIM1->CR1 |= TIM_CR1_ARPE | TIM_CR1_CEN;
   //SPI1 - L3GD20 (Gyro)
   GPIOA->MODER |= GPIO_MODER_MODER5_1 | GPIO_MODER_MODER6_1 |GPIO_MODER_MODER7_1;//PA5, PA6, PA7
- // GPIOA->AFR[0] |= 
+  GPIOA->AFR[0] |= 0x5<<5 | 0x5<<6 | 0x5<<7;
   //SPI1->
 }
 

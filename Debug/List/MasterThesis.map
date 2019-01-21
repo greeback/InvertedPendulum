@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.32.1.169/W32 for ARM                  21/Jan/2019  08:05:43
+# IAR ELF Linker V8.32.1.169/W32 for ARM                  21/Jan/2019  18:03:44
 # Copyright 2007-2018 IAR Systems AB.
 #
 #    Output file  =  
@@ -10,7 +10,7 @@
 #        C:\Users\a.dykman\Documents\IAR Embedded
 #        Workbench\MasterThesis\Debug\List\MasterThesis.map
 #    Command line =  
-#        -f C:\Users\A5416~1.DYK\AppData\Local\Temp\EWE252.tmp
+#        -f C:\Users\A5416~1.DYK\AppData\Local\Temp\EW606E.tmp
 #        ("C:\Users\a.dykman\Documents\IAR Embedded
 #        Workbench\MasterThesis\Debug\Obj\delay.o"
 #        "C:\Users\a.dykman\Documents\IAR Embedded
@@ -67,25 +67,22 @@ define block HEAP with size = 8K, alignment = 8 { };
   .intvec          ro code   0x800'0000   0x188  startup_stm32f4xx.o [1]
                            - 0x800'0188   0x188
 
-"P1":                                     0x558
-  .text            ro code   0x800'0188   0x22c  main.o [1]
-  .text            ro code   0x800'03b4    0x20  delay.o [1]
-  .text            ro code   0x800'03d4    0x84  system_stm32f4xx.o [1]
-  .text            ro code   0x800'0458    0x3a  zero_init3.o [4]
-  .text            ro code   0x800'0494    0x28  data_init.o [4]
-  .text            ro code   0x800'04bc    0x22  fpinit_M.o [3]
-  .iar.init_table  const     0x800'04e0    0x10  - Linker created -
-  .text            ro code   0x800'04f0    0x20  stm32f4xx_it.o [1]
-  .text            ro code   0x800'0510    0x1e  cmain.o [4]
-  .text            ro code   0x800'052e     0x4  low_level_init.o [2]
-  .text            ro code   0x800'0532     0x4  exit.o [2]
-  .text            ro code   0x800'0538     0xa  cexit.o [4]
-  .text            ro code   0x800'0544    0x14  exit.o [5]
-  .text            ro code   0x800'0558    0x10  startup_stm32f4xx.o [1]
-  .text            ro code   0x800'0568     0xc  cstartup_M.o [4]
-  .text            ro code   0x800'0574     0x4  startup_stm32f4xx.o [1]
-  .text            ro code   0x800'0578     0x4  startup_stm32f4xx.o [1]
-  .text            ro code   0x800'057c     0x4  startup_stm32f4xx.o [1]
+"P1":                                     0x564
+  .text            ro code   0x800'0188   0x238  main.o [1]
+  .text            ro code   0x800'03c0    0x20  delay.o [1]
+  .text            ro code   0x800'03e0    0x84  system_stm32f4xx.o [1]
+  .text            ro code   0x800'0464    0x3a  zero_init3.o [4]
+  .text            ro code   0x800'04a0    0x28  data_init.o [4]
+  .text            ro code   0x800'04c8    0x22  fpinit_M.o [3]
+  .iar.init_table  const     0x800'04ec    0x10  - Linker created -
+  .text            ro code   0x800'04fc    0x20  stm32f4xx_it.o [1]
+  .text            ro code   0x800'051c    0x1e  cmain.o [4]
+  .text            ro code   0x800'053a     0x4  low_level_init.o [2]
+  .text            ro code   0x800'053e     0x4  exit.o [2]
+  .text            ro code   0x800'0544     0xa  cexit.o [4]
+  .text            ro code   0x800'0550    0x14  exit.o [5]
+  .text            ro code   0x800'0564    0x10  startup_stm32f4xx.o [1]
+  .text            ro code   0x800'0574     0xc  cstartup_M.o [4]
   .text            ro code   0x800'0580     0x4  startup_stm32f4xx.o [1]
   .text            ro code   0x800'0584     0x4  startup_stm32f4xx.o [1]
   .text            ro code   0x800'0588     0x4  startup_stm32f4xx.o [1]
@@ -174,8 +171,11 @@ define block HEAP with size = 8K, alignment = 8 { };
   .text            ro code   0x800'06d4     0x4  startup_stm32f4xx.o [1]
   .text            ro code   0x800'06d8     0x4  startup_stm32f4xx.o [1]
   .text            ro code   0x800'06dc     0x4  startup_stm32f4xx.o [1]
-  .rodata          const     0x800'06e0     0x0  zero_init3.o [4]
-                           - 0x800'06e0   0x558
+  .text            ro code   0x800'06e0     0x4  startup_stm32f4xx.o [1]
+  .text            ro code   0x800'06e4     0x4  startup_stm32f4xx.o [1]
+  .text            ro code   0x800'06e8     0x4  startup_stm32f4xx.o [1]
+  .rodata          const     0x800'06ec     0x0  zero_init3.o [4]
+                           - 0x800'06ec   0x564
 
 "P2", part 1 of 2:                          0x4
   .bss             zero     0x2000'0000     0x4  delay.o [1]
@@ -190,7 +190,7 @@ Unused ranges:
 
          From           To      Size
          ----           --      ----
-   0x800'06e0   0x803'ffff  0x3'f920
+   0x800'06ec   0x803'ffff  0x3'f914
   0x2000'0004  0x2000'0007       0x4
   0x2000'2008  0x2000'ffff    0xdff8
 
@@ -219,12 +219,12 @@ command line/config:
 
 C:\Users\a.dykman\Documents\IAR Embedded Workbench\MasterThesis\Debug\Obj: [1]
     delay.o                   32                 4
-    main.o                   556
+    main.o                   568
     startup_stm32f4xx.o      772
     stm32f4xx_it.o            32
     system_stm32f4xx.o       132
     ----------------------------------------------
-    Total:                 1 524                 4
+    Total:                 1 536                 4
 
 dl7M_tln.a: [2]
     exit.o                     4
@@ -254,7 +254,7 @@ shb_l.a: [5]
     Gaps                       6        2
     Linker created                     16    8 192
 --------------------------------------------------
-    Grand Total:           1 742       18    8 196
+    Grand Total:           1 754       18    8 196
 
 
 *******************************************************************************
@@ -263,46 +263,46 @@ shb_l.a: [5]
 
 Entry                       Address  Size  Type      Object
 -----                       -------  ----  ----      ------
-.iar.init_table$$Base    0x800'04e0         --   Gb  - Linker created -
-.iar.init_table$$Limit   0x800'04f0         --   Gb  - Linker created -
-?main                    0x800'0511        Code  Gb  cmain.o [4]
-BusFault_Handler         0x800'04f7   0x2  Code  Gb  stm32f4xx_it.o [1]
+.iar.init_table$$Base    0x800'04ec         --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'04fc         --   Gb  - Linker created -
+?main                    0x800'051d        Code  Gb  cmain.o [4]
+BusFault_Handler         0x800'0503   0x2  Code  Gb  stm32f4xx_it.o [1]
 CSTACK$$Base            0x2000'0008         --   Gb  - Linker created -
 CSTACK$$Limit           0x2000'2008         --   Gb  - Linker created -
-DebugMon_Handler         0x800'04fd   0x2  Code  Gb  stm32f4xx_it.o [1]
-HardFault_Handler        0x800'04f3   0x2  Code  Gb  stm32f4xx_it.o [1]
-Init                     0x800'0215  0xb6  Code  Gb  main.o [1]
-MOTORS                   0x800'02cb  0x74  Code  Gb  main.o [1]
-MemManage_Handler        0x800'04f5   0x2  Code  Gb  stm32f4xx_it.o [1]
-NMI_Handler              0x800'04f1   0x2  Code  Gb  stm32f4xx_it.o [1]
+DebugMon_Handler         0x800'0509   0x2  Code  Gb  stm32f4xx_it.o [1]
+HardFault_Handler        0x800'04ff   0x2  Code  Gb  stm32f4xx_it.o [1]
+Init                     0x800'0215  0xc0  Code  Gb  main.o [1]
+MOTORS                   0x800'02d5  0x74  Code  Gb  main.o [1]
+MemManage_Handler        0x800'0501   0x2  Code  Gb  stm32f4xx_it.o [1]
+NMI_Handler              0x800'04fd   0x2  Code  Gb  stm32f4xx_it.o [1]
 NVIC_SetPriority         0x800'0189  0x24  Code  Lc  main.o [1]
-PendSV_Handler           0x800'04ff   0x2  Code  Gb  stm32f4xx_it.o [1]
-Region$$Table$$Base      0x800'04e0         --   Gb  - Linker created -
-Region$$Table$$Limit     0x800'04f0         --   Gb  - Linker created -
-SVC_Handler              0x800'04fb   0x2  Code  Gb  stm32f4xx_it.o [1]
-SetSysClock              0x800'041b  0x18  Code  Lc  system_stm32f4xx.o [1]
+PendSV_Handler           0x800'050b   0x2  Code  Gb  stm32f4xx_it.o [1]
+Region$$Table$$Base      0x800'04ec         --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'04fc         --   Gb  - Linker created -
+SVC_Handler              0x800'0507   0x2  Code  Gb  stm32f4xx_it.o [1]
+SetSysClock              0x800'0427  0x18  Code  Lc  system_stm32f4xx.o [1]
 SysTick_Config           0x800'01ad  0x30  Code  Lc  main.o [1]
-SysTick_Handler          0x800'0501   0x8  Code  Gb  stm32f4xx_it.o [1]
-SystemInit               0x800'03d5  0x46  Code  Gb  system_stm32f4xx.o [1]
-TIM1_CC_IRQHandler       0x800'050f   0x2  Code  Gb  stm32f4xx_it.o [1]
-TIM2_IRQHandler          0x800'0509   0x2  Code  Gb  stm32f4xx_it.o [1]
-TIM3_IRQHandler          0x800'050b   0x2  Code  Gb  stm32f4xx_it.o [1]
-TIM4_IRQHandler          0x800'050d   0x2  Code  Gb  stm32f4xx_it.o [1]
-TimeTick_Decrement       0x800'03b5  0x10  Code  Gb  delay.o [1]
-UsageFault_Handler       0x800'04f9   0x2  Code  Gb  stm32f4xx_it.o [1]
-__cmain                  0x800'0511        Code  Gb  cmain.o [4]
-__exit                   0x800'0545  0x14  Code  Gb  exit.o [5]
-__iar_data_init3         0x800'0495  0x28  Code  Gb  data_init.o [4]
-__iar_init_vfp           0x800'04bd        Code  Gb  fpinit_M.o [3]
-__iar_program_start      0x800'0569        Code  Gb  cstartup_M.o [4]
-__iar_zero_init3         0x800'0459  0x3a  Code  Gb  zero_init3.o [4]
-__low_level_init         0x800'052f   0x4  Code  Gb  low_level_init.o [2]
+SysTick_Handler          0x800'050d   0x8  Code  Gb  stm32f4xx_it.o [1]
+SystemInit               0x800'03e1  0x46  Code  Gb  system_stm32f4xx.o [1]
+TIM1_CC_IRQHandler       0x800'051b   0x2  Code  Gb  stm32f4xx_it.o [1]
+TIM2_IRQHandler          0x800'0515   0x2  Code  Gb  stm32f4xx_it.o [1]
+TIM3_IRQHandler          0x800'0517   0x2  Code  Gb  stm32f4xx_it.o [1]
+TIM4_IRQHandler          0x800'0519   0x2  Code  Gb  stm32f4xx_it.o [1]
+TimeTick_Decrement       0x800'03c1  0x10  Code  Gb  delay.o [1]
+UsageFault_Handler       0x800'0505   0x2  Code  Gb  stm32f4xx_it.o [1]
+__cmain                  0x800'051d        Code  Gb  cmain.o [4]
+__exit                   0x800'0551  0x14  Code  Gb  exit.o [5]
+__iar_data_init3         0x800'04a1  0x28  Code  Gb  data_init.o [4]
+__iar_init_vfp           0x800'04c9        Code  Gb  fpinit_M.o [3]
+__iar_program_start      0x800'0575        Code  Gb  cstartup_M.o [4]
+__iar_zero_init3         0x800'0465  0x3a  Code  Gb  zero_init3.o [4]
+__low_level_init         0x800'053b   0x4  Code  Gb  low_level_init.o [2]
 __vector_table           0x800'0000        Data  Gb  startup_stm32f4xx.o [1]
-_call_main               0x800'051d        Code  Gb  cmain.o [4]
-_exit                    0x800'0539        Code  Gb  cexit.o [4]
-_main                    0x800'052b        Code  Gb  cmain.o [4]
-delay_ms                 0x800'03c5   0xc  Code  Gb  delay.o [1]
-exit                     0x800'0533   0x4  Code  Gb  exit.o [2]
+_call_main               0x800'0529        Code  Gb  cmain.o [4]
+_exit                    0x800'0545        Code  Gb  cexit.o [4]
+_main                    0x800'0537        Code  Gb  cmain.o [4]
+delay_ms                 0x800'03d1   0xc  Code  Gb  delay.o [1]
+exit                     0x800'053f   0x4  Code  Gb  exit.o [2]
 main                     0x800'01dd  0x38  Code  Gb  main.o [1]
 sysTickCounter          0x2000'0000   0x4  Data  Lc  delay.o [1]
 
@@ -313,7 +313,7 @@ sysTickCounter          0x2000'0000   0x4  Data  Lc  delay.o [1]
 [4] = rt7M_tl.a
 [5] = shb_l.a
 
-  1 742 bytes of readonly  code memory
+  1 754 bytes of readonly  code memory
      18 bytes of readonly  data memory
   8 196 bytes of readwrite data memory
 
