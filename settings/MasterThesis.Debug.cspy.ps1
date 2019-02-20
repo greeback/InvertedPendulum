@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "C:\Users\a.dykman\Documents\IAR Embedded Workbench\MasterThesis\settings\MasterThesis.Debug.general.xcl" --backend -f "C:\Users\a.dykman\Documents\IAR Embedded Workbench\MasterThesis\settings\MasterThesis.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "C:\Users\aleks\Documents\Embedded\MasterThesis\settings\MasterThesis.Debug.general.xcl" --backend -f "C:\Users\aleks\Documents\Embedded\MasterThesis\settings\MasterThesis.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "C:\Users\a.dykman\Documents\IAR Embedded Workbench\MasterThesis\settings\MasterThesis.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\a.dykman\Documents\IAR Embedded Workbench\MasterThesis\settings\MasterThesis.Debug.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "C:\Users\aleks\Documents\Embedded\MasterThesis\settings\MasterThesis.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\aleks\Documents\Embedded\MasterThesis\settings\MasterThesis.Debug.driver.xcl" 
 }

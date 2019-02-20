@@ -2080,13 +2080,16 @@
     <group>
         <name>EWARM</name>
         <file>
-            <name>$PROJ_DIR$\startup_stm32f4xx.s</name>
+            <name>$PROJ_DIR$\startup_stm32f401xc.s</name>
         </file>
     </group>
     <group>
         <name>User</name>
         <file>
             <name>$PROJ_DIR$\delay.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\L3GD20.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\main.c</name>

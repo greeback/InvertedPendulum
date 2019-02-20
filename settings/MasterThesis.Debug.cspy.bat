@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "C:\Users\a.dykman\Documents\IAR Embedded Workbench\MasterThesis\settings\MasterThesis.Debug.general.xcl" --backend -f "C:\Users\a.dykman\Documents\IAR Embedded Workbench\MasterThesis\settings\MasterThesis.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "C:\Users\aleks\Documents\Embedded\MasterThesis\settings\MasterThesis.Debug.general.xcl" --backend -f "C:\Users\aleks\Documents\Embedded\MasterThesis\settings\MasterThesis.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "C:\Users\a.dykman\Documents\IAR Embedded Workbench\MasterThesis\settings\MasterThesis.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\a.dykman\Documents\IAR Embedded Workbench\MasterThesis\settings\MasterThesis.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "C:\Users\aleks\Documents\Embedded\MasterThesis\settings\MasterThesis.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\aleks\Documents\Embedded\MasterThesis\settings\MasterThesis.Debug.driver.xcl" 
 
 @echo off 
 :end
