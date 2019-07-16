@@ -1,10 +1,23 @@
 #ifndef __L3GD20_H__
 #define __L3GD20_H__
 
+#define X_AXIS_ENABLE
+//#define Y_AXIS_ENABLE
+//#define Z_AXIS_ENABLE
+
+typedef struct
+{
+  volatile int16_t X;
+  float Y;
+  float Z;
+}L3GD20_Data_t;
+
 void SPI_slaveSelect_ctrl(uint8_t state);
 uint8_t Spi_sendrecv (uint8_t data);
 void L3GD20_write_reg(uint8_t addr, uint8_t value);
 uint8_t L3GD20_read_reg(uint8_t addr);
+void L3GD20_init(void);
+void L3GD20_read_rates (L3GD20_Data_t* Data);
 void L3GD20_read_reg_multi(uint8_t addr, void* data, int size);
 
 // register addresses
@@ -40,13 +53,19 @@ void L3GD20_read_reg_multi(uint8_t addr, void* data, int size);
 #define L3GD20_INT1_THS_ZL   0x37
 #define L3GD20_INT1_DURATION 0x38
 
-#define X_G_Enable           0x02
-#define Y_G_Enable           0x01
+#define X_G_Enable           0x01
+#define Y_G_Enable           0x02
 #define Z_G_Enable           0x04
 #define PD_Normal            0x08
 #define Data_G_rate_190Hz    0x50
 #define Data_G_rate_95Hz     0x30
 
+/* Sensitivity factors, datasheet pg. 9 */
+#define L3GD20_SENSITIVITY_250		8.75	/* 8.75 mdps/digit */
+#define L3GD20_SENSITIVITY_500		17.5	/* 17.5 mdps/digit */
+#define L3GD20_SENSITIVITY_2000		70      /* 70 mdps/digit */
+
 #define TIMEOUT_TIME         0x1000
 enum {deselect=0, select = 1};
+
 #endif //__L3GD20_H__

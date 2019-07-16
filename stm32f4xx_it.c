@@ -149,7 +149,12 @@ void SysTick_Handler(void)
 * @param  None
 * @retval None
 */
-
+void EXTI0_IRQHandler ()
+{
+    
+    EXTI->PR |= EXTI_PR_PR0;
+    GPIOD->ODR^=GPIO_ODR_OD15;
+}
 
 
 

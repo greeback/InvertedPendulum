@@ -1,26 +1,26 @@
-//#include "stm32f4xx.h"
 #include "stm32f401xc.h"
 #include "delay.h"
 #include "L3GD20.h"
+#include <stdlib.h>
 
 #define PWM_MAX 100
+
+
 
 //Functions Prototypes
 void Init();
 void MOTORS (uint8_t direction, uint8_t duty);
-void SlaveSelect (uint8_t state)
-{ 
-  //if (state)
-  //GPIOE->BSRRH=0x0008;
-  
-}
+
+L3GD20_Data_t Gyro_Data;
+uint8_t zmienna = 0;
 
 int main()
-{
+{  
   Init();
-  uint8_t zmienna = 0;
+  
   while (1)
   {
+    L3GD20_read_rates (&Gyro_Data);
     GPIOD->ODR ^= GPIO_ODR_ODR_12;
     if (zmienna)
     {
@@ -36,7 +36,7 @@ int main()
     
     delay_ms(1000);
   }
-  return 0;
+    return 0;
 }
 
 
@@ -68,16 +68,12 @@ void Init()
   TIM1->CR1 |= TIM_CR1_ARPE | TIM_CR1_CEN;
   /******  SPI1 - L3GD20 (Gyro) **********************************************************************************/
   GPIOA->MODER |= GPIO_MODER_MODER5_1 | GPIO_MODER_MODER6_1 |GPIO_MODER_MODER7_1;//PA5(SCK), PA6(MISO), PA7(MOSI)
-  GPIOA->AFR[0]|= 0x5<<5 | 0x5<<6 | 0x5<<7;
+  GPIOA->AFR[0]|= 0x5<<4*5 | 0x5<<4*6 | 0x5<<4*7;
   GPIOE->MODER |= GPIO_MODER_MODER3_0;//PE3 (CS)
   GPIOE->PUPDR |= GPIO_PUPDR_PUPDR3_0;//Pull-Up
+  SPI1->CR1 |= SPI_CR1_CPOL | SPI_CR1_CPHA;
   SPI1->CR1 |= SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR | SPI_CR1_SPE;
-  /******  SPI4 **********************************************************************************/
-  GPIOE->MODER |= GPIO_MODER_MODER12_1 | GPIO_MODER_MODER13_1 | GPIO_MODER_MODER14_1;
-  GPIOE->AFR[1]|= 0x5<<12 | 0x5<<13 | 0x5<<14;
-  GPIOE->MODER |= GPIO_MODER_MODER11_0;
-  GPIOE->PUPDR |= GPIO_PUPDR_PUPDR11_0;
-  SPI4->CR1    |= SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR | SPI_CR1_SPE;
+  L3GD20_init();
 }
 
 void MOTORS (uint8_t direction, uint8_t duty)
@@ -95,16 +91,16 @@ void MOTORS (uint8_t direction, uint8_t duty)
   TIM1->EGR |= TIM_EGR_UG;
   if (direction)
   {
-      GPIOD->BSRR = GPIO_BSRR_BR0;
-      GPIOE->BSRR = GPIO_BSRR_BR13;
-      GPIOA->BSRR = GPIO_BSRR_BS10;
-      GPIOE->BSRR = GPIO_BSRR_BS9;
+    GPIOD->BSRR = GPIO_BSRR_BR0;
+    GPIOE->BSRR = GPIO_BSRR_BR13;
+    GPIOA->BSRR = GPIO_BSRR_BS10;
+    GPIOE->BSRR = GPIO_BSRR_BS9;
   }
   else
   {
-      GPIOA->BSRR = GPIO_BSRR_BR10;
-      GPIOE->BSRR = GPIO_BSRR_BR9;
-      GPIOD->BSRR = GPIO_BSRR_BS0;
-      GPIOE->BSRR = GPIO_BSRR_BS13;
+    GPIOA->BSRR = GPIO_BSRR_BR10;
+    GPIOE->BSRR = GPIO_BSRR_BR9;
+    GPIOD->BSRR = GPIO_BSRR_BS0;
+    GPIOE->BSRR = GPIO_BSRR_BS13;
   }
 }
