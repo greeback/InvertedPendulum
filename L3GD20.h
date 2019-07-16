@@ -1,15 +1,19 @@
 #ifndef __L3GD20_H__
 #define __L3GD20_H__
 
+/*Choose which axis you need*/
 #define X_AXIS_ENABLE
 //#define Y_AXIS_ENABLE
 //#define Z_AXIS_ENABLE
 
+/**
+ * @brief  L3GD20 main working structure
+ */
 typedef struct
 {
   volatile int16_t X;
-  float Y;
-  float Z;
+  volatile int16_t Y;
+  volatile int16_t Z;
 }L3GD20_Data_t;
 
 void SPI_slaveSelect_ctrl(uint8_t state);
@@ -20,10 +24,8 @@ void L3GD20_init(void);
 void L3GD20_read_rates (L3GD20_Data_t* Data);
 void L3GD20_read_reg_multi(uint8_t addr, void* data, int size);
 
-// register addresses
-
+/*Register addresses*/
 #define L3GD20_WHO_AM_I      0x0F
-
 #define L3GD20_CTRL_REG1     0x20
 #define L3GD20_CTRL_REG2     0x21
 #define L3GD20_CTRL_REG3     0x22
@@ -32,17 +34,14 @@ void L3GD20_read_reg_multi(uint8_t addr, void* data, int size);
 #define L3GD20_REFERENCE     0x25
 #define L3GD20_OUT_TEMP      0x26
 #define L3GD20_STATUS_REG    0x27
-
 #define L3GD20_OUT_X_L       0x28
 #define L3GD20_OUT_X_H       0x29
 #define L3GD20_OUT_Y_L       0x2A
 #define L3GD20_OUT_Y_H       0x2B
 #define L3GD20_OUT_Z_L       0x2C
 #define L3GD20_OUT_Z_H       0x2D
-
 #define L3GD20_FIFO_CTRL_REG 0x2E
 #define L3GD20_FIFO_SRC_REG  0x2F
-
 #define L3GD20_INT1_CFG      0x30
 #define L3GD20_INT1_SRC      0x31
 #define L3GD20_INT1_THS_XH   0x32
@@ -52,7 +51,6 @@ void L3GD20_read_reg_multi(uint8_t addr, void* data, int size);
 #define L3GD20_INT1_THS_ZH   0x36
 #define L3GD20_INT1_THS_ZL   0x37
 #define L3GD20_INT1_DURATION 0x38
-
 #define X_G_Enable           0x01
 #define Y_G_Enable           0x02
 #define Z_G_Enable           0x04
@@ -64,6 +62,11 @@ void L3GD20_read_reg_multi(uint8_t addr, void* data, int size);
 #define L3GD20_SENSITIVITY_250		8.75	/* 8.75 mdps/digit */
 #define L3GD20_SENSITIVITY_500		17.5	/* 17.5 mdps/digit */
 #define L3GD20_SENSITIVITY_2000		70      /* 70 mdps/digit */
+
+/* Cut-Off settings, datasheet pg. 32 */
+#define L3GD20_CUTOFF_100		0xF0	
+
+
 
 #define TIMEOUT_TIME         0x1000
 enum {deselect=0, select = 1};

@@ -13,15 +13,20 @@ void MOTORS (uint8_t direction, uint8_t duty);
 
 L3GD20_Data_t Gyro_Data;
 uint8_t zmienna = 0;
-
+float Tilt = 0;
+int32_t time_now, time_before = 0;
 int main()
 {  
   Init();
   
   while (1)
   {
+    
     L3GD20_read_rates (&Gyro_Data);
-    GPIOD->ODR ^= GPIO_ODR_ODR_12;
+    //dt = time_now - time_before;
+    
+    //Tilt += Gyro_Data.X * dt;
+    
     if (zmienna)
     {
       MOTORS (1,30);
@@ -35,6 +40,7 @@ int main()
     }
     
     delay_ms(1000);
+    GPIOD->ODR ^= GPIO_ODR_ODR_12;
   }
     return 0;
 }
@@ -43,8 +49,13 @@ int main()
 void Init()
 {
   /******  Clocks **********************************************************************************/
+  /*Wait until crystal is ready, turn it on and set as the system clock - crystal is more stable than internl clock*/
+  while (RCC->CR & RCC_CR_HSERDY != RCC_CR_HSERDY); 
+  RCC->CR |= RCC_CR_HSEON; 
+  RCC->CFGR |= RCC_CFGR_SW_HSE;
+  /*Enable peripherials*/
   RCC->AHB1ENR |= RCC_AHB1ENR_GPIOEEN | RCC_AHB1ENR_GPIODEN | RCC_AHB1ENR_GPIOAEN;
-  RCC->APB2ENR |= RCC_APB2ENR_TIM1EN | RCC_APB2ENR_SPI1EN | RCC_APB2ENR_SPI4EN;
+  RCC->APB2ENR |= RCC_APB2ENR_TIM1EN | RCC_APB2ENR_SPI1EN | RCC_APB2ENR_SPI4EN | RCC_APB2ENR_TIM10EN;
   /******  LEDS**********************************************************************************/
   GPIOD->MODER |= GPIO_MODER_MODER12_0 | GPIO_MODER_MODER13_0 | GPIO_MODER_MODER14_0 | GPIO_MODER_MODER15_0;
   /******  Motor Direction **********************************************************************************/
@@ -52,7 +63,7 @@ void Init()
   GPIOD->MODER |= GPIO_MODER_MODER0_0;//PD0
   GPIOA->MODER |= GPIO_MODER_MODER10_0;//PA10
   /******  Systick - every 1ms **********************************************************************************/
-  SysTick_Config(16000);
+  SysTick_Config(8000);
   /******  TIM1 - Motor PWM **********************************************************************************/
   GPIOA->MODER |= GPIO_MODER_MODER8_1;//PA8
   GPIOA->AFR[1] = 0x1;
@@ -74,6 +85,8 @@ void Init()
   SPI1->CR1 |= SPI_CR1_CPOL | SPI_CR1_CPHA;
   SPI1->CR1 |= SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR | SPI_CR1_SPE;
   L3GD20_init();
+  /******  TIM10 - Integragration period calculation *************************************************************/
+  //TIM10->ARR = ;
 }
 
 void MOTORS (uint8_t direction, uint8_t duty)

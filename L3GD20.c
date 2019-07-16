@@ -53,8 +53,7 @@ uint8_t L3GD20_read_reg(uint8_t addr)
 void L3GD20_init(void)
 {
 #ifdef X_AXIS_ENABLE
-  //L3GD20_write_reg(L3GD20_CTRL_REG1, PD_Normal | X_G_Enable);
-  L3GD20_write_reg(L3GD20_CTRL_REG1, 0xFF);
+  L3GD20_write_reg(L3GD20_CTRL_REG1, PD_Normal | X_G_Enable);
 #endif
 #ifdef Y_AXIS_ENABLE
   L3GD20_write_reg(L3GD20_CTRL_REG1, PD_Normal | Y_G_Enable);
@@ -62,6 +61,9 @@ void L3GD20_init(void)
 #ifdef Z_AXIS_ENABLE
   L3GD20_write_reg(L3GD20_CTRL_REG1, PD_Normal | Z_G_Enable);
 #endif
+  
+  /* Set Cut-Off settings */
+  L3GD20_write_reg(L3GD20_CTRL_REG1, L3GD20_CUTOFF_100);
   
   /* Set high-pass filter settings */
   L3GD20_write_reg(L3GD20_CTRL_REG2, 0x00);
