@@ -1,55 +1,51 @@
 #include "stm32f401xc.h"
 #include "delay.h"
 #include "L3GD20.h"
-#include <stdlib.h>
-
-#define PWM_MAX 100
-
-
-
-//Functions Prototypes
-void Init();
-void MOTORS (uint8_t direction, uint8_t duty);
+#include "main.h"
 
 L3GD20_Data_t Gyro_Data;
-uint8_t zmienna = 0;
-float Tilt = 0;
-int32_t time_now, time_before = 0;
+uint8_t zmienna;
+float Tilt = 0.0;
+int32_t time_now, time_before;
+float dt = 0.0;
+
 int main()
-{  
+{
   Init();
   
+
+ 
   while (1)
   {
-    
     L3GD20_read_rates (&Gyro_Data);
-    //dt = time_now - time_before;
-    
-    //Tilt += Gyro_Data.X * dt;
-    
+     
+    dt = TIM10->CNT * 0.000000125;
+    TIM10->CNT = 0;
+    Tilt += Gyro_Data.X * dt;
+   
     if (zmienna)
     {
+      GPIOD->ODR ^= GPIO_ODR_ODR_12;
       MOTORS (1,30);
       zmienna = 0;
       
     }
     else 
     {
+      GPIOD->ODR ^= GPIO_ODR_ODR_13;
       MOTORS (0,80);
       zmienna = 1; 
     }
-    
-    delay_ms(1000);
-    GPIOD->ODR ^= GPIO_ODR_ODR_12;
   }
-    return 0;
+  return 0;
 }
 
 
 void Init()
 {
   /******  Clocks **********************************************************************************/
-  /*Wait until crystal is ready, turn it on and set as the system clock - crystal is more stable than internl clock*/
+  /*Wait until crystal is ready, turn it on and set as the system clock.
+    8Mhz crystal is more stable than internal clock.*/
   while (RCC->CR & RCC_CR_HSERDY != RCC_CR_HSERDY); 
   RCC->CR |= RCC_CR_HSEON; 
   RCC->CFGR |= RCC_CFGR_SW_HSE;
@@ -63,12 +59,10 @@ void Init()
   GPIOD->MODER |= GPIO_MODER_MODER0_0;//PD0
   GPIOA->MODER |= GPIO_MODER_MODER10_0;//PA10
   /******  Systick - every 1ms **********************************************************************************/
-  SysTick_Config(8000);
+  SysTick_Config(16000);
   /******  TIM1 - Motor PWM **********************************************************************************/
   GPIOA->MODER |= GPIO_MODER_MODER8_1;//PA8
   GPIOA->AFR[1] = 0x1;
-  //GPIOE->MODER |= GPIO_MODER_MODER11_1;//PE11
-  //GPIOE->AFR[1] = 0x00001000;
   TIM1->CCMR1 |= TIM_CCMR1_OC1PE | TIM_CCMR1_OC1M_1 | TIM_CCMR1_OC1M_2;
   TIM1->CCMR1 |= TIM_CCMR1_OC2PE | TIM_CCMR1_OC2M_1 | TIM_CCMR1_OC2M_2;
   TIM1->CCER |= TIM_CCER_CC1E | TIM_CCER_CC2E;
@@ -79,14 +73,13 @@ void Init()
   TIM1->CR1 |= TIM_CR1_ARPE | TIM_CR1_CEN;
   /******  SPI1 - L3GD20 (Gyro) **********************************************************************************/
   GPIOA->MODER |= GPIO_MODER_MODER5_1 | GPIO_MODER_MODER6_1 |GPIO_MODER_MODER7_1;//PA5(SCK), PA6(MISO), PA7(MOSI)
-  GPIOA->AFR[0]|= 0x5<<4*5 | 0x5<<4*6 | 0x5<<4*7;
+  GPIOA->AFR[0]|=0x55500000;// PA5 - SCK, PA6 - MISO, PA7 - MOSI
   GPIOE->MODER |= GPIO_MODER_MODER3_0;//PE3 (CS)
   GPIOE->PUPDR |= GPIO_PUPDR_PUPDR3_0;//Pull-Up
-  SPI1->CR1 |= SPI_CR1_CPOL | SPI_CR1_CPHA;
-  SPI1->CR1 |= SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_MSTR | SPI_CR1_SPE;
+  SPI1->CR1 |= SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_SPE | SPI_CR1_MSTR;
   L3GD20_init();
   /******  TIM10 - Integragration period calculation *************************************************************/
-  //TIM10->ARR = ;
+   TIM10->CR1 |= TIM_CR1_CEN;
 }
 
 void MOTORS (uint8_t direction, uint8_t duty)
@@ -104,16 +97,16 @@ void MOTORS (uint8_t direction, uint8_t duty)
   TIM1->EGR |= TIM_EGR_UG;
   if (direction)
   {
-    GPIOD->BSRR = GPIO_BSRR_BR0;
-    GPIOE->BSRR = GPIO_BSRR_BR13;
-    GPIOA->BSRR = GPIO_BSRR_BS10;
-    GPIOE->BSRR = GPIO_BSRR_BS9;
+      GPIOD->BSRR = GPIO_BSRR_BR0;
+      GPIOE->BSRR = GPIO_BSRR_BR13;
+      GPIOA->BSRR = GPIO_BSRR_BS10;
+      GPIOE->BSRR = GPIO_BSRR_BS9;
   }
   else
   {
-    GPIOA->BSRR = GPIO_BSRR_BR10;
-    GPIOE->BSRR = GPIO_BSRR_BR9;
-    GPIOD->BSRR = GPIO_BSRR_BS0;
-    GPIOE->BSRR = GPIO_BSRR_BS13;
+      GPIOA->BSRR = GPIO_BSRR_BR10;
+      GPIOE->BSRR = GPIO_BSRR_BR9;
+      GPIOD->BSRR = GPIO_BSRR_BS0;
+      GPIOE->BSRR = GPIO_BSRR_BS13;
   }
 }

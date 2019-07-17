@@ -11,7 +11,7 @@
  */
 typedef struct
 {
-  volatile int16_t X;
+  volatile float X;
   volatile int16_t Y;
   volatile int16_t Z;
 }L3GD20_Data_t;

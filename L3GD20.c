@@ -1,17 +1,20 @@
 #include "stm32f401xc.h"
 #include "L3GD20.h"
+#include "main.h"
 
 uint16_t timeout;
 
 void SPI_slaveSelect_ctrl(uint8_t state){
   if(state)
   {
-    GPIOE->BSRR = GPIO_BSRR_BR3;
+    //GPIOE->BSRR = GPIO_BSRR_BR3;
+    GPIOE->ODR &= ~GPIO_ODR_ODR_3;
   }
   else 
   {
     while(SPI1->SR & SPI_SR_BSY);
-    GPIOE->BSRR = GPIO_BSRR_BS3;
+    //GPIOE->BSRR = GPIO_BSRR_BS3;
+    GPIOE->ODR |= GPIO_ODR_ODR_3;
   }
 }
 
@@ -52,21 +55,21 @@ uint8_t L3GD20_read_reg(uint8_t addr)
 
 void L3GD20_init(void)
 {
-#ifdef X_AXIS_ENABLE
-  L3GD20_write_reg(L3GD20_CTRL_REG1, PD_Normal | X_G_Enable);
+  while(L3GD20_read_reg(L3GD20_CTRL_REG1) != 0x0F)
+    L3GD20_write_reg(L3GD20_CTRL_REG1, 0x0F);
+/*#ifdef X_AXIS_ENABLE
+  while(L3GD20_read_reg(L3GD20_CTRL_REG1) != 0x0F)
+    L3GD20_write_reg(L3GD20_CTRL_REG1, 0x0F);
 #endif
 #ifdef Y_AXIS_ENABLE
   L3GD20_write_reg(L3GD20_CTRL_REG1, PD_Normal | Y_G_Enable);
 #endif
 #ifdef Z_AXIS_ENABLE
   L3GD20_write_reg(L3GD20_CTRL_REG1, PD_Normal | Z_G_Enable);
-#endif
-  
-  /* Set Cut-Off settings */
-  L3GD20_write_reg(L3GD20_CTRL_REG1, L3GD20_CUTOFF_100);
+#endif*/
   
   /* Set high-pass filter settings */
-  L3GD20_write_reg(L3GD20_CTRL_REG2, 0x00);
+  L3GD20_write_reg(L3GD20_CTRL_REG2, 0x09);
   
   /* Enable high-pass filter */
   L3GD20_write_reg(L3GD20_CTRL_REG5, 0x10);
@@ -80,10 +83,11 @@ void L3GD20_read_rates (L3GD20_Data_t* Data)
   s = L3GD20_SENSITIVITY_250 * 0.001;
   
 #ifdef X_AXIS_ENABLE
-  /* Read X axis */ 
+  /* Read X axis and check for drift*/ 
   RawData = L3GD20_read_reg(L3GD20_OUT_X_L);
   RawData |= L3GD20_read_reg(L3GD20_OUT_X_H) << 8;
   Data->X = (float)RawData * s;
+  if(Data->X>-1 && Data->X<1) Data->X=0;
 #endif
   
 #ifdef Y_AXIS_ENABLE
