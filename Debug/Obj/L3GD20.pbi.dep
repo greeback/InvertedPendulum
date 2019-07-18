@@ -1,17 +1,16 @@
-L3GD20.pbi: C:\Users\aldy\Documents\InvertedPendulum\L3GD20.c \
-  C:\Users\aldy\Documents\InvertedPendulum/stm32f401xc.h \
-  C:\Users\aldy\Documents\InvertedPendulum/core_cm4.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
-  C:\\Program\ Files\ (x86)\\IAR\ Systems\\Embedded\ Workbench\ 8.3\\arm\\inc\\c\\DLib_Config_Normal.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product.h \
-  C:\Users\aldy\Documents\InvertedPendulum\core_cmInstr.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\cmsis_iar.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c/iccarm_builtin.h \
-  C:\Users\aldy\Documents\InvertedPendulum\core_cmFunc.h \
+L3GD20.pbi: C:\Users\aldy\Documents\InvertedPendulum\main.h \
+  C:\Users\aldy\Documents\InvertedPendulum\L3GD20.h \
+  C:\Users\aldy\Documents\InvertedPendulum\system_stm32f4xx.h \
   C:\Users\aldy\Documents\InvertedPendulum\core_cm4_simd.h \
-  C:\Users\aldy\Documents\InvertedPendulum/system_stm32f4xx.h \
-  C:\Users\aldy\Documents\InvertedPendulum/L3GD20.h \
-  C:\Users\aldy\Documents\InvertedPendulum/main.h
+  C:\Users\aldy\Documents\InvertedPendulum\core_cmFunc.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\iccarm_builtin.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\cmsis_iar.h \
+  C:\Users\aldy\Documents\InvertedPendulum\core_cmInstr.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\yvals.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\ycheck.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\stdint.h \
+  C:\Users\aldy\Documents\InvertedPendulum\core_cm4.h \
+  C:\Users\aldy\Documents\InvertedPendulum\stm32f401xc.h \
+  C:\Users\aldy\Documents\InvertedPendulum\L3GD20.c

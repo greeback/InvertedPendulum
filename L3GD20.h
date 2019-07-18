@@ -12,8 +12,8 @@
 typedef struct
 {
   volatile float X;
-  volatile int16_t Y;
-  volatile int16_t Z;
+  volatile float Y;
+  volatile float Z;
 }L3GD20_Data_t;
 
 void SPI_slaveSelect_ctrl(uint8_t state);

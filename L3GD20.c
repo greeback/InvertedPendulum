@@ -55,11 +55,17 @@ uint8_t L3GD20_read_reg(uint8_t addr)
 
 void L3GD20_init(void)
 {
+  /* Set high-pass filter settings */
+  L3GD20_write_reg(L3GD20_CTRL_REG2, 0x09);
+  
+  /* Enable high-pass filter */
+  L3GD20_write_reg(L3GD20_CTRL_REG5, 0x10);
+  
+  while(L3GD20_read_reg(L3GD20_CTRL_REG1) != 0xFF)
+    L3GD20_write_reg(L3GD20_CTRL_REG1, 0xFF);
+  /*#ifdef X_AXIS_ENABLE
   while(L3GD20_read_reg(L3GD20_CTRL_REG1) != 0x0F)
-    L3GD20_write_reg(L3GD20_CTRL_REG1, 0x0F);
-/*#ifdef X_AXIS_ENABLE
-  while(L3GD20_read_reg(L3GD20_CTRL_REG1) != 0x0F)
-    L3GD20_write_reg(L3GD20_CTRL_REG1, 0x0F);
+  L3GD20_write_reg(L3GD20_CTRL_REG1, 0x0F);
 #endif
 #ifdef Y_AXIS_ENABLE
   L3GD20_write_reg(L3GD20_CTRL_REG1, PD_Normal | Y_G_Enable);
@@ -68,11 +74,7 @@ void L3GD20_init(void)
   L3GD20_write_reg(L3GD20_CTRL_REG1, PD_Normal | Z_G_Enable);
 #endif*/
   
-  /* Set high-pass filter settings */
-  L3GD20_write_reg(L3GD20_CTRL_REG2, 0x09);
   
-  /* Enable high-pass filter */
-  L3GD20_write_reg(L3GD20_CTRL_REG5, 0x10);
 }
 
 void L3GD20_read_rates (L3GD20_Data_t* Data)
@@ -84,10 +86,12 @@ void L3GD20_read_rates (L3GD20_Data_t* Data)
   
 #ifdef X_AXIS_ENABLE
   /* Read X axis and check for drift*/ 
-  RawData = L3GD20_read_reg(L3GD20_OUT_X_L);
-  RawData |= L3GD20_read_reg(L3GD20_OUT_X_H) << 8;
-  Data->X = (float)RawData * s;
-  if(Data->X>-1 && Data->X<1) Data->X=0;
+  //RawData = L3GD20_read_reg(L3GD20_OUT_X_L);
+  RawData = 0xA4;
+  //RawData |= L3GD20_read_reg(L3GD20_OUT_X_H) << 8;
+  RawData |= 0x2C << 8;
+  Data->X = (float)RawData * s ;
+  //if(Data->X>-1 && Data->X<1) Data->X=0;
 #endif
   
 #ifdef Y_AXIS_ENABLE

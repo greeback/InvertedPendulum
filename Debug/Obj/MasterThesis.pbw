@@ -116344,7 +116344,7 @@
     "display": "void L3GD20_read_rates(L3GD20_Data_t *)",
     "location": {
       "column": "6",
-      "line": "78",
+      "line": "80",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "L3GD20_read_rates",
@@ -116352,13 +116352,13 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@1758@F@L3GD20_read_rates@RawData",
+    "ID": "c:L3GD20.c@1766@F@L3GD20_read_rates@RawData",
     "What": "Variable",
     "defdec": "Def",
     "display": "RawData",
     "location": {
       "column": "11",
-      "line": "80",
+      "line": "82",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "RawData",
@@ -116366,13 +116366,13 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@1778@F@L3GD20_read_rates@s",
+    "ID": "c:L3GD20.c@1786@F@L3GD20_read_rates@s",
     "What": "Variable",
     "defdec": "Def",
     "display": "s",
     "location": {
       "column": "9",
-      "line": "81",
+      "line": "83",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "s",
@@ -116386,7 +116386,7 @@
     "display": "void L3GD20_read_reg_multi(uint8_t, void *, int)",
     "location": {
       "column": "6",
-      "line": "108",
+      "line": "112",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "L3GD20_read_reg_multi",
@@ -116394,13 +116394,13 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@2527@F@L3GD20_read_reg_multi@i",
+    "ID": "c:L3GD20.c@2586@F@L3GD20_read_reg_multi@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "7",
-      "line": "110",
+      "line": "114",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "i",
@@ -116408,13 +116408,13 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@2537@F@L3GD20_read_reg_multi@buffer",
+    "ID": "c:L3GD20.c@2596@F@L3GD20_read_reg_multi@buffer",
     "What": "Variable",
     "defdec": "Def",
     "display": "buffer",
     "location": {
       "column": "12",
-      "line": "111",
+      "line": "115",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "buffer",
@@ -116480,7 +116480,7 @@
         "defdec": "Def",
         "display": "Y",
         "location": {
-          "column": "20",
+          "column": "18",
           "line": "15",
           "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
         },
@@ -116494,7 +116494,7 @@
         "defdec": "Def",
         "display": "Z",
         "location": {
-          "column": "20",
+          "column": "18",
           "line": "16",
           "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
         },
@@ -116718,7 +116718,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@655@macro@L3GD20_WHO_AM_I",
+    "ID": "c:L3GD20.h@651@macro@L3GD20_WHO_AM_I",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_WHO_AM_I",
@@ -116732,7 +116732,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@690@macro@L3GD20_CTRL_REG1",
+    "ID": "c:L3GD20.h@686@macro@L3GD20_CTRL_REG1",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG1",
@@ -116746,7 +116746,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@725@macro@L3GD20_CTRL_REG2",
+    "ID": "c:L3GD20.h@721@macro@L3GD20_CTRL_REG2",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG2",
@@ -116760,7 +116760,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@760@macro@L3GD20_CTRL_REG3",
+    "ID": "c:L3GD20.h@756@macro@L3GD20_CTRL_REG3",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG3",
@@ -116774,7 +116774,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@795@macro@L3GD20_CTRL_REG4",
+    "ID": "c:L3GD20.h@791@macro@L3GD20_CTRL_REG4",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG4",
@@ -116788,7 +116788,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@830@macro@L3GD20_CTRL_REG5",
+    "ID": "c:L3GD20.h@826@macro@L3GD20_CTRL_REG5",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG5",
@@ -116802,7 +116802,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@865@macro@L3GD20_REFERENCE",
+    "ID": "c:L3GD20.h@861@macro@L3GD20_REFERENCE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_REFERENCE",
@@ -116816,7 +116816,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@900@macro@L3GD20_OUT_TEMP",
+    "ID": "c:L3GD20.h@896@macro@L3GD20_OUT_TEMP",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_TEMP",
@@ -116830,7 +116830,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@935@macro@L3GD20_STATUS_REG",
+    "ID": "c:L3GD20.h@931@macro@L3GD20_STATUS_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_STATUS_REG",
@@ -116844,7 +116844,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@970@macro@L3GD20_OUT_X_L",
+    "ID": "c:L3GD20.h@966@macro@L3GD20_OUT_X_L",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_X_L",
@@ -116858,7 +116858,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1005@macro@L3GD20_OUT_X_H",
+    "ID": "c:L3GD20.h@1001@macro@L3GD20_OUT_X_H",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_X_H",
@@ -116872,7 +116872,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1040@macro@L3GD20_OUT_Y_L",
+    "ID": "c:L3GD20.h@1036@macro@L3GD20_OUT_Y_L",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_Y_L",
@@ -116886,7 +116886,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1075@macro@L3GD20_OUT_Y_H",
+    "ID": "c:L3GD20.h@1071@macro@L3GD20_OUT_Y_H",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_Y_H",
@@ -116900,7 +116900,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1110@macro@L3GD20_OUT_Z_L",
+    "ID": "c:L3GD20.h@1106@macro@L3GD20_OUT_Z_L",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_Z_L",
@@ -116914,7 +116914,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1145@macro@L3GD20_OUT_Z_H",
+    "ID": "c:L3GD20.h@1141@macro@L3GD20_OUT_Z_H",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_Z_H",
@@ -116928,7 +116928,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1180@macro@L3GD20_FIFO_CTRL_REG",
+    "ID": "c:L3GD20.h@1176@macro@L3GD20_FIFO_CTRL_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_FIFO_CTRL_REG",
@@ -116942,7 +116942,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1215@macro@L3GD20_FIFO_SRC_REG",
+    "ID": "c:L3GD20.h@1211@macro@L3GD20_FIFO_SRC_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_FIFO_SRC_REG",
@@ -116956,7 +116956,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1250@macro@L3GD20_INT1_CFG",
+    "ID": "c:L3GD20.h@1246@macro@L3GD20_INT1_CFG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_CFG",
@@ -116970,7 +116970,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1285@macro@L3GD20_INT1_SRC",
+    "ID": "c:L3GD20.h@1281@macro@L3GD20_INT1_SRC",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_SRC",
@@ -116984,7 +116984,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1320@macro@L3GD20_INT1_THS_XH",
+    "ID": "c:L3GD20.h@1316@macro@L3GD20_INT1_THS_XH",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_THS_XH",
@@ -116998,7 +116998,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1355@macro@L3GD20_INT1_THS_XL",
+    "ID": "c:L3GD20.h@1351@macro@L3GD20_INT1_THS_XL",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_THS_XL",
@@ -117012,7 +117012,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1390@macro@L3GD20_INT1_THS_YH",
+    "ID": "c:L3GD20.h@1386@macro@L3GD20_INT1_THS_YH",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_THS_YH",
@@ -117026,7 +117026,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1425@macro@L3GD20_INT1_THS_YL",
+    "ID": "c:L3GD20.h@1421@macro@L3GD20_INT1_THS_YL",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_THS_YL",
@@ -117040,7 +117040,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1460@macro@L3GD20_INT1_THS_ZH",
+    "ID": "c:L3GD20.h@1456@macro@L3GD20_INT1_THS_ZH",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_THS_ZH",
@@ -117054,7 +117054,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1495@macro@L3GD20_INT1_THS_ZL",
+    "ID": "c:L3GD20.h@1491@macro@L3GD20_INT1_THS_ZL",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_THS_ZL",
@@ -117068,7 +117068,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1530@macro@L3GD20_INT1_DURATION",
+    "ID": "c:L3GD20.h@1526@macro@L3GD20_INT1_DURATION",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_DURATION",
@@ -117082,7 +117082,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1565@macro@X_G_Enable",
+    "ID": "c:L3GD20.h@1561@macro@X_G_Enable",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "X_G_Enable",
@@ -117096,7 +117096,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1600@macro@Y_G_Enable",
+    "ID": "c:L3GD20.h@1596@macro@Y_G_Enable",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "Y_G_Enable",
@@ -117110,7 +117110,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1635@macro@Z_G_Enable",
+    "ID": "c:L3GD20.h@1631@macro@Z_G_Enable",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "Z_G_Enable",
@@ -117124,7 +117124,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1670@macro@PD_Normal",
+    "ID": "c:L3GD20.h@1666@macro@PD_Normal",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PD_Normal",
@@ -117138,7 +117138,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1705@macro@Data_G_rate_190Hz",
+    "ID": "c:L3GD20.h@1701@macro@Data_G_rate_190Hz",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "Data_G_rate_190Hz",
@@ -117152,7 +117152,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1740@macro@Data_G_rate_95Hz",
+    "ID": "c:L3GD20.h@1736@macro@Data_G_rate_95Hz",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "Data_G_rate_95Hz",
@@ -117166,7 +117166,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1821@macro@L3GD20_SENSITIVITY_250",
+    "ID": "c:L3GD20.h@1817@macro@L3GD20_SENSITIVITY_250",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_SENSITIVITY_250",
@@ -117180,7 +117180,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1881@macro@L3GD20_SENSITIVITY_500",
+    "ID": "c:L3GD20.h@1877@macro@L3GD20_SENSITIVITY_500",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_SENSITIVITY_500",
@@ -117194,7 +117194,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1941@macro@L3GD20_SENSITIVITY_2000",
+    "ID": "c:L3GD20.h@1937@macro@L3GD20_SENSITIVITY_2000",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_SENSITIVITY_2000",
@@ -117208,7 +117208,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2047@macro@L3GD20_CUTOFF_100",
+    "ID": "c:L3GD20.h@2043@macro@L3GD20_CUTOFF_100",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CUTOFF_100",
@@ -117222,7 +117222,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2087@macro@TIMEOUT_TIME",
+    "ID": "c:L3GD20.h@2083@macro@TIMEOUT_TIME",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TIMEOUT_TIME",
@@ -117448,13 +117448,27 @@
     "scope": null
   },
   {
+    "ID": "c:main.c@234@F@main@cos",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "cos",
+    "location": {
+      "column": "11",
+      "line": "16",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
+    },
+    "name": "cos",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@Init",
     "What": "Function",
     "defdec": "Def",
     "display": "void Init(void)",
     "location": {
       "column": "6",
-      "line": "44",
+      "line": "48",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "Init",
@@ -117468,7 +117482,7 @@
     "display": "void MOTORS(uint8_t, uint8_t)",
     "location": {
       "column": "6",
-      "line": "85",
+      "line": "106",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "MOTORS",
