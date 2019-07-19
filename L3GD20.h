@@ -63,6 +63,11 @@ void L3GD20_read_reg_multi(uint8_t addr, void* data, int size);
 #define L3GD20_SENSITIVITY_500		17.5	/* 17.5 mdps/digit */
 #define L3GD20_SENSITIVITY_2000		70      /* 70 mdps/digit */
 
+/* Full scale selection */
+#define L3GD20_CTRL_REG4_FS_250         0x00
+#define L3GD20_CTRL_REG4_FS_500         0x10
+#define L3GD20_CTRL_REG4_FS_2000        0x20
+
 /* Cut-Off settings, datasheet pg. 32 */
 #define L3GD20_CUTOFF_100		0xF0	
 

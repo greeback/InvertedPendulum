@@ -116274,7 +116274,7 @@
     "display": "uint8_t Spi_sendrecv(uint8_t)",
     "location": {
       "column": "9",
-      "line": "21",
+      "line": "19",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "Spi_sendrecv",
@@ -116288,7 +116288,7 @@
     "display": "void L3GD20_write_reg(uint8_t, uint8_t)",
     "location": {
       "column": "6",
-      "line": "38",
+      "line": "36",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "L3GD20_write_reg",
@@ -116302,7 +116302,7 @@
     "display": "uint8_t L3GD20_read_reg(uint8_t)",
     "location": {
       "column": "9",
-      "line": "46",
+      "line": "44",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "L3GD20_read_reg",
@@ -116310,13 +116310,13 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@993@F@L3GD20_read_reg@value",
+    "ID": "c:L3GD20.c@918@F@L3GD20_read_reg@value",
     "What": "Variable",
     "defdec": "Def",
     "display": "value",
     "location": {
       "column": "11",
-      "line": "51",
+      "line": "49",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "value",
@@ -116330,7 +116330,7 @@
     "display": "void L3GD20_init(void)",
     "location": {
       "column": "6",
-      "line": "56",
+      "line": "54",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "L3GD20_init",
@@ -116344,7 +116344,7 @@
     "display": "void L3GD20_read_rates(L3GD20_Data_t *)",
     "location": {
       "column": "6",
-      "line": "80",
+      "line": "70",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "L3GD20_read_rates",
@@ -116352,13 +116352,13 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@1766@F@L3GD20_read_rates@RawData",
+    "ID": "c:L3GD20.c@1532@F@L3GD20_read_rates@RawData",
     "What": "Variable",
     "defdec": "Def",
     "display": "RawData",
     "location": {
       "column": "11",
-      "line": "82",
+      "line": "72",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "RawData",
@@ -116366,13 +116366,13 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@1786@F@L3GD20_read_rates@s",
+    "ID": "c:L3GD20.c@1552@F@L3GD20_read_rates@s",
     "What": "Variable",
     "defdec": "Def",
     "display": "s",
     "location": {
       "column": "9",
-      "line": "83",
+      "line": "73",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "s",
@@ -116386,7 +116386,7 @@
     "display": "void L3GD20_read_reg_multi(uint8_t, void *, int)",
     "location": {
       "column": "6",
-      "line": "112",
+      "line": "101",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "L3GD20_read_reg_multi",
@@ -116394,13 +116394,13 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@2586@F@L3GD20_read_reg_multi@i",
+    "ID": "c:L3GD20.c@2362@F@L3GD20_read_reg_multi@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "7",
-      "line": "114",
+      "line": "103",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "i",
@@ -116408,13 +116408,13 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@2596@F@L3GD20_read_reg_multi@buffer",
+    "ID": "c:L3GD20.c@2372@F@L3GD20_read_reg_multi@buffer",
     "What": "Variable",
     "defdec": "Def",
     "display": "buffer",
     "location": {
       "column": "12",
-      "line": "115",
+      "line": "104",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
     "name": "buffer",
@@ -117208,13 +117208,55 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2043@macro@L3GD20_CUTOFF_100",
+    "ID": "c:L3GD20.h@2029@macro@L3GD20_CTRL_REG4_FS_250",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "L3GD20_CTRL_REG4_FS_250",
+    "location": {
+      "column": "9",
+      "line": "67",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
+    },
+    "name": "L3GD20_CTRL_REG4_FS_250",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:L3GD20.h@2075@macro@L3GD20_CTRL_REG4_FS_500",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "L3GD20_CTRL_REG4_FS_500",
+    "location": {
+      "column": "9",
+      "line": "68",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
+    },
+    "name": "L3GD20_CTRL_REG4_FS_500",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:L3GD20.h@2121@macro@L3GD20_CTRL_REG4_FS_2000",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "L3GD20_CTRL_REG4_FS_2000",
+    "location": {
+      "column": "9",
+      "line": "69",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
+    },
+    "name": "L3GD20_CTRL_REG4_FS_2000",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:L3GD20.h@2211@macro@L3GD20_CUTOFF_100",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CUTOFF_100",
     "location": {
       "column": "9",
-      "line": "67",
+      "line": "72",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
     },
     "name": "L3GD20_CUTOFF_100",
@@ -117222,13 +117264,13 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2083@macro@TIMEOUT_TIME",
+    "ID": "c:L3GD20.h@2251@macro@TIMEOUT_TIME",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TIMEOUT_TIME",
     "location": {
       "column": "9",
-      "line": "71",
+      "line": "76",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
     },
     "name": "TIMEOUT_TIME",
@@ -117248,7 +117290,7 @@
         "display": "deselect",
         "location": {
           "column": "7",
-          "line": "72",
+          "line": "77",
           "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
         },
         "name": "deselect",
@@ -117262,7 +117304,7 @@
         "display": "select",
         "location": {
           "column": "19",
-          "line": "72",
+          "line": "77",
           "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
         },
         "name": "select",
@@ -117272,7 +117314,7 @@
     ],
     "location": {
       "column": "1",
-      "line": "72",
+      "line": "77",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
     },
     "name": "",
@@ -117294,13 +117336,69 @@
     "scope": null
   },
   {
+    "ID": "c:main.h@29@macro@INTEGERATION_TIME_MS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "INTEGERATION_TIME_MS",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.h"
+    },
+    "name": "INTEGERATION_TIME_MS",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:main.h@65@macro@GYRO_OFFSET_250",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GYRO_OFFSET_250",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.h"
+    },
+    "name": "GYRO_OFFSET_250",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:main.h@100@macro@GYRO_OFFSET_500",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GYRO_OFFSET_500",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.h"
+    },
+    "name": "GYRO_OFFSET_500",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:main.h@137@macro@GYRO_OFFSET_2000",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GYRO_OFFSET_2000",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.h"
+    },
+    "name": "GYRO_OFFSET_2000",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@Init",
     "What": "Function",
     "defdec": "Dec",
     "display": "void Init(void)",
     "location": {
       "column": "6",
-      "line": "4",
+      "line": "8",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.h"
     },
     "name": "Init",
@@ -117314,7 +117412,7 @@
     "display": "void Init(void)",
     "location": {
       "column": "6",
-      "line": "4",
+      "line": "8",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.h"
     },
     "name": "Init",
@@ -117328,7 +117426,7 @@
     "display": "void MOTORS(uint8_t, uint8_t)",
     "location": {
       "column": "6",
-      "line": "5",
+      "line": "9",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.h"
     },
     "name": "MOTORS",
@@ -117342,11 +117440,181 @@
     "display": "void MOTORS(uint8_t, uint8_t)",
     "location": {
       "column": "6",
-      "line": "5",
+      "line": "9",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.h"
     },
     "name": "MOTORS",
     "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Led.h@27@macro@__Led_h__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__Led_h__",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.h"
+    },
+    "name": "__Led_h__",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Led.h@74@macro@GREEN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GREEN",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.h"
+    },
+    "name": "GREEN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Led.h@107@macro@ORANGE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "ORANGE",
+    "location": {
+      "column": "9",
+      "line": "6",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.h"
+    },
+    "name": "ORANGE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Led.h@141@macro@RED",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "RED",
+    "location": {
+      "column": "9",
+      "line": "7",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.h"
+    },
+    "name": "RED",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:Led.h@174@macro@BLUE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "BLUE",
+    "location": {
+      "column": "9",
+      "line": "8",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.h"
+    },
+    "name": "BLUE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@ActionTypeDef",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@ActionTypeDef@ON",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "ON",
+        "location": {
+          "column": "3",
+          "line": "12",
+          "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.h"
+        },
+        "name": "ON",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@ActionTypeDef@OFF",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "OFF",
+        "location": {
+          "column": "7",
+          "line": "12",
+          "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.h"
+        },
+        "name": "OFF",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@ActionTypeDef@TOGGLE",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "TOGGLE",
+        "location": {
+          "column": "12",
+          "line": "12",
+          "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.h"
+        },
+        "name": "TOGGLE",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "10",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LED",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LED(uint32_t, ActionTypeDef)",
+    "location": {
+      "column": "6",
+      "line": "22",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.h"
+    },
+    "name": "LED",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LED",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LED(uint32_t, ActionTypeDef)",
+    "location": {
+      "column": "6",
+      "line": "22",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.h"
+    },
+    "name": "LED",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LED",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void LED(uint32_t, ActionTypeDef)",
+    "location": {
+      "column": "6",
+      "line": "3",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.c"
+    },
+    "name": "LED",
+    "origin": "project_file",
     "scope": null
   },
   {
@@ -117356,7 +117624,7 @@
     "display": "Gyro_Data",
     "location": {
       "column": "15",
-      "line": "6",
+      "line": "8",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "Gyro_Data",
@@ -117370,7 +117638,7 @@
     "display": "zmienna",
     "location": {
       "column": "9",
-      "line": "7",
+      "line": "9",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "zmienna",
@@ -117384,7 +117652,7 @@
     "display": "Tilt",
     "location": {
       "column": "7",
-      "line": "8",
+      "line": "10",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "Tilt",
@@ -117398,7 +117666,7 @@
     "display": "time_now",
     "location": {
       "column": "9",
-      "line": "9",
+      "line": "11",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "time_now",
@@ -117412,7 +117680,7 @@
     "display": "time_before",
     "location": {
       "column": "19",
-      "line": "9",
+      "line": "11",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "time_before",
@@ -117426,10 +117694,38 @@
     "display": "dt",
     "location": {
       "column": "7",
-      "line": "10",
+      "line": "12",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "dt",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@srednia",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "srednia",
+    "location": {
+      "column": "7",
+      "line": "13",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
+    },
+    "name": "srednia",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@suma",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "suma",
+    "location": {
+      "column": "7",
+      "line": "14",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
+    },
+    "name": "suma",
     "origin": "project_file",
     "scope": null
   },
@@ -117440,7 +117736,7 @@
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "12",
+      "line": "15",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "main",
@@ -117448,16 +117744,16 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@234@F@main@cos",
+    "ID": "c:main.c@316@F@main@i",
     "What": "Variable",
     "defdec": "Def",
-    "display": "cos",
+    "display": "i",
     "location": {
-      "column": "11",
-      "line": "16",
+      "column": "12",
+      "line": "19",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
-    "name": "cos",
+    "name": "i",
     "origin": "project_file",
     "scope": null
   },
@@ -117468,7 +117764,7 @@
     "display": "void Init(void)",
     "location": {
       "column": "6",
-      "line": "48",
+      "line": "52",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "Init",
@@ -117482,206 +117778,10 @@
     "display": "void MOTORS(uint8_t, uint8_t)",
     "location": {
       "column": "6",
-      "line": "106",
+      "line": "112",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "MOTORS",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@NMI_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void NMI_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "38",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "NMI_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@HardFault_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void HardFault_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "47",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "HardFault_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@MemManage_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void MemManage_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "60",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "MemManage_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@BusFault_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void BusFault_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "73",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "BusFault_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@UsageFault_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void UsageFault_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "86",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "UsageFault_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SVC_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void SVC_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "99",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "SVC_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@DebugMon_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void DebugMon_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "108",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "DebugMon_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@PendSV_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void PendSV_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "117",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "PendSV_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SysTick_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void SysTick_Handler(void)",
-    "location": {
-      "column": "6",
-      "line": "126",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "SysTick_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@EXTI0_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void EXTI0_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "152",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "EXTI0_IRQHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TIM2_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void TIM2_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "162",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "TIM2_IRQHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TIM3_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void TIM3_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "168",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "TIM3_IRQHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TIM4_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void TIM4_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "174",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "TIM4_IRQHandler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@TIM1_CC_IRQHandler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void TIM1_CC_IRQHandler(void)",
-    "location": {
-      "column": "6",
-      "line": "182",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
-    },
-    "name": "TIM1_CC_IRQHandler",
     "origin": "project_file",
     "scope": null
   },
@@ -117714,6 +117814,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@NMI_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void NMI_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "34",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "NMI_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@HardFault_Handler",
     "What": "Function",
     "defdec": "Dec",
@@ -117724,6 +117838,34 @@
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
     },
     "name": "HardFault_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@HardFault_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void HardFault_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "35",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "HardFault_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@MemManage_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void MemManage_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "36",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "MemManage_Handler",
     "origin": "user_include",
     "scope": null
   },
@@ -117756,6 +117898,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@BusFault_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void BusFault_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "37",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "BusFault_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@UsageFault_Handler",
     "What": "Function",
     "defdec": "Dec",
@@ -117766,6 +117922,34 @@
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
     },
     "name": "UsageFault_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UsageFault_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UsageFault_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "38",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "UsageFault_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SVC_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SVC_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "39",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "SVC_Handler",
     "origin": "user_include",
     "scope": null
   },
@@ -117798,6 +117982,34 @@
     "scope": null
   },
   {
+    "ID": "c:@F@DebugMon_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void DebugMon_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "40",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "DebugMon_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@PendSV_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void PendSV_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "41",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "PendSV_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@PendSV_Handler",
     "What": "Function",
     "defdec": "Dec",
@@ -117823,6 +118035,300 @@
     },
     "name": "SysTick_Handler",
     "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SysTick_Handler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SysTick_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "42",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "SysTick_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIM1_UP_TIM10_IRQHandler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void TIM1_UP_TIM10_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "43",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "TIM1_UP_TIM10_IRQHandler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIM1_UP_TIM10_IRQHandler",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void TIM1_UP_TIM10_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "43",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "TIM1_UP_TIM10_IRQHandler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@dt_flag",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "dt_flag",
+    "location": {
+      "column": "16",
+      "line": "46",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "dt_flag",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@dt_flag",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "dt_flag",
+    "location": {
+      "column": "16",
+      "line": "46",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.h"
+    },
+    "name": "dt_flag",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@dt_flag",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "dt_flag",
+    "location": {
+      "column": "9",
+      "line": "29",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "dt_flag",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@NMI_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void NMI_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "40",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "NMI_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@HardFault_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void HardFault_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "49",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "HardFault_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@MemManage_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void MemManage_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "62",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "MemManage_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@BusFault_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void BusFault_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "75",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "BusFault_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@UsageFault_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void UsageFault_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "88",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "UsageFault_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SVC_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SVC_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "101",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "SVC_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@DebugMon_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void DebugMon_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "110",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "DebugMon_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@PendSV_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void PendSV_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "119",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "PendSV_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SysTick_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SysTick_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "128",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "SysTick_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@EXTI0_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void EXTI0_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "154",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "EXTI0_IRQHandler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIM1_UP_TIM10_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TIM1_UP_TIM10_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "165",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "TIM1_UP_TIM10_IRQHandler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIM2_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TIM2_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "179",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "TIM2_IRQHandler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIM3_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TIM3_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "185",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "TIM3_IRQHandler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIM4_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TIM4_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "191",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "TIM4_IRQHandler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@TIM1_CC_IRQHandler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void TIM1_CC_IRQHandler(void)",
+    "location": {
+      "column": "6",
+      "line": "199",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\stm32f4xx_it.c"
+    },
+    "name": "TIM1_CC_IRQHandler",
+    "origin": "project_file",
     "scope": null
   }
 ]

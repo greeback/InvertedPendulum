@@ -14,4 +14,5 @@ stm32f4xx_it.pbi: C:\Users\aldy\Documents\InvertedPendulum\stm32f4xx_it.c \
   C:\Users\aldy\Documents\InvertedPendulum\core_cmFunc.h \
   C:\Users\aldy\Documents\InvertedPendulum\core_cm4_simd.h \
   C:\Users\aldy\Documents\InvertedPendulum/system_stm32f4xx.h \
-  C:\Users\aldy\Documents\InvertedPendulum/delay.h
+  C:\Users\aldy\Documents\InvertedPendulum/delay.h \
+  C:\Users\aldy\Documents\InvertedPendulum/Led.h

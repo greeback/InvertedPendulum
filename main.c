@@ -2,44 +2,48 @@
 #include "delay.h"
 #include "L3GD20.h"
 #include "main.h"
+#include "Led.h"
+#include "stm32f4xx_it.h"
 
 L3GD20_Data_t Gyro_Data;
 uint8_t zmienna;
 float Tilt = 0.0;
 int32_t time_now, time_before;
 float dt = 0.0;
-
+float srednia = 0.0;
+float suma = 0.0;
 int main()
 {
   Init();
-  
-  int16_t cos = 0xA6B7;
-  
-  
-  
+
+  uint32_t i = 0;
   while (1)
   {
-    
-    
-    L3GD20_read_rates (&Gyro_Data);
-    dt = TIM10->CNT * 0.000000125;
-    TIM10->CNT = 0;
-    Tilt += Gyro_Data.X * dt;
-    
-    if (zmienna)
+//    i++;
+//    L3GD20_read_rates (&Gyro_Data);
+//    suma += Gyro_Data.X;
+//    srednia = suma / i;
+    if(dt_flag)
     {
-      GPIOD->ODR ^= GPIO_ODR_ODR_12;
-      MOTORS (1,30);
-      zmienna = 0;
+      dt_flag = 0;
+      L3GD20_read_rates (&Gyro_Data);
       
+      Tilt += Gyro_Data.X * INTEGERATION_TIME_MS * 0.001;
+      
+      if (zmienna)
+      {
+        LED(GREEN, TOGGLE);
+        MOTORS (1,30);
+        zmienna = 0;
+        
+      }
+      else 
+      {
+        LED(ORANGE, TOGGLE);
+        MOTORS (0,80);
+        zmienna = 1; 
+      }
     }
-    else 
-    {
-      GPIOD->ODR ^= GPIO_ODR_ODR_13;
-      MOTORS (0,80);
-      zmienna = 1; 
-    }
-    
   }
   return 0;
 }
@@ -97,8 +101,10 @@ void Init()
   I2C1->CR1 |= I2C_CR1_PE;
   
   /******  TIM10 (1KHz) - Integration period calculation ******/
-  //TIM10->PSC = 999;
-  //TIM10->ARR = 7;
+  TIM10->DIER |= TIM_DIER_UIE; //Update interrupt enable
+  TIM10->PSC = INTEGERATION_TIME_MS-1;
+  TIM10->ARR = 8000-1;
+  NVIC_EnableIRQ(TIM1_UP_TIM10_IRQn);
   TIM10->CR1 |= TIM_CR1_CEN;
   
 }

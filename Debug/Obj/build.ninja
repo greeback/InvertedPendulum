@@ -23,11 +23,12 @@ rule browsedata
 build system_stm32f4xx.pbi : index system_stm32f4xx.xcl
 build delay.pbi : index delay.xcl
 build L3GD20.pbi : index L3GD20.xcl
+build Led.pbi : index Led.xcl
 build main.pbi : index main.xcl
 build stm32f4xx_it.pbi : index stm32f4xx_it.xcl
 build MasterThesis_part0.pbi : link system_stm32f4xx.pbi delay.pbi
-build MasterThesis_part1.pbi : link L3GD20.pbi main.pbi
-build MasterThesis_part2.pbi : link stm32f4xx_it.pbi
+build MasterThesis_part1.pbi : link L3GD20.pbi Led.pbi
+build MasterThesis_part2.pbi : link main.pbi stm32f4xx_it.pbi
 build MasterThesis.pbd : link MasterThesis_part0.pbi MasterThesis_part1.pbi MasterThesis_part2.pbi
 build MasterThesis.pbw : browsedata MasterThesis.pbd
 

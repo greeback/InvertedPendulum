@@ -7,14 +7,12 @@ uint16_t timeout;
 void SPI_slaveSelect_ctrl(uint8_t state){
   if(state)
   {
-    //GPIOE->BSRR = GPIO_BSRR_BR3;
-    GPIOE->ODR &= ~GPIO_ODR_ODR_3;
+    GPIOE->BSRR = GPIO_BSRR_BR3;
   }
   else 
   {
     while(SPI1->SR & SPI_SR_BSY);
-    //GPIOE->BSRR = GPIO_BSRR_BS3;
-    GPIOE->ODR |= GPIO_ODR_ODR_3;
+    GPIOE->BSRR = GPIO_BSRR_BS3;
   }
 }
 
@@ -61,20 +59,12 @@ void L3GD20_init(void)
   /* Enable high-pass filter */
   L3GD20_write_reg(L3GD20_CTRL_REG5, 0x10);
   
+  /* Full scale selection */
+  L3GD20_write_reg(L3GD20_CTRL_REG4, L3GD20_CTRL_REG4_FS_2000);
+  
+  /* Power on, turn on all axes, maximym ODR - output data rate */
   while(L3GD20_read_reg(L3GD20_CTRL_REG1) != 0xFF)
-    L3GD20_write_reg(L3GD20_CTRL_REG1, 0xFF);
-  /*#ifdef X_AXIS_ENABLE
-  while(L3GD20_read_reg(L3GD20_CTRL_REG1) != 0x0F)
-  L3GD20_write_reg(L3GD20_CTRL_REG1, 0x0F);
-#endif
-#ifdef Y_AXIS_ENABLE
-  L3GD20_write_reg(L3GD20_CTRL_REG1, PD_Normal | Y_G_Enable);
-#endif
-#ifdef Z_AXIS_ENABLE
-  L3GD20_write_reg(L3GD20_CTRL_REG1, PD_Normal | Z_G_Enable);
-#endif*/
-  
-  
+    L3GD20_write_reg(L3GD20_CTRL_REG1, 0xFF); 
 }
 
 void L3GD20_read_rates (L3GD20_Data_t* Data)
@@ -82,16 +72,15 @@ void L3GD20_read_rates (L3GD20_Data_t* Data)
   int16_t RawData;
   float s;
   
-  s = L3GD20_SENSITIVITY_250 * 0.001;
+  s = L3GD20_SENSITIVITY_2000 * 0.001;
   
 #ifdef X_AXIS_ENABLE
   /* Read X axis and check for drift*/ 
-  //RawData = L3GD20_read_reg(L3GD20_OUT_X_L);
-  RawData = 0xA4;
-  //RawData |= L3GD20_read_reg(L3GD20_OUT_X_H) << 8;
-  RawData |= 0x2C << 8;
-  Data->X = (float)RawData * s ;
-  //if(Data->X>-1 && Data->X<1) Data->X=0;
+  RawData = L3GD20_read_reg(L3GD20_OUT_X_L);
+  RawData |= L3GD20_read_reg(L3GD20_OUT_X_H) << 8;
+  //Data->X = (float)RawData * s;
+  Data->X = (float)RawData * s - GYRO_OFFSET_2000;
+  //if(Data->X>-1.9 && Data->X<1.4) Data->X=0;
 #endif
   
 #ifdef Y_AXIS_ENABLE

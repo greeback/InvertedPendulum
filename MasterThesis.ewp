@@ -2124,6 +2124,9 @@
             <name>$PROJ_DIR$\L3GD20.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\Led.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\main.c</name>
         </file>
         <file>

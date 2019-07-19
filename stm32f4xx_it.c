@@ -24,7 +24,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
 #include "delay.h"
+#include "Led.h"
 
+uint8_t dt_flag = 0;
 
 /******************************************************************************/
 /*            Cortex-M3 Processor Exceptions Handlers                         */
@@ -150,12 +152,27 @@ void SysTick_Handler(void)
 * @retval None
 */
 void EXTI0_IRQHandler ()
-{
-    
-    EXTI->PR |= EXTI_PR_PR0;
-    GPIOD->ODR^=GPIO_ODR_OD15;
+{ 
+  EXTI->PR |= EXTI_PR_PR0;
+  GPIOD->ODR^=GPIO_ODR_OD15;
 }
 
+/**
+* @brief  This function handles TIM1_UP_TIM10_IRQHandler.
+* @param  None
+* @retval None
+*/
+void TIM1_UP_TIM10_IRQHandler ()
+{
+  if (TIM10->SR & TIM_SR_UIF)
+  {
+    TIM10->SR = 0; 
+    LED(BLUE,TOGGLE);
+    dt_flag = 1;
+  }
+  
+  
+}
 
 
 
