@@ -24,16 +24,16 @@
         <stlinkResetStrategy>0</stlinkResetStrategy>
     </StLinkDriver>
     <DebugChecksum>
-        <Checksum>1867480094</Checksum>
+        <Checksum>4262457393</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
         <StopOnThrow>_ 0</StopOnThrow>
     </Exceptions>
     <CodeCoverage>
-        <Enabled>0</Enabled>
         <ShowSource>0</ShowSource>
         <HideCovered>0</HideCovered>
+        <Enabled>_ 0</Enabled>
     </CodeCoverage>
     <Disassembly>
         <InstrCount>0</InstrCount>
@@ -139,13 +139,14 @@
         <Category>_ 0</Category>
     </LogFile>
     <Aliases>
-        <A0>_ "C:\Users\aleks\Documents\Embedded\MasterThesis\core_cm4.h" ""</A0>
-        <A1>_ "C:\Users\aleks\Documents\Embedded\MasterThesis\delay.c" ""</A1>
-        <A2>_ "C:\Users\aleks\Documents\Embedded\MasterThesis\main.c" ""</A2>
-        <A3>_ "C:\Users\aleks\Documents\Embedded\MasterThesis\startup_stm32f401xc.s" ""</A3>
-        <A4>_ "C:\Users\aleks\Documents\Embedded\MasterThesis\stm32f4xx_it.c" ""</A4>
-        <A5>_ "C:\Users\aleks\Documents\Embedded\MasterThesis\system_stm32f4xx.c" ""</A5>
-        <Count>6</Count>
+        <A0>_ "C:\Users\aldy\Documents\InvertedPendulum\main.c" "C:\Users\aleks\Documents\Embedded\InvertedPendulum\main.c"</A0>
+        <A1>_ "C:\Users\aleks\Documents\Embedded\MasterThesis\core_cm4.h" ""</A1>
+        <A2>_ "C:\Users\aleks\Documents\Embedded\MasterThesis\delay.c" ""</A2>
+        <A3>_ "C:\Users\aleks\Documents\Embedded\MasterThesis\main.c" ""</A3>
+        <A4>_ "C:\Users\aleks\Documents\Embedded\MasterThesis\startup_stm32f401xc.s" ""</A4>
+        <A5>_ "C:\Users\aleks\Documents\Embedded\MasterThesis\stm32f4xx_it.c" ""</A5>
+        <A6>_ "C:\Users\aleks\Documents\Embedded\MasterThesis\system_stm32f4xx.c" ""</A6>
+        <Count>7</Count>
         <SuppressDialog>0</SuppressDialog>
     </Aliases>
     <DriverProfiling>

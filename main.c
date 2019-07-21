@@ -11,39 +11,40 @@ float Tilt = 0.0;
 int32_t time_now, time_before;
 float dt = 0.0;
 float srednia = 0.0;
-float suma = 0.0;
+long double suma = 0.0;
+uint32_t i = 0;
 int main()
 {
   Init();
 
-  uint32_t i = 0;
+  
   while (1)
   {
-//    i++;
-//    L3GD20_read_rates (&Gyro_Data);
-//    suma += Gyro_Data.X;
-//    srednia = suma / i;
-    if(dt_flag)
-    {
-      dt_flag = 0;
-      L3GD20_read_rates (&Gyro_Data);
-      
-      Tilt += Gyro_Data.X * INTEGERATION_TIME_MS * 0.001;
-      
-      if (zmienna)
-      {
-        LED(GREEN, TOGGLE);
-        MOTORS (1,30);
-        zmienna = 0;
-        
-      }
-      else 
-      {
-        LED(ORANGE, TOGGLE);
-        MOTORS (0,80);
-        zmienna = 1; 
-      }
-    }
+    i++;
+    L3GD20_read_rates (&Gyro_Data);
+    suma += Gyro_Data.X;
+    srednia = suma / i;
+//    if(dt_flag)
+//    {
+//      dt_flag = 0;
+//      L3GD20_read_rates (&Gyro_Data);
+//      
+//      Tilt += Gyro_Data.X * INTEGERATION_TIME_MS * 0.001;
+//      
+//      if (zmienna)
+//      {
+//        LED(GREEN, TOGGLE);
+//        MOTORS (1,30);
+//        zmienna = 0;
+//        
+//      }
+//      else 
+//      {
+//        LED(ORANGE, TOGGLE);
+//        MOTORS (0,80);
+//        zmienna = 1; 
+//      }
+//    }
   }
   return 0;
 }

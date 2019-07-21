@@ -1,11 +1,6 @@
 #ifndef __L3GD20_H__
 #define __L3GD20_H__
 
-/*Choose which axis you need*/
-#define X_AXIS_ENABLE
-//#define Y_AXIS_ENABLE
-//#define Z_AXIS_ENABLE
-
 /**
  * @brief  L3GD20 main working structure
  */
@@ -68,10 +63,32 @@ void L3GD20_read_reg_multi(uint8_t addr, void* data, int size);
 #define L3GD20_CTRL_REG4_FS_500         0x10
 #define L3GD20_CTRL_REG4_FS_2000        0x20
 
+/* Offset values for each scale. It is tailored to particular gyro*/
+#define GYRO_OFFSET_250     (0.3)
+#define GYRO_OFFSET_500     (-0.16)
+#define GYRO_OFFSET_2000    (-0.52)
+
+/*Choose which scale you need*/
+
+//#define L3GD20_CTRL_REG4_FS     L3GD20_CTRL_REG4_FS_250
+//#define L3GD20_SENSITIVITY      L3GD20_SENSITIVITY_250
+//#define GYRO_OFFSET             GYRO_OFFSET_250
+
+//#define L3GD20_CTRL_REG4_FS     L3GD20_CTRL_REG4_FS_500
+//#define L3GD20_SENSITIVITY      L3GD20_SENSITIVITY_500
+//#define GYRO_OFFSET             GYRO_OFFSET_500
+
+#define L3GD20_CTRL_REG4_FS     L3GD20_CTRL_REG4_FS_2000
+#define L3GD20_SENSITIVITY      L3GD20_SENSITIVITY_2000
+#define GYRO_OFFSET             GYRO_OFFSET_2000
+
 /* Cut-Off settings, datasheet pg. 32 */
 #define L3GD20_CUTOFF_100		0xF0	
 
-
+/*Choose which axis you need*/
+#define X_AXIS_ENABLE
+//#define Y_AXIS_ENABLE
+//#define Z_AXIS_ENABLE
 
 #define TIMEOUT_TIME         0x1000
 enum {deselect=0, select = 1};
