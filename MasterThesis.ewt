@@ -2393,6 +2393,9 @@
             <name>$PROJ_DIR$\Led.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\LSM303DLHC.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\main.c</name>
         </file>
         <file>

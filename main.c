@@ -4,6 +4,7 @@
 #include "main.h"
 #include "Led.h"
 #include "stm32f4xx_it.h"
+#include "LSM303DLHC.h"
 
 L3GD20_Data_t Gyro_Data;
 uint8_t zmienna;
@@ -16,7 +17,7 @@ uint32_t i = 0;
 int main()
 {
   Init();
-
+  LSM303DLHC_read_reg();
   
   while (1)
   {
@@ -24,27 +25,29 @@ int main()
     L3GD20_read_rates (&Gyro_Data);
     suma += Gyro_Data.X;
     srednia = suma / i;
-//    if(dt_flag)
-//    {
-//      dt_flag = 0;
-//      L3GD20_read_rates (&Gyro_Data);
-//      
-//      Tilt += Gyro_Data.X * INTEGERATION_TIME_MS * 0.001;
-//      
-//      if (zmienna)
-//      {
-//        LED(GREEN, TOGGLE);
-//        MOTORS (1,30);
-//        zmienna = 0;
-//        
-//      }
-//      else 
-//      {
-//        LED(ORANGE, TOGGLE);
-//        MOTORS (0,80);
-//        zmienna = 1; 
-//      }
-//    }
+
+
+    if(dt_flag)
+    {
+      dt_flag = 0;
+      L3GD20_read_rates (&Gyro_Data);
+      
+      Tilt += Gyro_Data.X * INTEGERATION_TIME_MS * 0.001;
+      
+      if (zmienna)
+      {
+        LED(GREEN, TOGGLE);
+        MOTORS (1,30);
+        zmienna = 0;
+        
+      }
+      else 
+      {
+        LED(ORANGE, TOGGLE);
+        MOTORS (0,80);
+        zmienna = 1; 
+      }
+    }
   }
   return 0;
 }
@@ -60,7 +63,8 @@ void Init()
   RCC->CFGR |= RCC_CFGR_SW_HSE;
   /*Enable peripherials*/
   RCC->AHB1ENR |= RCC_AHB1ENR_GPIOEEN | RCC_AHB1ENR_GPIODEN | RCC_AHB1ENR_GPIOAEN | RCC_AHB1ENR_GPIOBEN;
-  RCC->APB2ENR |= RCC_APB2ENR_TIM1EN | RCC_APB2ENR_SPI1EN | RCC_APB2ENR_SPI4EN | RCC_APB2ENR_TIM10EN;
+  RCC->APB2ENR |= RCC_APB2ENR_TIM1EN | RCC_APB2ENR_SPI1EN | RCC_APB2ENR_TIM10EN;
+  RCC->APB1ENR |= RCC_APB1ENR_I2C1EN;
   
   /******  LEDS ******/
   GPIOD->MODER |= GPIO_MODER_MODER12_0 | GPIO_MODER_MODER13_0 | GPIO_MODER_MODER14_0 | GPIO_MODER_MODER15_0;
@@ -99,7 +103,11 @@ void Init()
   GPIOB->PUPDR |= GPIO_PUPDR_PUPD6_0 | GPIO_PUPDR_PUPD9_0; //Pull-up
   GPIOB->AFR[0] |= 0x04000000; //PB6 - SCL
   GPIOB->AFR[1] |= 0x00000040; //PB9 - SDA
-  I2C1->CR1 |= I2C_CR1_PE;
+  
+  I2C1->CR2 |= 8; //Assign 8MHz peripherial clock
+  I2C1->CCR |= 40; //Standard mode, SCL frequency = 100kHz
+  I2C1->TRISE = 9; //Calculated according to reference manual
+  I2C1->CR1 |= I2C_CR1_PE | I2C_CR1_ACK; //Enable I2C and Acknowledges
   
   /******  TIM10 (1KHz) - Integration period calculation ******/
   TIM10->DIER |= TIM_DIER_UIE; //Update interrupt enable

@@ -44,14 +44,17 @@ void L3GD20_read_reg_multi(uint8_t addr, void* data, int size);
 #define L3GD20_INT1_THS_YH   0x34
 #define L3GD20_INT1_THS_YL   0x35
 #define L3GD20_INT1_THS_ZH   0x36
-#define L3GD20_INT1_THS_ZL   0x37
+#define L3GD20_INT1_THS_ZL   0x37 
 #define L3GD20_INT1_DURATION 0x38
-#define X_G_Enable           0x01
-#define Y_G_Enable           0x02
-#define Z_G_Enable           0x04
-#define PD_Normal            0x08
-#define Data_G_rate_190Hz    0x50
-#define Data_G_rate_95Hz     0x30
+
+#define X_G_Enable              0x01
+#define Y_G_Enable              0x02
+#define Z_G_Enable              0x04
+#define PD_Normal               0x08
+#define Data_G_rate_190Hz       0x50
+#define Data_G_rate_95Hz        0x30
+#define L3GD20_CTRL_REG5_HPEN   0x10
+
 
 /* Sensitivity factors, datasheet pg. 9 */
 #define L3GD20_SENSITIVITY_250		8.75	/* 8.75 mdps/digit */
