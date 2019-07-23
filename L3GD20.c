@@ -4,7 +4,7 @@
 
 uint16_t timeout;
 
-void SPI_slaveSelect_ctrl(uint8_t state){
+static void SPI_slaveSelect_ctrl(uint8_t state){
   if(state)
   {
     GPIOE->BSRR = GPIO_BSRR_BR3;
@@ -16,7 +16,7 @@ void SPI_slaveSelect_ctrl(uint8_t state){
   }
 }
 
-uint8_t Spi_sendrecv (uint8_t data)
+static uint8_t Spi_sendrecv (uint8_t data)
 {
   timeout = TIMEOUT_TIME;
   while( !(SPI1->SR & SPI_SR_TXE) &(timeout != 0))

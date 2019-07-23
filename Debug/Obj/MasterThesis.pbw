@@ -115974,12 +115974,12 @@
     "scope": null
   },
   {
-    "ID": "c:@F@SPI_slaveSelect_ctrl",
+    "ID": "c:L3GD20.h@F@SPI_slaveSelect_ctrl",
     "What": "Function",
     "defdec": "Def",
     "display": "void SPI_slaveSelect_ctrl(uint8_t)",
     "location": {
-      "column": "6",
+      "column": "13",
       "line": "7",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
@@ -115988,12 +115988,12 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Spi_sendrecv",
+    "ID": "c:L3GD20.h@F@Spi_sendrecv",
     "What": "Function",
     "defdec": "Def",
     "display": "uint8_t Spi_sendrecv(uint8_t)",
     "location": {
-      "column": "9",
+      "column": "16",
       "line": "19",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.c"
     },
@@ -116030,7 +116030,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@918@F@L3GD20_read_reg@value",
+    "ID": "c:L3GD20.c@932@F@L3GD20_read_reg@value",
     "What": "Variable",
     "defdec": "Def",
     "display": "value",
@@ -116072,7 +116072,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@1555@F@L3GD20_read_rates@RawData",
+    "ID": "c:L3GD20.c@1569@F@L3GD20_read_rates@RawData",
     "What": "Variable",
     "defdec": "Def",
     "display": "RawData",
@@ -116086,7 +116086,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@1575@F@L3GD20_read_rates@s",
+    "ID": "c:L3GD20.c@1589@F@L3GD20_read_rates@s",
     "What": "Variable",
     "defdec": "Def",
     "display": "s",
@@ -116114,7 +116114,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@2327@F@L3GD20_read_reg_multi@i",
+    "ID": "c:L3GD20.c@2341@F@L3GD20_read_reg_multi@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -116128,7 +116128,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.c@2337@F@L3GD20_read_reg_multi@buffer",
+    "ID": "c:L3GD20.c@2351@F@L3GD20_read_reg_multi@buffer",
     "What": "Variable",
     "defdec": "Def",
     "display": "buffer",
@@ -116228,12 +116228,12 @@
     "scope": null
   },
   {
-    "ID": "c:@F@SPI_slaveSelect_ctrl",
+    "ID": "c:L3GD20.h@F@SPI_slaveSelect_ctrl",
     "What": "Function",
     "defdec": "Dec",
     "display": "void SPI_slaveSelect_ctrl(uint8_t)",
     "location": {
-      "column": "6",
+      "column": "13",
       "line": "14",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
     },
@@ -116242,12 +116242,12 @@
     "scope": null
   },
   {
-    "ID": "c:@F@SPI_slaveSelect_ctrl",
+    "ID": "c:L3GD20.h@F@SPI_slaveSelect_ctrl",
     "What": "Function",
     "defdec": "Dec",
     "display": "void SPI_slaveSelect_ctrl(uint8_t)",
     "location": {
-      "column": "6",
+      "column": "13",
       "line": "14",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
     },
@@ -116256,12 +116256,12 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Spi_sendrecv",
+    "ID": "c:L3GD20.h@F@Spi_sendrecv",
     "What": "Function",
     "defdec": "Dec",
     "display": "uint8_t Spi_sendrecv(uint8_t)",
     "location": {
-      "column": "9",
+      "column": "16",
       "line": "15",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
     },
@@ -116270,12 +116270,12 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Spi_sendrecv",
+    "ID": "c:L3GD20.h@F@Spi_sendrecv",
     "What": "Function",
     "defdec": "Dec",
     "display": "uint8_t Spi_sendrecv(uint8_t)",
     "location": {
-      "column": "9",
+      "column": "16",
       "line": "15",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\L3GD20.h"
     },
@@ -116424,7 +116424,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@544@macro@L3GD20_WHO_AM_I",
+    "ID": "c:L3GD20.h@558@macro@L3GD20_WHO_AM_I",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_WHO_AM_I",
@@ -116438,7 +116438,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@579@macro@L3GD20_CTRL_REG1",
+    "ID": "c:L3GD20.h@593@macro@L3GD20_CTRL_REG1",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG1",
@@ -116452,7 +116452,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@614@macro@L3GD20_CTRL_REG2",
+    "ID": "c:L3GD20.h@628@macro@L3GD20_CTRL_REG2",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG2",
@@ -116466,7 +116466,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@649@macro@L3GD20_CTRL_REG3",
+    "ID": "c:L3GD20.h@663@macro@L3GD20_CTRL_REG3",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG3",
@@ -116480,7 +116480,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@684@macro@L3GD20_CTRL_REG4",
+    "ID": "c:L3GD20.h@698@macro@L3GD20_CTRL_REG4",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG4",
@@ -116494,7 +116494,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@719@macro@L3GD20_CTRL_REG5",
+    "ID": "c:L3GD20.h@733@macro@L3GD20_CTRL_REG5",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG5",
@@ -116508,7 +116508,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@754@macro@L3GD20_REFERENCE",
+    "ID": "c:L3GD20.h@768@macro@L3GD20_REFERENCE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_REFERENCE",
@@ -116522,7 +116522,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@789@macro@L3GD20_OUT_TEMP",
+    "ID": "c:L3GD20.h@803@macro@L3GD20_OUT_TEMP",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_TEMP",
@@ -116536,7 +116536,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@824@macro@L3GD20_STATUS_REG",
+    "ID": "c:L3GD20.h@838@macro@L3GD20_STATUS_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_STATUS_REG",
@@ -116550,7 +116550,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@859@macro@L3GD20_OUT_X_L",
+    "ID": "c:L3GD20.h@873@macro@L3GD20_OUT_X_L",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_X_L",
@@ -116564,7 +116564,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@894@macro@L3GD20_OUT_X_H",
+    "ID": "c:L3GD20.h@908@macro@L3GD20_OUT_X_H",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_X_H",
@@ -116578,7 +116578,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@929@macro@L3GD20_OUT_Y_L",
+    "ID": "c:L3GD20.h@943@macro@L3GD20_OUT_Y_L",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_Y_L",
@@ -116592,7 +116592,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@964@macro@L3GD20_OUT_Y_H",
+    "ID": "c:L3GD20.h@978@macro@L3GD20_OUT_Y_H",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_Y_H",
@@ -116606,7 +116606,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@999@macro@L3GD20_OUT_Z_L",
+    "ID": "c:L3GD20.h@1013@macro@L3GD20_OUT_Z_L",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_Z_L",
@@ -116620,7 +116620,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1034@macro@L3GD20_OUT_Z_H",
+    "ID": "c:L3GD20.h@1048@macro@L3GD20_OUT_Z_H",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_OUT_Z_H",
@@ -116634,7 +116634,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1069@macro@L3GD20_FIFO_CTRL_REG",
+    "ID": "c:L3GD20.h@1083@macro@L3GD20_FIFO_CTRL_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_FIFO_CTRL_REG",
@@ -116648,7 +116648,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1104@macro@L3GD20_FIFO_SRC_REG",
+    "ID": "c:L3GD20.h@1118@macro@L3GD20_FIFO_SRC_REG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_FIFO_SRC_REG",
@@ -116662,7 +116662,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1139@macro@L3GD20_INT1_CFG",
+    "ID": "c:L3GD20.h@1153@macro@L3GD20_INT1_CFG",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_CFG",
@@ -116676,7 +116676,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1174@macro@L3GD20_INT1_SRC",
+    "ID": "c:L3GD20.h@1188@macro@L3GD20_INT1_SRC",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_SRC",
@@ -116690,7 +116690,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1209@macro@L3GD20_INT1_THS_XH",
+    "ID": "c:L3GD20.h@1223@macro@L3GD20_INT1_THS_XH",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_THS_XH",
@@ -116704,7 +116704,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1244@macro@L3GD20_INT1_THS_XL",
+    "ID": "c:L3GD20.h@1258@macro@L3GD20_INT1_THS_XL",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_THS_XL",
@@ -116718,7 +116718,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1279@macro@L3GD20_INT1_THS_YH",
+    "ID": "c:L3GD20.h@1293@macro@L3GD20_INT1_THS_YH",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_THS_YH",
@@ -116732,7 +116732,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1314@macro@L3GD20_INT1_THS_YL",
+    "ID": "c:L3GD20.h@1328@macro@L3GD20_INT1_THS_YL",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_THS_YL",
@@ -116746,7 +116746,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1349@macro@L3GD20_INT1_THS_ZH",
+    "ID": "c:L3GD20.h@1363@macro@L3GD20_INT1_THS_ZH",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_THS_ZH",
@@ -116760,7 +116760,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1384@macro@L3GD20_INT1_THS_ZL",
+    "ID": "c:L3GD20.h@1398@macro@L3GD20_INT1_THS_ZL",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_THS_ZL",
@@ -116774,7 +116774,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1420@macro@L3GD20_INT1_DURATION",
+    "ID": "c:L3GD20.h@1434@macro@L3GD20_INT1_DURATION",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_INT1_DURATION",
@@ -116788,7 +116788,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1457@macro@X_G_Enable",
+    "ID": "c:L3GD20.h@1471@macro@X_G_Enable",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "X_G_Enable",
@@ -116802,7 +116802,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1495@macro@Y_G_Enable",
+    "ID": "c:L3GD20.h@1509@macro@Y_G_Enable",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "Y_G_Enable",
@@ -116816,7 +116816,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1533@macro@Z_G_Enable",
+    "ID": "c:L3GD20.h@1547@macro@Z_G_Enable",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "Z_G_Enable",
@@ -116830,7 +116830,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1571@macro@PD_Normal",
+    "ID": "c:L3GD20.h@1585@macro@PD_Normal",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "PD_Normal",
@@ -116844,7 +116844,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1609@macro@Data_G_rate_190Hz",
+    "ID": "c:L3GD20.h@1623@macro@Data_G_rate_190Hz",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "Data_G_rate_190Hz",
@@ -116858,7 +116858,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1647@macro@Data_G_rate_95Hz",
+    "ID": "c:L3GD20.h@1661@macro@Data_G_rate_95Hz",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "Data_G_rate_95Hz",
@@ -116872,7 +116872,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1685@macro@L3GD20_CTRL_REG5_HPEN",
+    "ID": "c:L3GD20.h@1699@macro@L3GD20_CTRL_REG5_HPEN",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG5_HPEN",
@@ -116886,7 +116886,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1771@macro@L3GD20_SENSITIVITY_250",
+    "ID": "c:L3GD20.h@1785@macro@L3GD20_SENSITIVITY_250",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_SENSITIVITY_250",
@@ -116900,7 +116900,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1831@macro@L3GD20_SENSITIVITY_500",
+    "ID": "c:L3GD20.h@1845@macro@L3GD20_SENSITIVITY_500",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_SENSITIVITY_500",
@@ -116914,7 +116914,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1891@macro@L3GD20_SENSITIVITY_2000",
+    "ID": "c:L3GD20.h@1905@macro@L3GD20_SENSITIVITY_2000",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_SENSITIVITY_2000",
@@ -116928,7 +116928,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@1983@macro@L3GD20_CTRL_REG4_FS_250",
+    "ID": "c:L3GD20.h@1997@macro@L3GD20_CTRL_REG4_FS_250",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG4_FS_250",
@@ -116942,7 +116942,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2029@macro@L3GD20_CTRL_REG4_FS_500",
+    "ID": "c:L3GD20.h@2043@macro@L3GD20_CTRL_REG4_FS_500",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG4_FS_500",
@@ -116956,7 +116956,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2075@macro@L3GD20_CTRL_REG4_FS_2000",
+    "ID": "c:L3GD20.h@2089@macro@L3GD20_CTRL_REG4_FS_2000",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG4_FS_2000",
@@ -116970,7 +116970,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2193@macro@GYRO_OFFSET_250",
+    "ID": "c:L3GD20.h@2207@macro@GYRO_OFFSET_250",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "GYRO_OFFSET_250",
@@ -116984,7 +116984,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2228@macro@GYRO_OFFSET_500",
+    "ID": "c:L3GD20.h@2242@macro@GYRO_OFFSET_500",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "GYRO_OFFSET_500",
@@ -116998,7 +116998,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2265@macro@GYRO_OFFSET_2000",
+    "ID": "c:L3GD20.h@2279@macro@GYRO_OFFSET_2000",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "GYRO_OFFSET_2000",
@@ -117012,7 +117012,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2679@macro@L3GD20_CTRL_REG4_FS",
+    "ID": "c:L3GD20.h@2693@macro@L3GD20_CTRL_REG4_FS",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CTRL_REG4_FS",
@@ -117026,7 +117026,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2737@macro@L3GD20_SENSITIVITY",
+    "ID": "c:L3GD20.h@2751@macro@L3GD20_SENSITIVITY",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_SENSITIVITY",
@@ -117040,7 +117040,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2794@macro@GYRO_OFFSET",
+    "ID": "c:L3GD20.h@2808@macro@GYRO_OFFSET",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "GYRO_OFFSET",
@@ -117054,7 +117054,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2888@macro@L3GD20_CUTOFF_100",
+    "ID": "c:L3GD20.h@2902@macro@L3GD20_CUTOFF_100",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "L3GD20_CUTOFF_100",
@@ -117068,7 +117068,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@2956@macro@X_AXIS_ENABLE",
+    "ID": "c:L3GD20.h@2970@macro@X_AXIS_ENABLE",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "X_AXIS_ENABLE",
@@ -117082,7 +117082,7 @@
     "scope": null
   },
   {
-    "ID": "c:L3GD20.h@3031@macro@TIMEOUT_TIME",
+    "ID": "c:L3GD20.h@3045@macro@TIMEOUT_TIME",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "TIMEOUT_TIME",
@@ -117504,6 +117504,1370 @@
     "scope": null
   },
   {
+    "ID": "c:LSM303DLHC.h@F@I2C_Start",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void I2C_Start(void)",
+    "location": {
+      "column": "13",
+      "line": "4",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "I2C_Start",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Stop",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void I2C_Stop(void)",
+    "location": {
+      "column": "13",
+      "line": "10",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "I2C_Stop",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Addr",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void I2C_Addr(uint8_t, read_write_typedef)",
+    "location": {
+      "column": "13",
+      "line": "15",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "I2C_Addr",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Clear_Addr_Flag",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void I2C_Clear_Addr_Flag(void)",
+    "location": {
+      "column": "13",
+      "line": "24",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "I2C_Clear_Addr_Flag",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.c@616@F@I2C_Clear_Addr_Flag@dummyRead",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "dummyRead",
+    "location": {
+      "column": "12",
+      "line": "28",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "dummyRead",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Write",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void I2C_Write(uint8_t)",
+    "location": {
+      "column": "13",
+      "line": "33",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "I2C_Write",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@LSM303DLHC_set_reg",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void LSM303DLHC_set_reg(uint8_t)",
+    "location": {
+      "column": "13",
+      "line": "41",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "LSM303DLHC_set_reg",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LSM303DLHC_write_reg",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void LSM303DLHC_write_reg(uint8_t, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "48",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "LSM303DLHC_write_reg",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LSM303DLHC_read_reg",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void LSM303DLHC_read_reg(uint8_t, uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "55",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "LSM303DLHC_read_reg",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.c@1735@F@LSM303DLHC_read_reg@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "18",
+      "line": "73",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LSM303DLHC_init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void LSM303DLHC_init(void)",
+    "location": {
+      "column": "6",
+      "line": "88",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "LSM303DLHC_init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LSM303DLHC_read_rates",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void LSM303DLHC_read_rates(LSM303DLHC_Data_t *)",
+    "location": {
+      "column": "6",
+      "line": "94",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "LSM303DLHC_read_rates",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.c@2354@F@LSM303DLHC_read_rates@temp",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "temp",
+    "location": {
+      "column": "11",
+      "line": "96",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
+    },
+    "name": "temp",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@34@macro@__LSM303DLHC_H__",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__LSM303DLHC_H__",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "__LSM303DLHC_H__",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@SA@LSM303DLHC_Data_t",
+    "What": "Struct",
+    "defdec": "Def",
+    "display": "",
+    "location": {
+      "column": "9",
+      "line": "7",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "members": [
+      {
+        "ID": "c:@SA@LSM303DLHC_Data_t@FI@X",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "X",
+        "location": {
+          "column": "20",
+          "line": "9",
+          "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+        },
+        "name": "X",
+        "origin": "user_include",
+        "scope": "_anonymous_LSM303DLHC_h_7_9"
+      },
+      {
+        "ID": "c:@SA@LSM303DLHC_Data_t@FI@Y",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "Y",
+        "location": {
+          "column": "20",
+          "line": "10",
+          "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+        },
+        "name": "Y",
+        "origin": "user_include",
+        "scope": "_anonymous_LSM303DLHC_h_7_9"
+      },
+      {
+        "ID": "c:@SA@LSM303DLHC_Data_t@FI@Z",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "Z",
+        "location": {
+          "column": "20",
+          "line": "11",
+          "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+        },
+        "name": "Z",
+        "origin": "user_include",
+        "scope": "_anonymous_LSM303DLHC_h_7_9"
+      },
+      {
+        "ID": "c:@T@LSM303DLHC_Data_t",
+        "What": "TypedefDecl",
+        "defdec": "Def",
+        "display": "struct LSM303DLHC_Data_t",
+        "location": {
+          "column": "2",
+          "line": "12",
+          "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+        },
+        "name": "LSM303DLHC_Data_t",
+        "origin": "user_include",
+        "scope": "_anonymous_LSM303DLHC_h_7_9"
+      }
+    ],
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@read_write_typedef",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@read_write_typedef@READ",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "READ",
+        "location": {
+          "column": "15",
+          "line": "15",
+          "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+        },
+        "name": "READ",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@read_write_typedef@WRITE",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "WRITE",
+        "location": {
+          "column": "21",
+          "line": "15",
+          "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+        },
+        "name": "WRITE",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "15",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@ack_typedef",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@ack_typedef@ACK",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "ACK",
+        "location": {
+          "column": "15",
+          "line": "16",
+          "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+        },
+        "name": "ACK",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@ack_typedef@NACK",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "NACK",
+        "location": {
+          "column": "20",
+          "line": "16",
+          "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+        },
+        "name": "NACK",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "16",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Start",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_Start(void)",
+    "location": {
+      "column": "13",
+      "line": "19",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "I2C_Start",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Start",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_Start(void)",
+    "location": {
+      "column": "13",
+      "line": "19",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "I2C_Start",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Stop",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_Stop(void)",
+    "location": {
+      "column": "13",
+      "line": "20",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "I2C_Stop",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Stop",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_Stop(void)",
+    "location": {
+      "column": "13",
+      "line": "20",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "I2C_Stop",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Addr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_Addr(uint8_t, read_write_typedef)",
+    "location": {
+      "column": "13",
+      "line": "21",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "I2C_Addr",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Addr",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_Addr(uint8_t, read_write_typedef)",
+    "location": {
+      "column": "13",
+      "line": "21",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "I2C_Addr",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Clear_Addr_Flag",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_Clear_Addr_Flag(void)",
+    "location": {
+      "column": "13",
+      "line": "22",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "I2C_Clear_Addr_Flag",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Clear_Addr_Flag",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_Clear_Addr_Flag(void)",
+    "location": {
+      "column": "13",
+      "line": "22",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "I2C_Clear_Addr_Flag",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Write",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_Write(uint8_t)",
+    "location": {
+      "column": "13",
+      "line": "23",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "I2C_Write",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@I2C_Write",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void I2C_Write(uint8_t)",
+    "location": {
+      "column": "13",
+      "line": "23",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "I2C_Write",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@LSM303DLHC_set_reg",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LSM303DLHC_set_reg(uint8_t)",
+    "location": {
+      "column": "13",
+      "line": "24",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_set_reg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@F@LSM303DLHC_set_reg",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LSM303DLHC_set_reg(uint8_t)",
+    "location": {
+      "column": "13",
+      "line": "24",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_set_reg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LSM303DLHC_write_reg",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LSM303DLHC_write_reg(uint8_t, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "25",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_write_reg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LSM303DLHC_write_reg",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LSM303DLHC_write_reg(uint8_t, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "25",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_write_reg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LSM303DLHC_read_reg",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LSM303DLHC_read_reg(uint8_t, uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "26",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_read_reg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LSM303DLHC_read_reg",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LSM303DLHC_read_reg(uint8_t, uint8_t *, uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "26",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_read_reg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LSM303DLHC_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LSM303DLHC_init(void)",
+    "location": {
+      "column": "6",
+      "line": "27",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LSM303DLHC_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LSM303DLHC_init(void)",
+    "location": {
+      "column": "6",
+      "line": "27",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LSM303DLHC_read_rates",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LSM303DLHC_read_rates(LSM303DLHC_Data_t *)",
+    "location": {
+      "column": "6",
+      "line": "28",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_read_rates",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LSM303DLHC_read_rates",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void LSM303DLHC_read_rates(LSM303DLHC_Data_t *)",
+    "location": {
+      "column": "6",
+      "line": "28",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_read_rates",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@787@macro@LSM303DLHC_CTRL_REG1_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_CTRL_REG1_A",
+    "location": {
+      "column": "9",
+      "line": "31",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_CTRL_REG1_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@826@macro@LSM303DLHC_CTRL_REG2_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_CTRL_REG2_A",
+    "location": {
+      "column": "9",
+      "line": "32",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_CTRL_REG2_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@865@macro@LSM303DLHC_CTRL_REG3_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_CTRL_REG3_A",
+    "location": {
+      "column": "9",
+      "line": "33",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_CTRL_REG3_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@904@macro@LSM303DLHC_CTRL_REG4_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_CTRL_REG4_A",
+    "location": {
+      "column": "9",
+      "line": "34",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_CTRL_REG4_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@943@macro@LSM303DLHC_CTRL_REG5_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_CTRL_REG5_A",
+    "location": {
+      "column": "9",
+      "line": "35",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_CTRL_REG5_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@982@macro@LSM303DLHC_CTRL_REG6_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_CTRL_REG6_A",
+    "location": {
+      "column": "9",
+      "line": "36",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_CTRL_REG6_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1021@macro@LSM303DLHC_REFFERENCE_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_REFFERENCE_A",
+    "location": {
+      "column": "9",
+      "line": "37",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_REFFERENCE_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1061@macro@LSM303DLHC_STATUS_REG_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_STATUS_REG_A",
+    "location": {
+      "column": "9",
+      "line": "38",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_STATUS_REG_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1101@macro@LSM303DLHC_OUT_X_L_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_OUT_X_L_A",
+    "location": {
+      "column": "9",
+      "line": "39",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_OUT_X_L_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1138@macro@LSM303DLHC_OUT_X_H_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_OUT_X_H_A",
+    "location": {
+      "column": "9",
+      "line": "40",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_OUT_X_H_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1175@macro@LSM303DLHC_OUT_Y_L_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_OUT_Y_L_A",
+    "location": {
+      "column": "9",
+      "line": "41",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_OUT_Y_L_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1212@macro@LSM303DLHC_OUT_Y_H_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_OUT_Y_H_A",
+    "location": {
+      "column": "9",
+      "line": "42",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_OUT_Y_H_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1249@macro@LSM303DLHC_OUT_Z_L_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_OUT_Z_L_A",
+    "location": {
+      "column": "9",
+      "line": "43",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_OUT_Z_L_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1286@macro@LSM303DLHC_OUT_Z_H_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_OUT_Z_H_A",
+    "location": {
+      "column": "9",
+      "line": "44",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_OUT_Z_H_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1323@macro@LSM303DLHC_FIFO_CTRL_REG_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_FIFO_CTRL_REG_A",
+    "location": {
+      "column": "9",
+      "line": "45",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_FIFO_CTRL_REG_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1365@macro@LSM303DLHC_FIFO_SRC_REG_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_FIFO_SRC_REG_A",
+    "location": {
+      "column": "9",
+      "line": "46",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_FIFO_SRC_REG_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1406@macro@LSM303DLHC_INT1_CFG_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_INT1_CFG_A",
+    "location": {
+      "column": "9",
+      "line": "47",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_INT1_CFG_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1446@macro@LSM303DLHC_INT1_SOURCE_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_INT1_SOURCE_A",
+    "location": {
+      "column": "9",
+      "line": "48",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_INT1_SOURCE_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1489@macro@LSM303DLHC_INT1_THS_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_INT1_THS_A",
+    "location": {
+      "column": "9",
+      "line": "49",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_INT1_THS_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1529@macro@LSM303DLHC_INT1_DURATION_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_INT1_DURATION_A",
+    "location": {
+      "column": "9",
+      "line": "50",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_INT1_DURATION_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1574@macro@LSM303DLHC_INT2_CFG_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_INT2_CFG_A",
+    "location": {
+      "column": "9",
+      "line": "51",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_INT2_CFG_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1614@macro@LSM303DLHC_INT2_SOURCE_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_INT2_SOURCE_A",
+    "location": {
+      "column": "9",
+      "line": "52",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_INT2_SOURCE_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1657@macro@LSM303DLHC_INT2_THS_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_INT2_THS_A",
+    "location": {
+      "column": "9",
+      "line": "53",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_INT2_THS_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1697@macro@LSM303DLHC_INT2_DURATION_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_INT2_DURATION_A",
+    "location": {
+      "column": "9",
+      "line": "54",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_INT2_DURATION_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1742@macro@LSM303DLHC_CLICK_CFG_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_CLICK_CFG_A",
+    "location": {
+      "column": "9",
+      "line": "55",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_CLICK_CFG_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1783@macro@LSM303DLHC_CLICK_SRC_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_CLICK_SRC_A",
+    "location": {
+      "column": "9",
+      "line": "56",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_CLICK_SRC_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1824@macro@LSM303DLHC_CLICK_THS_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_CLICK_THS_A",
+    "location": {
+      "column": "9",
+      "line": "57",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_CLICK_THS_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1865@macro@LSM303DLHC_TIME_LIMIT_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_TIME_LIMIT_A",
+    "location": {
+      "column": "9",
+      "line": "58",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_TIME_LIMIT_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1907@macro@LSM303DLHC_TIME_LATENCY_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_TIME_LATENCY_A",
+    "location": {
+      "column": "9",
+      "line": "59",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_TIME_LATENCY_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1951@macro@LSM303DLHC_TIME_WINDOW_A",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_TIME_WINDOW_A",
+    "location": {
+      "column": "9",
+      "line": "60",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_TIME_WINDOW_A",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@1994@macro@LSM303DLHC_CRA_REG_M",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_CRA_REG_M",
+    "location": {
+      "column": "9",
+      "line": "61",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_CRA_REG_M",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2037@macro@LSM303DLHC_CRB_REG_M",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_CRB_REG_M",
+    "location": {
+      "column": "9",
+      "line": "62",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_CRB_REG_M",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2080@macro@LSM303DLHC_MR_REG_M",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_MR_REG_M",
+    "location": {
+      "column": "9",
+      "line": "63",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_MR_REG_M",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2122@macro@LSM303DLHC_OUT_X_L_M",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_OUT_X_L_M",
+    "location": {
+      "column": "9",
+      "line": "64",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_OUT_X_L_M",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2159@macro@LSM303DLHC_OUT_X_H_M",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_OUT_X_H_M",
+    "location": {
+      "column": "9",
+      "line": "65",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_OUT_X_H_M",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2196@macro@LSM303DLHC_OUT_Y_L_M",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_OUT_Y_L_M",
+    "location": {
+      "column": "9",
+      "line": "66",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_OUT_Y_L_M",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2233@macro@LSM303DLHC_OUT_Y_H_M",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_OUT_Y_H_M",
+    "location": {
+      "column": "9",
+      "line": "67",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_OUT_Y_H_M",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2270@macro@LSM303DLHC_OUT_Z_L_M",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_OUT_Z_L_M",
+    "location": {
+      "column": "9",
+      "line": "68",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_OUT_Z_L_M",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2307@macro@LSM303DLHC_OUT_Z_H_M",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_OUT_Z_H_M",
+    "location": {
+      "column": "9",
+      "line": "69",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_OUT_Z_H_M",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2344@macro@LSM303DLHC_SR_REG_Mg",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_SR_REG_Mg",
+    "location": {
+      "column": "9",
+      "line": "70",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_SR_REG_Mg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2381@macro@LSM303DLHC_IRA_REG_Mg",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_IRA_REG_Mg",
+    "location": {
+      "column": "9",
+      "line": "71",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_IRA_REG_Mg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2419@macro@LSM303DLHC_IRB_REG_Mg",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_IRB_REG_Mg",
+    "location": {
+      "column": "9",
+      "line": "72",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_IRB_REG_Mg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2457@macro@LSM303DLHC_IRC_REG_Mg",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_IRC_REG_Mg",
+    "location": {
+      "column": "9",
+      "line": "73",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_IRC_REG_Mg",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2495@macro@LSM303DLHC_TEMP_OUT_H_M",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_TEMP_OUT_H_M",
+    "location": {
+      "column": "9",
+      "line": "74",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_TEMP_OUT_H_M",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2535@macro@LSM303DLHC_TEMP_OUT_L_M",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303DLHC_TEMP_OUT_L_M",
+    "location": {
+      "column": "9",
+      "line": "75",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303DLHC_TEMP_OUT_L_M",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2577@macro@LSM303D_ADDR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LSM303D_ADDR",
+    "location": {
+      "column": "9",
+      "line": "77",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "LSM303D_ADDR",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2614@macro@X_A_Enable",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "X_A_Enable",
+    "location": {
+      "column": "9",
+      "line": "78",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "X_A_Enable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2668@macro@Y_A_Enable",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "Y_A_Enable",
+    "location": {
+      "column": "9",
+      "line": "79",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "Y_A_Enable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2722@macro@Z_A_Enable",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "Z_A_Enable",
+    "location": {
+      "column": "9",
+      "line": "80",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "Z_A_Enable",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2776@macro@Data_rate_100Hz",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "Data_rate_100Hz",
+    "location": {
+      "column": "9",
+      "line": "81",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "Data_rate_100Hz",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:LSM303DLHC.h@2830@macro@HIGH_RESOLUTION_EN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "HIGH_RESOLUTION_EN",
+    "location": {
+      "column": "9",
+      "line": "82",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
+    },
+    "name": "HIGH_RESOLUTION_EN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@LED",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void LED(uint32_t, ActionTypeDef)",
+    "location": {
+      "column": "6",
+      "line": "3",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.c"
+    },
+    "name": "LED",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:Led.h@27@macro@__Led_h__",
     "What": "MacroDef",
     "defdec": "Def",
@@ -117674,13 +119038,27 @@
     "scope": null
   },
   {
+    "ID": "c:@Accelerometer_Data",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "Accelerometer_Data",
+    "location": {
+      "column": "19",
+      "line": "10",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
+    },
+    "name": "Accelerometer_Data",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@zmienna",
     "What": "Variable",
     "defdec": "Dec",
     "display": "zmienna",
     "location": {
       "column": "9",
-      "line": "10",
+      "line": "11",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "zmienna",
@@ -117694,38 +119072,10 @@
     "display": "Tilt",
     "location": {
       "column": "7",
-      "line": "11",
+      "line": "12",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "Tilt",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@time_now",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "time_now",
-    "location": {
-      "column": "9",
-      "line": "12",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
-    },
-    "name": "time_now",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@time_before",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "time_before",
-    "location": {
-      "column": "19",
-      "line": "12",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
-    },
-    "name": "time_before",
     "origin": "project_file",
     "scope": null
   },
@@ -117786,13 +119136,27 @@
     "scope": null
   },
   {
+    "ID": "c:@costam",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "costam",
+    "location": {
+      "column": "9",
+      "line": "17",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
+    },
+    "name": "costam",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@main",
     "What": "Function",
     "defdec": "Def",
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "17",
+      "line": "18",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "main",
@@ -117806,7 +119170,7 @@
     "display": "void Init(void)",
     "location": {
       "column": "6",
-      "line": "56",
+      "line": "61",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "Init",
@@ -117820,836 +119184,10 @@
     "display": "void MOTORS(uint8_t, uint8_t)",
     "location": {
       "column": "6",
-      "line": "121",
+      "line": "127",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "MOTORS",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@I2C_Start",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void I2C_Start(void)",
-    "location": {
-      "column": "6",
-      "line": "4",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
-    },
-    "name": "I2C_Start",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@LSM303DLHC_read_reg",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void LSM303DLHC_read_reg(void)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
-    },
-    "name": "LSM303DLHC_read_reg",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.c@332@F@LSM303DLHC_read_reg@dummyRead",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "dummyRead",
-    "location": {
-      "column": "12",
-      "line": "15",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
-    },
-    "name": "dummyRead",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@34@macro@__LSM303DLHC_H__",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__LSM303DLHC_H__",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "__LSM303DLHC_H__",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@I2C_Start",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void I2C_Start(void)",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "I2C_Start",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@I2C_Start",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void I2C_Start(void)",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "I2C_Start",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@LSM303DLHC_read_reg",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void LSM303DLHC_read_reg(void)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_read_reg",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@LSM303DLHC_read_reg",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void LSM303DLHC_read_reg(void)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_read_reg",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@176@macro@LSM303DLHC_CTRL_REG1_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_CTRL_REG1_A",
-    "location": {
-      "column": "9",
-      "line": "9",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_CTRL_REG1_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@215@macro@LSM303DLHC_CTRL_REG2_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_CTRL_REG2_A",
-    "location": {
-      "column": "9",
-      "line": "10",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_CTRL_REG2_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@254@macro@LSM303DLHC_CTRL_REG3_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_CTRL_REG3_A",
-    "location": {
-      "column": "9",
-      "line": "11",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_CTRL_REG3_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@293@macro@LSM303DLHC_CTRL_REG4_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_CTRL_REG4_A",
-    "location": {
-      "column": "9",
-      "line": "12",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_CTRL_REG4_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@332@macro@LSM303DLHC_CTRL_REG5_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_CTRL_REG5_A",
-    "location": {
-      "column": "9",
-      "line": "13",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_CTRL_REG5_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@371@macro@LSM303DLHC_CTRL_REG6_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_CTRL_REG6_A",
-    "location": {
-      "column": "9",
-      "line": "14",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_CTRL_REG6_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@410@macro@LSM303DLHC_REFFERENCE_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_REFFERENCE_A",
-    "location": {
-      "column": "9",
-      "line": "15",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_REFFERENCE_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@450@macro@LSM303DLHC_STATUS_REG_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_STATUS_REG_A",
-    "location": {
-      "column": "9",
-      "line": "16",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_STATUS_REG_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@490@macro@LSM303DLHC_OUT_X_L_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_OUT_X_L_A",
-    "location": {
-      "column": "9",
-      "line": "17",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_OUT_X_L_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@527@macro@LSM303DLHC_OUT_X_H_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_OUT_X_H_A",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_OUT_X_H_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@564@macro@LSM303DLHC_OUT_Y_L_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_OUT_Y_L_A",
-    "location": {
-      "column": "9",
-      "line": "19",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_OUT_Y_L_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@601@macro@LSM303DLHC_OUT_Y_H_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_OUT_Y_H_A",
-    "location": {
-      "column": "9",
-      "line": "20",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_OUT_Y_H_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@638@macro@LSM303DLHC_OUT_Z_L_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_OUT_Z_L_A",
-    "location": {
-      "column": "9",
-      "line": "21",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_OUT_Z_L_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@675@macro@LSM303DLHC_OUT_Z_H_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_OUT_Z_H_A",
-    "location": {
-      "column": "9",
-      "line": "22",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_OUT_Z_H_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@712@macro@LSM303DLHC_FIFO_CTRL_REG_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_FIFO_CTRL_REG_A",
-    "location": {
-      "column": "9",
-      "line": "23",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_FIFO_CTRL_REG_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@754@macro@LSM303DLHC_FIFO_SRC_REG_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_FIFO_SRC_REG_A",
-    "location": {
-      "column": "9",
-      "line": "24",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_FIFO_SRC_REG_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@795@macro@LSM303DLHC_INT1_CFG_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_INT1_CFG_A",
-    "location": {
-      "column": "9",
-      "line": "25",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_INT1_CFG_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@835@macro@LSM303DLHC_INT1_SOURCE_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_INT1_SOURCE_A",
-    "location": {
-      "column": "9",
-      "line": "26",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_INT1_SOURCE_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@878@macro@LSM303DLHC_INT1_THS_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_INT1_THS_A",
-    "location": {
-      "column": "9",
-      "line": "27",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_INT1_THS_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@918@macro@LSM303DLHC_INT1_DURATION_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_INT1_DURATION_A",
-    "location": {
-      "column": "9",
-      "line": "28",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_INT1_DURATION_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@963@macro@LSM303DLHC_INT2_CFG_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_INT2_CFG_A",
-    "location": {
-      "column": "9",
-      "line": "29",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_INT2_CFG_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1003@macro@LSM303DLHC_INT2_SOURCE_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_INT2_SOURCE_A",
-    "location": {
-      "column": "9",
-      "line": "30",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_INT2_SOURCE_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1046@macro@LSM303DLHC_INT2_THS_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_INT2_THS_A",
-    "location": {
-      "column": "9",
-      "line": "31",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_INT2_THS_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1086@macro@LSM303DLHC_INT2_DURATION_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_INT2_DURATION_A",
-    "location": {
-      "column": "9",
-      "line": "32",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_INT2_DURATION_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1131@macro@LSM303DLHC_CLICK_CFG_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_CLICK_CFG_A",
-    "location": {
-      "column": "9",
-      "line": "33",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_CLICK_CFG_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1172@macro@LSM303DLHC_CLICK_SRC_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_CLICK_SRC_A",
-    "location": {
-      "column": "9",
-      "line": "34",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_CLICK_SRC_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1213@macro@LSM303DLHC_CLICK_THS_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_CLICK_THS_A",
-    "location": {
-      "column": "9",
-      "line": "35",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_CLICK_THS_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1254@macro@LSM303DLHC_TIME_LIMIT_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_TIME_LIMIT_A",
-    "location": {
-      "column": "9",
-      "line": "36",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_TIME_LIMIT_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1296@macro@LSM303DLHC_TIME_LATENCY_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_TIME_LATENCY_A",
-    "location": {
-      "column": "9",
-      "line": "37",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_TIME_LATENCY_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1340@macro@LSM303DLHC_TIME_WINDOW_A",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_TIME_WINDOW_A",
-    "location": {
-      "column": "9",
-      "line": "38",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_TIME_WINDOW_A",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1383@macro@LSM303DLHC_CRA_REG_M",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_CRA_REG_M",
-    "location": {
-      "column": "9",
-      "line": "39",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_CRA_REG_M",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1426@macro@LSM303DLHC_CRB_REG_M",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_CRB_REG_M",
-    "location": {
-      "column": "9",
-      "line": "40",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_CRB_REG_M",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1469@macro@LSM303DLHC_MR_REG_M",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_MR_REG_M",
-    "location": {
-      "column": "9",
-      "line": "41",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_MR_REG_M",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1511@macro@LSM303DLHC_OUT_X_L_M",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_OUT_X_L_M",
-    "location": {
-      "column": "9",
-      "line": "42",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_OUT_X_L_M",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1548@macro@LSM303DLHC_OUT_X_H_M",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_OUT_X_H_M",
-    "location": {
-      "column": "9",
-      "line": "43",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_OUT_X_H_M",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1585@macro@LSM303DLHC_OUT_Y_L_M",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_OUT_Y_L_M",
-    "location": {
-      "column": "9",
-      "line": "44",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_OUT_Y_L_M",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1622@macro@LSM303DLHC_OUT_Y_H_M",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_OUT_Y_H_M",
-    "location": {
-      "column": "9",
-      "line": "45",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_OUT_Y_H_M",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1659@macro@LSM303DLHC_OUT_Z_L_M",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_OUT_Z_L_M",
-    "location": {
-      "column": "9",
-      "line": "46",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_OUT_Z_L_M",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1696@macro@LSM303DLHC_OUT_Z_H_M",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_OUT_Z_H_M",
-    "location": {
-      "column": "9",
-      "line": "47",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_OUT_Z_H_M",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1733@macro@LSM303DLHC_SR_REG_Mg",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_SR_REG_Mg",
-    "location": {
-      "column": "9",
-      "line": "48",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_SR_REG_Mg",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1770@macro@LSM303DLHC_IRA_REG_Mg",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_IRA_REG_Mg",
-    "location": {
-      "column": "9",
-      "line": "49",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_IRA_REG_Mg",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1808@macro@LSM303DLHC_IRB_REG_Mg",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_IRB_REG_Mg",
-    "location": {
-      "column": "9",
-      "line": "50",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_IRB_REG_Mg",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1846@macro@LSM303DLHC_IRC_REG_Mg",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_IRC_REG_Mg",
-    "location": {
-      "column": "9",
-      "line": "51",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_IRC_REG_Mg",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1884@macro@LSM303DLHC_TEMP_OUT_H_M",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_TEMP_OUT_H_M",
-    "location": {
-      "column": "9",
-      "line": "52",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_TEMP_OUT_H_M",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1924@macro@LSM303DLHC_TEMP_OUT_L_M",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303DLHC_TEMP_OUT_L_M",
-    "location": {
-      "column": "9",
-      "line": "53",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303DLHC_TEMP_OUT_L_M",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@1966@macro@LSM303D_ADDR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LSM303D_ADDR",
-    "location": {
-      "column": "9",
-      "line": "55",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "LSM303D_ADDR",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@2003@macro@X_A_Enable",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "X_A_Enable",
-    "location": {
-      "column": "9",
-      "line": "56",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "X_A_Enable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@2057@macro@Y_A_Enable",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "Y_A_Enable",
-    "location": {
-      "column": "9",
-      "line": "57",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "Y_A_Enable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@2111@macro@Z_A_Enable",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "Z_A_Enable",
-    "location": {
-      "column": "9",
-      "line": "58",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "Z_A_Enable",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:LSM303DLHC.h@2165@macro@Data_rate_100Hz",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "Data_rate_100Hz",
-    "location": {
-      "column": "9",
-      "line": "59",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.h"
-    },
-    "name": "Data_rate_100Hz",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@LED",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void LED(uint32_t, ActionTypeDef)",
-    "location": {
-      "column": "6",
-      "line": "3",
-      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\Led.c"
-    },
-    "name": "LED",
     "origin": "project_file",
     "scope": null
   },

@@ -11,8 +11,8 @@ typedef struct
   volatile float Z;
 }L3GD20_Data_t;
 
-void SPI_slaveSelect_ctrl(uint8_t state);
-uint8_t Spi_sendrecv (uint8_t data);
+static void SPI_slaveSelect_ctrl(uint8_t state);
+static uint8_t Spi_sendrecv (uint8_t data);
 void L3GD20_write_reg(uint8_t addr, uint8_t value);
 uint8_t L3GD20_read_reg(uint8_t addr);
 void L3GD20_init(void);

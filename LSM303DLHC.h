@@ -1,9 +1,31 @@
 #ifndef __LSM303DLHC_H__
 #define __LSM303DLHC_H__
 
+/**
+ * @brief  LSM303DLHC main working structure
+ */
+typedef struct
+{
+  volatile int16_t X;
+  volatile int16_t Y;
+  volatile int16_t Z;
+}LSM303DLHC_Data_t;
+
+
+typedef enum {READ, WRITE}read_write_typedef;
+typedef enum {ACK, NACK}ack_typedef;
+
 /* Fuctions prototypes */
-void I2C_Start (void);
-void LSM303DLHC_read_reg(void);
+static void I2C_Start (void);
+static void I2C_Stop (void);
+static void I2C_Addr(uint8_t, read_write_typedef);
+static void I2C_Clear_Addr_Flag(void);
+static void I2C_Write (uint8_t);
+static void LSM303DLHC_set_reg(uint8_t);
+void LSM303DLHC_write_reg (uint8_t, uint8_t);
+void LSM303DLHC_read_reg (uint8_t, uint8_t*, uint8_t);
+void LSM303DLHC_init (void);
+void LSM303DLHC_read_rates (LSM303DLHC_Data_t*);
 
 /* LSM303DLHC registers */
 #define LSM303DLHC_CTRL_REG1_A			0x20
@@ -57,6 +79,7 @@ void LSM303DLHC_read_reg(void);
 #define Y_A_Enable                              0x02
 #define Z_A_Enable                              0x04
 #define Data_rate_100Hz                         0x50
+#define HIGH_RESOLUTION_EN                      0X08
 
 
 #endif //__LSM303DLHC_H__

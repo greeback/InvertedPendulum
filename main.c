@@ -7,25 +7,30 @@
 #include "LSM303DLHC.h"
 
 L3GD20_Data_t Gyro_Data;
+LSM303DLHC_Data_t Accelerometer_Data;
 uint8_t zmienna;
 float Tilt = 0.0;
-int32_t time_now, time_before;
 float dt = 0.0;
 float srednia = 0.0;
 long double suma = 0.0;
 uint32_t i = 0;
+uint8_t costam;
 int main()
 {
   Init();
-  LSM303DLHC_read_reg();
+  
   
   while (1)
   {
+    //LSM303DLHC_read_rates(&Accelerometer_Data);
+    //LSM303DLHC_read_reg (LSM303DLHC_OUT_Y_L_A, &costam, 1);
+    LSM303DLHC_write_reg(LSM303DLHC_CTRL_REG1_A, Y_A_Enable | Z_A_Enable | Data_rate_100Hz);
+    
     i++;
     L3GD20_read_rates (&Gyro_Data);
     suma += Gyro_Data.X;
     srednia = suma / i;
-
+    LSM303DLHC_write_reg(LSM303DLHC_CTRL_REG1_A, 0x01);
 
     if(dt_flag)
     {
@@ -108,6 +113,7 @@ void Init()
   I2C1->CCR |= 40; //Standard mode, SCL frequency = 100kHz
   I2C1->TRISE = 9; //Calculated according to reference manual
   I2C1->CR1 |= I2C_CR1_PE | I2C_CR1_ACK; //Enable I2C and Acknowledges
+  LSM303DLHC_init ();
   
   /******  TIM10 (1KHz) - Integration period calculation ******/
   TIM10->DIER |= TIM_DIER_UIE; //Update interrupt enable
