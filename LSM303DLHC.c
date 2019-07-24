@@ -1,5 +1,6 @@
 #include "stm32f401xc.h"
 #include "LSM303DLHC.h"
+#include "Led.h"
 
 static void I2C_Start ()
 {
@@ -58,18 +59,23 @@ void LSM303DLHC_read_reg (uint8_t reg, uint8_t* data, uint8_t size)
   I2C_Start(); // repeated start
   I2C_Addr(LSM303D_ADDR, READ);
   
+  
   if (size == 1)
   {
     I2C1->CR1 &= ~I2C_CR1_ACK;//Disable acking
-    I2C_Stop();
     //I2C_Clear_Addr_Flag();
+    I2C_Stop();
+    
+    
     while (!(I2C1->SR1 & I2C_SR1_RXNE)); //Wait until Data Register is not empty 
     *data = I2C1->DR;
   }
   
   if (size >1)
   {
+    
     //I2C_Clear_Addr_Flag();
+        
     for (uint8_t i=size ; i>0 ; i--)
     {
       while (!(I2C1->SR1 & I2C_SR1_RXNE)); //Wait until Data Register is not empty
@@ -93,8 +99,9 @@ void LSM303DLHC_init ()
 
 void LSM303DLHC_read_rates (LSM303DLHC_Data_t* Data)
 {
+  
   uint8_t temp[4];
   LSM303DLHC_read_reg (LSM303DLHC_OUT_Y_L_A, temp, 4);
-  Data->Y = temp[1]<<8 | temp[0];
+  Data->Y = ((temp[1]<<8) | temp[0]);
   Data->Z = temp[3]<<8 | temp[2];
 }

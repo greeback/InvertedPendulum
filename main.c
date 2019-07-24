@@ -6,8 +6,8 @@
 #include "stm32f4xx_it.h"
 #include "LSM303DLHC.h"
 
-L3GD20_Data_t Gyro_Data;
-LSM303DLHC_Data_t Accelerometer_Data;
+L3GD20_Data_t Gyro_Data = {0.0, 0.0, 0.0};
+LSM303DLHC_Data_t Accelerometer_Data = {0, 0, 0};
 uint8_t zmienna;
 float Tilt = 0.0;
 float dt = 0.0;
@@ -15,25 +15,27 @@ float srednia = 0.0;
 long double suma = 0.0;
 uint32_t i = 0;
 uint8_t costam;
+int16_t costam2;
 int main()
 {
   Init();
   
-  
   while (1)
   {
-    //LSM303DLHC_read_rates(&Accelerometer_Data);
-    //LSM303DLHC_read_reg (LSM303DLHC_OUT_Y_L_A, &costam, 1);
-    LSM303DLHC_write_reg(LSM303DLHC_CTRL_REG1_A, Y_A_Enable | Z_A_Enable | Data_rate_100Hz);
+    LED(RED, TOGGLE);
     
     i++;
     L3GD20_read_rates (&Gyro_Data);
     suma += Gyro_Data.X;
     srednia = suma / i;
-    LSM303DLHC_write_reg(LSM303DLHC_CTRL_REG1_A, 0x01);
 
     if(dt_flag)
     {
+      LSM303DLHC_read_reg (LSM303DLHC_OUT_Y_L_A, &costam, 1);
+      costam2 = costam;
+      LSM303DLHC_read_reg (LSM303DLHC_OUT_Y_H_A, &costam, 1);
+      costam2 |= (costam<<8);
+      LSM303DLHC_read_rates(&Accelerometer_Data);
       dt_flag = 0;
       L3GD20_read_rates (&Gyro_Data);
       

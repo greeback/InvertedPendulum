@@ -117510,7 +117510,7 @@
     "display": "void I2C_Start(void)",
     "location": {
       "column": "13",
-      "line": "4",
+      "line": "5",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "I2C_Start",
@@ -117524,7 +117524,7 @@
     "display": "void I2C_Stop(void)",
     "location": {
       "column": "13",
-      "line": "10",
+      "line": "11",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "I2C_Stop",
@@ -117538,7 +117538,7 @@
     "display": "void I2C_Addr(uint8_t, read_write_typedef)",
     "location": {
       "column": "13",
-      "line": "15",
+      "line": "16",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "I2C_Addr",
@@ -117552,7 +117552,7 @@
     "display": "void I2C_Clear_Addr_Flag(void)",
     "location": {
       "column": "13",
-      "line": "24",
+      "line": "25",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "I2C_Clear_Addr_Flag",
@@ -117560,13 +117560,13 @@
     "scope": null
   },
   {
-    "ID": "c:LSM303DLHC.c@616@F@I2C_Clear_Addr_Flag@dummyRead",
+    "ID": "c:LSM303DLHC.c@634@F@I2C_Clear_Addr_Flag@dummyRead",
     "What": "Variable",
     "defdec": "Def",
     "display": "dummyRead",
     "location": {
       "column": "12",
-      "line": "28",
+      "line": "29",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "dummyRead",
@@ -117580,7 +117580,7 @@
     "display": "void I2C_Write(uint8_t)",
     "location": {
       "column": "13",
-      "line": "33",
+      "line": "34",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "I2C_Write",
@@ -117594,7 +117594,7 @@
     "display": "void LSM303DLHC_set_reg(uint8_t)",
     "location": {
       "column": "13",
-      "line": "41",
+      "line": "42",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "LSM303DLHC_set_reg",
@@ -117608,7 +117608,7 @@
     "display": "void LSM303DLHC_write_reg(uint8_t, uint8_t)",
     "location": {
       "column": "6",
-      "line": "48",
+      "line": "49",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "LSM303DLHC_write_reg",
@@ -117622,7 +117622,7 @@
     "display": "void LSM303DLHC_read_reg(uint8_t, uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "55",
+      "line": "56",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "LSM303DLHC_read_reg",
@@ -117630,13 +117630,13 @@
     "scope": null
   },
   {
-    "ID": "c:LSM303DLHC.c@1735@F@LSM303DLHC_read_reg@i",
+    "ID": "c:LSM303DLHC.c@1785@F@LSM303DLHC_read_reg@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "18",
-      "line": "73",
+      "line": "79",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "i",
@@ -117650,7 +117650,7 @@
     "display": "void LSM303DLHC_init(void)",
     "location": {
       "column": "6",
-      "line": "88",
+      "line": "94",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "LSM303DLHC_init",
@@ -117664,7 +117664,7 @@
     "display": "void LSM303DLHC_read_rates(LSM303DLHC_Data_t *)",
     "location": {
       "column": "6",
-      "line": "94",
+      "line": "100",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "LSM303DLHC_read_rates",
@@ -117672,13 +117672,13 @@
     "scope": null
   },
   {
-    "ID": "c:LSM303DLHC.c@2354@F@LSM303DLHC_read_rates@temp",
+    "ID": "c:LSM303DLHC.c@2408@F@LSM303DLHC_read_rates@temp",
     "What": "Variable",
     "defdec": "Def",
     "display": "temp",
     "location": {
       "column": "11",
-      "line": "96",
+      "line": "103",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\LSM303DLHC.c"
     },
     "name": "temp",
@@ -119026,7 +119026,7 @@
   {
     "ID": "c:@Gyro_Data",
     "What": "Variable",
-    "defdec": "Dec",
+    "defdec": "Def",
     "display": "Gyro_Data",
     "location": {
       "column": "15",
@@ -119040,7 +119040,7 @@
   {
     "ID": "c:@Accelerometer_Data",
     "What": "Variable",
-    "defdec": "Dec",
+    "defdec": "Def",
     "display": "Accelerometer_Data",
     "location": {
       "column": "19",
@@ -119150,13 +119150,27 @@
     "scope": null
   },
   {
+    "ID": "c:@costam2",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "costam2",
+    "location": {
+      "column": "9",
+      "line": "18",
+      "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
+    },
+    "name": "costam2",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@main",
     "What": "Function",
     "defdec": "Def",
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "18",
+      "line": "19",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "main",
@@ -119170,7 +119184,7 @@
     "display": "void Init(void)",
     "location": {
       "column": "6",
-      "line": "61",
+      "line": "63",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "Init",
@@ -119184,7 +119198,7 @@
     "display": "void MOTORS(uint8_t, uint8_t)",
     "location": {
       "column": "6",
-      "line": "127",
+      "line": "129",
       "path": "C:\\Users\\aldy\\Documents\\InvertedPendulum\\main.c"
     },
     "name": "MOTORS",
