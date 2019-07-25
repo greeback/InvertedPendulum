@@ -39,6 +39,16 @@ static void I2C_Write (uint8_t data)
   while (!(I2C1->SR1 & I2C_SR1_BTF)); //Wait until Byte Transfer is Finished
 }
 
+static uint8_t I2C_Read (ack_typedef ack_nack)
+{
+  if (ack_nack == ACK)
+    I2C1->CR1 |= I2C_CR1_ACK;//Enable acking
+  else 
+    I2C1->CR1 &= ~I2C_CR1_ACK;//Disable acking
+  while (!(I2C1->SR1 & I2C_SR1_RXNE)); //Wait until Data Register is not empty 
+  return (I2C1->DR);
+}
+
 static void LSM303DLHC_set_reg(uint8_t reg)
 {
   I2C_Start();
@@ -55,53 +65,41 @@ void LSM303DLHC_write_reg (uint8_t reg, uint8_t data)
 
 void LSM303DLHC_read_reg (uint8_t reg, uint8_t* data, uint8_t size)
 {
+  uint8_t i;
+  uint8_t* buffer = (uint8_t*)data;
+  
   LSM303DLHC_set_reg(reg);
   I2C_Start(); // repeated start
   I2C_Addr(LSM303D_ADDR, READ);
   
-  
-  if (size == 1)
+  for (i = 0; i < size - 1; i++)
   {
-    I2C1->CR1 &= ~I2C_CR1_ACK;//Disable acking
-    //I2C_Clear_Addr_Flag();
-    I2C_Stop();
-    
-    
-    while (!(I2C1->SR1 & I2C_SR1_RXNE)); //Wait until Data Register is not empty 
-    *data = I2C1->DR;
+    buffer[i] = I2C_Read(ACK);
   }
-  
-  if (size >1)
-  {
-    
-    //I2C_Clear_Addr_Flag();
-        
-    for (uint8_t i=size ; i>0 ; i--)
-    {
-      while (!(I2C1->SR1 & I2C_SR1_RXNE)); //Wait until Data Register is not empty
-      if (i == 2) //if last 2 bytes are remaining
-      {
-        I2C1->CR1 &= ~I2C_CR1_ACK;//Disable acking
-        I2C_Stop();
-      }
-      *data = I2C1->DR;
-      data++;
-    }
-  }
-  I2C1->CR1 |= I2C_CR1_ACK;//Re-enable acking
-}
-
-void LSM303DLHC_init ()
-{
-  LSM303DLHC_write_reg(LSM303DLHC_CTRL_REG1_A, Y_A_Enable | Z_A_Enable | Data_rate_100Hz);
-  LSM303DLHC_write_reg(LSM303DLHC_CTRL_REG4_A, HIGH_RESOLUTION_EN);
+  I2C_Stop();
+  buffer[i] = I2C_Read(NACK);
 }
 
 void LSM303DLHC_read_rates (LSM303DLHC_Data_t* Data)
 {
   
-  uint8_t temp[4];
-  LSM303DLHC_read_reg (LSM303DLHC_OUT_Y_L_A, temp, 4);
-  Data->Y = ((temp[1]<<8) | temp[0]);
-  Data->Z = temp[3]<<8 | temp[2];
+//  uint8_t temp[] = {0,0};
+//  LSM303DLHC_read_reg (LSM303DLHC_OUT_Y_L_A, temp, 2);
+//  Data->Y = ((temp[1]<<8) | temp[0]);
+//  Data->Z = temp[3]<<8 | temp[2];
+  
+  uint8_t tempL, tempH;
+  LSM303DLHC_read_reg (LSM303DLHC_OUT_Y_L_A, &tempL, 1);
+  LSM303DLHC_read_reg (LSM303DLHC_OUT_Y_H_A, &tempH, 1);
+  Data->Y = ((tempH<<8) | tempL);
+  LSM303DLHC_read_reg (LSM303DLHC_OUT_Z_L_A, &tempL, 1);
+  LSM303DLHC_read_reg (LSM303DLHC_OUT_Z_H_A, &tempH, 1);
+  Data->Z = ((tempH<<8) | tempL);
+}
+
+void LSM303DLHC_init ()
+{
+  LSM303DLHC_write_reg(LSM303DLHC_CTRL_REG1_A, Y_A_Enable | Z_A_Enable | Data_rate_100Hz);
+  //LSM303DLHC_write_reg(LSM303DLHC_CTRL_REG2_A, LSM303DLHC_CTRL_REG2_A_);
+  //LSM303DLHC_write_reg(LSM303DLHC_CTRL_REG4_A, HIGH_RESOLUTION_EN);
 }

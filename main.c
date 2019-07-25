@@ -5,17 +5,19 @@
 #include "Led.h"
 #include "stm32f4xx_it.h"
 #include "LSM303DLHC.h"
+#include <math.h>
+#include "pid.h"
 
-L3GD20_Data_t Gyro_Data = {0.0, 0.0, 0.0};
-LSM303DLHC_Data_t Accelerometer_Data = {0, 0, 0};
-uint8_t zmienna;
-float Tilt = 0.0;
+L3GD20_Data_t Gyro_Data;
+LSM303DLHC_Data_t Accelerometer_Data;
+float Tilt, Tilt_A, Tilt_G;
 float dt = 0.0;
+int8_t Processed_value;
+
+
 float srednia = 0.0;
 long double suma = 0.0;
 uint32_t i = 0;
-uint8_t costam;
-int16_t costam2;
 int main()
 {
   Init();
@@ -31,29 +33,33 @@ int main()
 
     if(dt_flag)
     {
-      LSM303DLHC_read_reg (LSM303DLHC_OUT_Y_L_A, &costam, 1);
-      costam2 = costam;
-      LSM303DLHC_read_reg (LSM303DLHC_OUT_Y_H_A, &costam, 1);
-      costam2 |= (costam<<8);
-      LSM303DLHC_read_rates(&Accelerometer_Data);
       dt_flag = 0;
+      
+      /* Read data from Gyro and Accelerometer */
       L3GD20_read_rates (&Gyro_Data);
+      LSM303DLHC_read_rates(&Accelerometer_Data);
       
-      Tilt += Gyro_Data.X * INTEGERATION_TIME_MS * 0.001;
+      /* Calculate Tilt from Gyro and Accelerometer */
+      Tilt_G = Tilt + (-1)*Gyro_Data.X * INTEGERATION_TIME_MS * 0.001;
+      Tilt_A = atanf((float)Accelerometer_Data.Y / (float)Accelerometer_Data.Z) * 57.29578;
       
-      if (zmienna)
-      {
-        LED(GREEN, TOGGLE);
-        MOTORS (1,30);
-        zmienna = 0;
-        
-      }
-      else 
-      {
-        LED(ORANGE, TOGGLE);
-        MOTORS (0,80);
-        zmienna = 1; 
-      }
+      /* Complementary filter */
+      Tilt=(0.98*Tilt_G+0.02*Tilt_A);
+      
+      Processed_value = PID (Tilt, -4, 0, 0);
+//      if (zmienna)
+//      {
+//        LED(GREEN, TOGGLE);
+//        MOTORS (1,30);
+//        zmienna = 0;
+//        
+//      }
+//      else 
+//      {
+//        LED(ORANGE, TOGGLE);
+//        MOTORS (0,80);
+//        zmienna = 1; 
+//      }
     }
   }
   return 0;
@@ -115,6 +121,7 @@ void Init()
   I2C1->CCR |= 40; //Standard mode, SCL frequency = 100kHz
   I2C1->TRISE = 9; //Calculated according to reference manual
   I2C1->CR1 |= I2C_CR1_PE | I2C_CR1_ACK; //Enable I2C and Acknowledges
+  //I2C1->CR1 |= I2C_CR1_PE; //Enable I2C
   LSM303DLHC_init ();
   
   /******  TIM10 (1KHz) - Integration period calculation ******/

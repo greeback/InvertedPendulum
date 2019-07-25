@@ -6,8 +6,8 @@
  */
 typedef struct
 {
-  volatile int16_t X;
-  volatile int16_t Y;
+  int16_t X;
+  int16_t Y;
   volatile int16_t Z;
 }LSM303DLHC_Data_t;
 
@@ -21,6 +21,7 @@ static void I2C_Stop (void);
 static void I2C_Addr(uint8_t, read_write_typedef);
 static void I2C_Clear_Addr_Flag(void);
 static void I2C_Write (uint8_t);
+static uint8_t I2C_Read (ack_typedef ack_nack);
 static void LSM303DLHC_set_reg(uint8_t);
 void LSM303DLHC_write_reg (uint8_t, uint8_t);
 void LSM303DLHC_read_reg (uint8_t, uint8_t*, uint8_t);
