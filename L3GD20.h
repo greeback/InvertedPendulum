@@ -69,7 +69,7 @@ void L3GD20_read_reg_multi(uint8_t addr, void* data, int size);
 /* Offset values for each scale. It is tailored to particular gyro*/
 #define GYRO_OFFSET_250     (0.3)
 #define GYRO_OFFSET_500     (-0.16)
-#define GYRO_OFFSET_2000    (-0.52)
+#define GYRO_OFFSET_2000    (-0.56)
 
 /*Choose which scale you need*/
 

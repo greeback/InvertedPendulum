@@ -78,8 +78,8 @@ void L3GD20_read_rates (L3GD20_Data_t* Data)
   /* Read X axis and check for drift*/ 
   RawData = L3GD20_read_reg(L3GD20_OUT_X_L);
   RawData |= L3GD20_read_reg(L3GD20_OUT_X_H) << 8;
-  Data->X = (float)RawData * s;
-  //Data->X = (float)RawData * s - GYRO_OFFSET;
+  //Data->X = (float)RawData * s;
+  Data->X = (float)RawData * s - GYRO_OFFSET;
 #endif
   
 #ifdef Y_AXIS_ENABLE
