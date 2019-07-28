@@ -2399,6 +2399,9 @@
             <name>$PROJ_DIR$\main.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\motors.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\pid.c</name>
         </file>
         <file>

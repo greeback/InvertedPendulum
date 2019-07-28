@@ -8,8 +8,8 @@
  * The K_P, K_I and K_D values (P, I and D gains)
  * need to be modified to adapt to the application at hand
  */
-#define K_P 1.00
-#define K_I 1.00
+#define K_P 100.00
+#define K_I 0.00
 #define K_D 0.00
 
 /**
