@@ -26,11 +26,12 @@ build L3GD20.pbi : index L3GD20.xcl
 build Led.pbi : index Led.xcl
 build LSM303DLHC.pbi : index LSM303DLHC.xcl
 build main.pbi : index main.xcl
+build motors.pbi : index motors.xcl
 build pid.pbi : index pid.xcl
 build stm32f4xx_it.pbi : index stm32f4xx_it.xcl
 build MasterThesis_part0.pbi : link system_stm32f4xx.pbi delay.pbi L3GD20.pbi
 build MasterThesis_part1.pbi : link Led.pbi LSM303DLHC.pbi main.pbi
-build MasterThesis_part2.pbi : link pid.pbi stm32f4xx_it.pbi
+build MasterThesis_part2.pbi : link motors.pbi pid.pbi stm32f4xx_it.pbi
 build MasterThesis.pbd : link MasterThesis_part0.pbi MasterThesis_part1.pbi MasterThesis_part2.pbi
 build MasterThesis.pbw : browsedata MasterThesis.pbd
 

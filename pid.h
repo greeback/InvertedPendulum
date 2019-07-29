@@ -8,9 +8,9 @@
  * The K_P, K_I and K_D values (P, I and D gains)
  * need to be modified to adapt to the application at hand
  */
-#define K_P 100.00
+#define K_P 0.00
 #define K_I 0.00
-#define K_D 0.00
+#define K_D 1.00
 
 /**
 * @brief  Setpoints and data used by the PID control algorithm
@@ -27,10 +27,14 @@ typedef struct PID_DATA
 	float I_Factor;
 	//! The Derivative tuning constant, multiplied with SCALING_FACTOR
 	float D_Factor;
-	//! Maximum allowed error, avoid overflow
-	float maxError;
-	//! Maximum allowed sumerror, avoid overflow
-	float maxSumError;
+	//! Maximum allowed output value
+	float maxValue;
+	//! Minimum allowed output value
+	float minValue;
+	//! Error from previous iteration
+	float prevError;
+	//! Error from previous iteration
+	float prev_i_term;
 } pidData_t;
 
 /*! \brief Maximum values

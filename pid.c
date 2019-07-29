@@ -1,5 +1,6 @@
 #include "stm32f401xc.h"
 #include "pid.h"
+#include "motors.h"
 #include "main.h"
 
 /*! \brief Initialization of PID controller parameters.
@@ -21,10 +22,9 @@ void pid_Init(float p_factor, float i_factor, float d_factor, struct PID_DATA *p
 	pid->I_Factor = i_factor;
 	pid->D_Factor = d_factor;
 	/* Limits to avoid overflow */
-	pid->maxError    = 1000;
-	pid->maxSumError = 1000;
-	//	pid->maxError    = MAX_INT / (pid->P_Factor + 1);
-	//	pid->maxSumError = MAX_I_TERM / (pid->I_Factor + 1);
+	pid->maxValue	= PWM_MAX;
+	pid->minValue 	= PWM_MIN;
+	pid->prev_i_term = 0;
 }
 
 /*! \brief PID control algorithm.
@@ -43,52 +43,35 @@ float pid_Controller(float setPoint, float processValue, struct PID_DATA *pid_st
 	
 	errors = setPoint - processValue;
 	
-	/* Calculate Pterm and limit error overflow */
-//	if (errors > pid_st->maxError) 
-//	{
-//		p_term = MAX_INT;
-//	} 
-//	else if (errors < -pid_st->maxError) 
-//	{
-//		p_term = -MAX_INT;
-//	} 
-//	else 
-//	{
-		p_term = pid_st->P_Factor * errors;
-//	}
+	/* Calculate Pterm */
+	p_term = pid_st->P_Factor * errors;
 	
-	/* Calculate Iterm and limit integral runaway */
-	temp = pid_st->sumError + errors;
-//	if (temp > pid_st->maxSumError) 
-//	{
-//		i_term           = MAX_I_TERM;
-//		pid_st->sumError = pid_st->maxSumError;
-//	} 
-//	else if (temp < -pid_st->maxSumError) 
-//	{
-//		i_term           = -MAX_I_TERM;
-//		pid_st->sumError = -pid_st->maxSumError;
-//	} 
-//	else 
-//	{
-		pid_st->sumError = temp;
-		i_term = pid_st->I_Factor * pid_st->sumError * INTEGERATION_TIME_MS * 0.001;
-//	}
+	/* Calculate Iterm */	
+	i_term = pid_st->I_Factor * INTEGERATION_TIME_MS * 0.001 * (pid_st->prevError + errors) / 2 + pid_st->prev_i_term;
 	
 	/* Calculate Dterm */
-	d_term = pid_st->D_Factor * (pid_st->lastProcessValue - processValue) / (INTEGERATION_TIME_MS * 0.001);
+	d_term = pid_st->D_Factor * (errors - pid_st->prevError) / (INTEGERATION_TIME_MS * 0.001);
+	pid_st->prevError = errors;
 	
-	pid_st->lastProcessValue = processValue;
-	
+	/* Calculate output value */
 	ret = p_term + i_term + d_term;
-//	if (ret > MAX_INT) 
-//	{
-//		ret = MAX_INT;
+	
+	/* Limit output value */
+//	if((ret > pid_st->maxValue) || (ret < pid_st->minValue)) 
+//	{ 
+//		if(ret > pid_st->maxValue) 
+//		{ 
+//			ret = pid_st->maxValue; 
+//		} 
+//		else if(ret < pid_st->minValue) 
+//		{ 
+//			ret = pid_st->minValue;
+//		} 
 //	} 
-//	else if (ret < -MAX_INT) 
-//	{
-//		ret = -MAX_INT;
-//	}
+//	else 
+//	{ 
+		pid_st->prev_i_term = i_term; 
+//	} 
 	
 	return ret;
 }
