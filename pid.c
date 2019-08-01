@@ -16,7 +16,6 @@ void pid_Init(float p_factor, float i_factor, float d_factor, struct PID_DATA *p
 {
 	/* Start values for PID controller */
 	pid->sumError         = 0;
-	pid->lastProcessValue = 0;
 	/* Tuning constants for PID loop */
 	pid->P_Factor = p_factor;
 	pid->I_Factor = i_factor;
@@ -37,10 +36,8 @@ void pid_Init(float p_factor, float i_factor, float d_factor, struct PID_DATA *p
 */
 float pid_Controller(float setPoint, float processValue, struct PID_DATA *pid_st)
 {
-	float errors, p_term, d_term;
-	float i_term, temp;
-	float ret;
-	
+	float errors, p_term, d_term, i_term, ret;
+
 	errors = setPoint - processValue;
 	
 	/* Calculate Pterm */
@@ -56,31 +53,10 @@ float pid_Controller(float setPoint, float processValue, struct PID_DATA *pid_st
 	/* Calculate output value */
 	ret = p_term + i_term + d_term;
 	
-	/* Limit output value */
-//	if((ret > pid_st->maxValue) || (ret < pid_st->minValue)) 
-//	{ 
-//		if(ret > pid_st->maxValue) 
-//		{ 
-//			ret = pid_st->maxValue; 
-//		} 
-//		else if(ret < pid_st->minValue) 
-//		{ 
-//			ret = pid_st->minValue;
-//		} 
-//	} 
-//	else 
-//	{ 
+	/* Update prev_i_term only when output is in acceptable range. */
+	if((ret <= pid_st->maxValue) && (ret >= -pid_st->maxValue)) 
 		pid_st->prev_i_term = i_term; 
-//	} 
+
 	
 	return ret;
-}
-
-/*! \brief Resets the integrator.
-*
-*  Calling this function will reset the integrator in the PID regulator.
-*/
-void pid_Reset_Integrator(pidData_t *pid_st)
-{
-	pid_st->sumError = 0;
 }

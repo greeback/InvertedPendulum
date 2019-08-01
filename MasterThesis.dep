@@ -85,6 +85,8 @@
             <file>$PROJ_DIR$\LSM303DLHC.h</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
             <file>$PROJ_DIR$\Debug\Obj\motors.xcl</file>
+            <file>$PROJ_DIR$\fuzzy_pid.c</file>
+            <file>$PROJ_DIR$\fuzzy_pid.h</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
@@ -211,7 +213,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 26 69 32 57 62 51 21 61 65 58 35 59 6 10 11 73 63 15 14 77 53 78 75 42</file>
+                    <file> 26 69 32 57 62 51 21 61 65 58 35 59 6 10 11 73 63 15 14 77 53 78 75 81 42</file>
                 </tool>
             </inputs>
         </file>

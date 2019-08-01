@@ -7,6 +7,7 @@
 #include "LSM303DLHC.h"
 #include <math.h>
 #include "pid.h"
+#include "fuzzy_pid.h"
 #include "motors.h"
 
 L3GD20_Data_t Gyro_Data;
@@ -35,7 +36,7 @@ int main()
 		
 		if(dt_flag)
 		{
-			LED(RED, TOGGLE);
+			LED(ORANGE, TOGGLE);
 			dt_flag = 0;
 			/* Read data from Gyro and Accelerometer */
 			L3GD20_read_rates (&Gyro_Data);
@@ -51,6 +52,7 @@ int main()
 			/* Control motors output */
 			Processed_value = pid_Controller (0, (Tilt + ROBOT_OFF_BALANCE), &pidData);
 			Motors (Processed_value);
+			
 		}
 	}
 	return 0;

@@ -27,7 +27,7 @@ void Motors (float raw_data)
 		GPIOE->BSRR = GPIO_BSRR_BS13;
 		
 		LED(GREEN, ON);
-		LED(ORANGE, OFF);
+		LED(RED, OFF);
 	}
 	else
 	{
@@ -37,7 +37,7 @@ void Motors (float raw_data)
 		GPIOE->BSRR = GPIO_BSRR_BS9;
 		
 		LED(GREEN, OFF);
-		LED(ORANGE, ON);
+		LED(RED, ON);
 	}
 	Duty = duty; 
 }
