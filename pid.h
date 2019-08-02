@@ -8,7 +8,7 @@
  * The K_P, K_I and K_D values (P, I and D gains)
  * need to be modified to adapt to the application at hand
  */
-#define K_P 1.00
+#define K_P 2.00
 #define K_I 0.00
 #define K_D 0.00
 
@@ -33,7 +33,7 @@ typedef struct PID_DATA
 	float prevError;
 	//! Error from previous iteration
 	float prev_i_term;
-} pidData_t;
+} pidData_typedef;
 
 /* Fuctions prototypes */
 void pid_Init(float p_factor, float i_factor, float d_factor, struct PID_DATA *pid);

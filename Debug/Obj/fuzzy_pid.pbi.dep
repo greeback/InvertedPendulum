@@ -1,0 +1,3 @@
+fuzzy_pid.pbi: C:\Users\aldy\Documents\InvertedPendulum\fuzzy_pid.c \
+  C:\Users\aldy\Documents\InvertedPendulum/fuzzy_pid.h \
+  C:\Users\aldy\Documents\InvertedPendulum/pid.h

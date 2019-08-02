@@ -36,19 +36,19 @@ void pid_Init(float p_factor, float i_factor, float d_factor, struct PID_DATA *p
 */
 float pid_Controller(float setPoint, float processValue, struct PID_DATA *pid_st)
 {
-	float errors, p_term, d_term, i_term, ret;
+	float error, p_term, d_term, i_term, ret;
 
-	errors = setPoint - processValue;
+	error = setPoint - processValue;
 	
 	/* Calculate Pterm */
-	p_term = pid_st->P_Factor * errors;
+	p_term = pid_st->P_Factor * error;
 	
 	/* Calculate Iterm */	
-	i_term = pid_st->I_Factor * INTEGERATION_TIME_MS * 0.001 * (pid_st->prevError + errors) / 2 + pid_st->prev_i_term;
+	i_term = pid_st->I_Factor * INTEGERATION_TIME_MS * 0.001 * (pid_st->prevError + error) / 2 + pid_st->prev_i_term;
 	
 	/* Calculate Dterm */
-	d_term = pid_st->D_Factor * (errors - pid_st->prevError) / (INTEGERATION_TIME_MS * 0.001);
-	pid_st->prevError = errors;
+	d_term = pid_st->D_Factor * (error - pid_st->prevError) / (INTEGERATION_TIME_MS * 0.001);
+	pid_st->prevError = error;
 	
 	/* Calculate output value */
 	ret = p_term + i_term + d_term;

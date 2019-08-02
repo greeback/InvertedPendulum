@@ -8,17 +8,6 @@ uint8_t Duty;
 
 void Motors (float raw_data)
 {
-	uint8_t duty;
-	duty = (uint8_t)(abs(raw_data)) + PWM_MIN; 
-	
-	if (duty >= PWM_MAX)
-		duty = PWM_MAX;
-
-	TIM1->CCR1=duty;
-	TIM1->CCR2=duty; 
-	
-	TIM1->EGR |= TIM_EGR_UG;
-	
 	if (raw_data >= 0.0)
 	{
 		GPIOA->BSRR = GPIO_BSRR_BR10;
@@ -39,5 +28,21 @@ void Motors (float raw_data)
 		LED(GREEN, OFF);
 		LED(RED, ON);
 	}
+	
+	raw_data = abs(raw_data) + PWM_MIN;
+	uint8_t duty;
+	
+	
+	if (raw_data >= PWM_MAX)
+		duty = PWM_MAX;
+	else
+		duty = (uint8_t)(raw_data);
+	
+	TIM1->CCR1=duty;
+	TIM1->CCR2=duty; 
+	
+	TIM1->EGR |= TIM_EGR_UG;
+	
+	
 	Duty = duty; 
 }

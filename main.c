@@ -6,15 +6,16 @@
 #include "stm32f4xx_it.h"
 #include "LSM303DLHC.h"
 #include <math.h>
-#include "pid.h"
 #include "fuzzy_pid.h"
+#include "pid.h"
+
 #include "motors.h"
 
 L3GD20_Data_t Gyro_Data;
 LSM303DLHC_Data_t Accelerometer_Data;
 float Tilt, Tilt_A, Tilt_G;
 float dt = 0.0;
-pidData_t pidData;
+pidData_typedef pidData;
 float Processed_value;
 
 uint8_t zmienna = 0;
@@ -50,14 +51,14 @@ int main()
 			Tilt=(0.98*Tilt_G+0.02*Tilt_A);
 			
 			/* Control motors output */
-			Processed_value = pid_Controller (0, (Tilt + ROBOT_OFF_BALANCE), &pidData);
+			//Processed_value = pid_Controller (0, (Tilt + ROBOT_OFF_BALANCE), &pidData);
+			Processed_value = fuzzy_pid_Controller (0, (Tilt + ROBOT_OFF_BALANCE), &pidData);
 			Motors (Processed_value);
 			
 		}
 	}
 	return 0;
 }
-
 
 void Init()
 {

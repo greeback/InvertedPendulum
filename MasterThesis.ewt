@@ -2387,6 +2387,9 @@
             <name>$PROJ_DIR$\delay.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\fuzzy_pid.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\L3GD20.c</name>
         </file>
         <file>
