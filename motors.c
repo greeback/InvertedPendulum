@@ -6,8 +6,16 @@
 
 uint8_t Duty;
 
+/*! \brief Controls direction and speed for motors.
+*
+*  \param raw_data  Value from controller
+*  \retvalue none
+*/
 void Motors (float raw_data)
 {
+	uint8_t duty;
+	
+	/* Change Direction */
 	if (raw_data >= 0.0)
 	{
 		GPIOA->BSRR = GPIO_BSRR_BR10;
@@ -29,10 +37,8 @@ void Motors (float raw_data)
 		LED(RED, ON);
 	}
 	
+	/* Change Speed */
 	raw_data = abs(raw_data) + PWM_MIN;
-	uint8_t duty;
-	
-	
 	if (raw_data >= PWM_MAX)
 		duty = PWM_MAX;
 	else
@@ -42,7 +48,6 @@ void Motors (float raw_data)
 	TIM1->CCR2=duty; 
 	
 	TIM1->EGR |= TIM_EGR_UG;
-	
 	
 	Duty = duty; 
 }

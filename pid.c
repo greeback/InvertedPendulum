@@ -11,6 +11,7 @@
 *  \param i_factor  Integral term.
 *  \param d_factor  Derivate term.
 *  \param pid  Struct with PID status.
+*  \retvalue none
 */
 void pid_Init(float p_factor, float i_factor, float d_factor, struct PID_DATA *pid)
 {
@@ -33,6 +34,7 @@ void pid_Init(float p_factor, float i_factor, float d_factor, struct PID_DATA *p
 *  \param setPoint  Desired value.
 *  \param processValue  Measured value.
 *  \param pid_st  PID status struct.
+*  \retvalue pid output value
 */
 float pid_Controller(float setPoint, float processValue, struct PID_DATA *pid_st)
 {

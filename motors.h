@@ -4,7 +4,7 @@
 
 
 /* Below this value motors are not able to move robot (measuerd experimentally) */
-#define PWM_MIN         20
+#define PWM_MIN         0
 
 /* Above this value motors won't produce more power (measuerd experimentally) */
 #define PWM_MAX         100.0

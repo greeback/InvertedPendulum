@@ -1,15 +1,38 @@
 #include "fuzzy_pid.h"
 
+/*! \brief This function handles calculation of membership in rising slope 
+*			of triangle shape membership function 
+*
+*  \param var  			X axis value. Value that need to be fuzyficated.
+*  \param lim_start		Y axis value. Beginning of slope.
+*  \param lim_end  		Y axis value. End of slope.
+*  \retvalue 			membership value (0 - 1)
+*/
 static float rising_slope (float var, float lim_start, float lim_end)
 {
 	return ((var - lim_start) / (lim_end - lim_start));
 }
 
+/*! \brief This function handles calculation of membership in falling slope 
+*			of triangle shape membership function 
+*
+*  \param var  			X axis value. Value that need to be fuzyficated.
+*  \param lim_start		Y axis value. Beginning of slope.
+*  \param lim_end  		Y axis value. End of slope.
+*  \retvalue 			membership value (0 - 1)
+*/
 static float falling_slope (float var, float lim_start, float lim_end)
 {
 	return ((var - lim_end) / (lim_start - lim_end));
 }
 
+/*! \brief  This function calculates membership values of error. 
+*			It's tailored to triangle shaped membership functions. Begining and 
+*			end of each triangle is defined as E1...E5.
+*
+*  \param error  	difference between measured and set value
+*  \retvalue 		membership values 
+*/
 static fuzzy_input_typedef error_fuzzyfication (float error)
 {
 	/* Initialize membership functions to 0 */
@@ -46,6 +69,12 @@ static fuzzy_input_typedef error_fuzzyfication (float error)
 	return fe;
 }
 
+/*! \brief  This function determines output pid coefficients.
+*
+*  \param fe  	calculated error membership functions
+*  \param ret	pointer to pidData structure
+*  \retvalue 	none 
+*/
 static void if_then_engine (fuzzy_input_typedef fe, pidData_typedef* ret)
 {	
 	fuzzy_output_typedef Kp = {0, 0, 0};
@@ -63,6 +92,14 @@ static void if_then_engine (fuzzy_input_typedef fe, pidData_typedef* ret)
 	ret->D_Factor = Kd.Y + Kd.YY + Kd.YYY;
 }
 
+/*! \brief  This function calculates error, fuzzyficate it, determines pid coefficient 
+*			and finally invokes standard pid controller.
+*
+*  \param setPoint  	Desired value.
+*  \param processValue  Measured value.
+*  \param pid_st  		PID status struct.		
+*  \retvalue 			pid output value
+*/
 float fuzzy_pid_Controller(float setPoint, float processValue, pidData_typedef *pid_st)
 {
 	float error, ret;

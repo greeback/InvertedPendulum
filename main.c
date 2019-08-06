@@ -45,15 +45,15 @@ int main()
 			
 			/* Calculate Tilt from Gyro and Accelerometer */
 			Tilt_G = Tilt + (-1)*Gyro_Data.X * INTEGERATION_TIME_MS * 0.001;
-			Tilt_A = atanf((float)Accelerometer_Data.Y / (float)Accelerometer_Data.Z) * 57.29578;
+			Tilt_A = atanf((float)Accelerometer_Data.Y / (float)Accelerometer_Data.Z) * RAD_TO_DEG;
 			
 			/* Complementary filter */
 			Tilt=(0.98*Tilt_G+0.02*Tilt_A);
 			
 			/* Control motors output */
-			//Processed_value = pid_Controller (0, (Tilt + ROBOT_OFF_BALANCE), &pidData);
-			Processed_value = fuzzy_pid_Controller (0, (Tilt + ROBOT_OFF_BALANCE), &pidData);
-			Motors (Processed_value);
+			Processed_value = pid_Controller (0, (Tilt + ROBOT_OFF_BALANCE), &pidData);
+			//Processed_value = fuzzy_pid_Controller (0, (Tilt + ROBOT_OFF_BALANCE), &pidData);
+			//Motors (Processed_value);
 			
 		}
 	}
@@ -103,7 +103,8 @@ void Init()
 	GPIOA->AFR[0]|= 0x55500000; //PA5 - SCK, PA6 - MISO, PA7 - MOSI
 	GPIOE->MODER |= GPIO_MODER_MODER3_0; //PE3 (CS)
 	GPIOE->PUPDR |= GPIO_PUPDR_PUPDR3_0; //Pull-Up
-	SPI1->CR1 |= SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_SPE | SPI_CR1_MSTR;
+	/* Software Slave Management, NSS to Vdd, Master mode, Clock polarity and phase according to L3GD20 datasheet*/ 
+	SPI1->CR1 |= SPI_CR1_SSM | SPI_CR1_SSI | SPI_CR1_SPE | SPI_CR1_MSTR | SPI_CR1_CPOL | SPI_CR1_CPHA;
 	L3GD20_init();
 	
 	/******  I2C1 - LSM303DLHC (Accelerometer) ******/
