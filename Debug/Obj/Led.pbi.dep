@@ -13,4 +13,5 @@ Led.pbi: C:\Users\aldy\Documents\InvertedPendulum\Led.c \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c/iccarm_builtin.h \
   C:\Users\aldy\Documents\InvertedPendulum\core_cmFunc.h \
   C:\Users\aldy\Documents\InvertedPendulum\core_cm4_simd.h \
-  C:\Users\aldy\Documents\InvertedPendulum/system_stm32f4xx.h
+  C:\Users\aldy\Documents\InvertedPendulum/system_stm32f4xx.h \
+  C:\Users\aldy\Documents\InvertedPendulum/stm32f4_gpio.h

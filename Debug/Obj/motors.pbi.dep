@@ -19,4 +19,5 @@ motors.pbi: C:\Users\aldy\Documents\InvertedPendulum\motors.c \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\math.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_float_setup.h \
   C:\Users\aldy\Documents\InvertedPendulum/motors.h \
-  C:\Users\aldy\Documents\InvertedPendulum/Led.h
+  C:\Users\aldy\Documents\InvertedPendulum/Led.h \
+  C:\Users\aldy\Documents\InvertedPendulum/stm32f4_gpio.h

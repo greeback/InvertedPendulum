@@ -1,111 +1,135 @@
 #include "stm32f401xc.h"
+#include <stddef.h>
 #include "L3GD20.h"
 #include "main.h"
+#include "stm32f4_spi.h"
 
-uint16_t timeout;
+/* Private functions */
+static void SPI_slaveSelect_ctrl(uint8_t state);
+static void L3GD20_SPI_Init();
 
-static void SPI_slaveSelect_ctrl(uint8_t state){
-  if(state)
-  {
-    GPIOE->BSRR = GPIO_BSRR_BR3;
-  }
-  else 
-  {
-    while(SPI1->SR & SPI_SR_BSY);
-    GPIOE->BSRR = GPIO_BSRR_BS3;
-  }
-}
+/* Private variables */
+static GPIO_Handle_t SS;	/*!< Slave Select Pin >*/
 
-static uint8_t Spi_sendrecv (uint8_t data)
+uint8_t L3GD20_read_reg(uint8_t addr)
 {
-  timeout = TIMEOUT_TIME;
-  while( !(SPI1->SR & SPI_SR_TXE) &(timeout != 0))
-  {
-    timeout--;
-  }	
-  SPI1->DR = data;
-  timeout = TIMEOUT_TIME;
-  while( !(SPI1->SR & SPI_SR_RXNE)&(timeout != 0) )
-  {
-    timeout--;
-  }	
-  data = SPI1->DR;
-  return data;
+	uint8_t ret;
+	addr |= 0x80;
+	SPI_slaveSelect_ctrl (select);
+	
+	SPI_SendData (SPI1, &addr, 1);
+	
+	SPI_ReceiveData(SPI1, &ret, 1);
+	
+	SPI_slaveSelect_ctrl (deselect);
+	return ret;
 }
 
 void L3GD20_write_reg(uint8_t addr, uint8_t value)
 {
-  SPI_slaveSelect_ctrl(select);
-  Spi_sendrecv(addr);
-  Spi_sendrecv(value);
-  SPI_slaveSelect_ctrl(deselect);
+	SPI_slaveSelect_ctrl(select);
+	SPI_SendData (SPI1, &addr, 1);
+	SPI_SendData (SPI1, &value, 1);
+	SPI_slaveSelect_ctrl(deselect);
 }
 
-uint8_t L3GD20_read_reg(uint8_t addr)
+void L3GD20_read_reg_multi (uint8_t addr, uint8_t* data, uint32_t Len)
 {
-  SPI_slaveSelect_ctrl(select);
-  /* Send address with read command */
-  Spi_sendrecv(addr | 0x80);
-  uint8_t value = Spi_sendrecv(0xff);
-  SPI_slaveSelect_ctrl(deselect);
-  return value;
+	/* set Read bit and Multiple reading bit */
+	addr |= 0xC0;
+	SPI_slaveSelect_ctrl (select);
+	
+	SPI_SendData (SPI1, &addr, 1);
+	
+	SPI_ReceiveData(SPI1, data, Len);
+	
+	SPI_slaveSelect_ctrl (deselect);
 }
 
-void L3GD20_init(void)
+void L3GD20_Init()
 {
-  /* Set high-pass filter settings */
-  //L3GD20_write_reg(L3GD20_CTRL_REG2, 0x09);
-  
-  /* Enable high-pass filter */
-  //L3GD20_write_reg(L3GD20_CTRL_REG5, 0x01 | L3GD20_CTRL_REG5_HPEN);
-  
-  /* Full scale selection */
-  L3GD20_write_reg(L3GD20_CTRL_REG4, L3GD20_CTRL_REG4_FS);
-  
-  /* Power on, turn on all axes, maximym ODR - output data rate */
-  while(L3GD20_read_reg(L3GD20_CTRL_REG1) != 0xFF)
-    L3GD20_write_reg(L3GD20_CTRL_REG1, 0xFF); 
+	/* Initialize SPI1 */
+	L3GD20_SPI_Init();
+	
+	/* Full scale selection */
+	L3GD20_write_reg(L3GD20_CTRL_REG4, L3GD20_CTRL_REG4_FS);
+	
+	/* Power on, turn on all axes, maximum ODR - output data rate */
+	L3GD20_write_reg(L3GD20_CTRL_REG1, 0xFF); 
 }
 
 void L3GD20_read_rates (L3GD20_Data_t* Data)
 {
-  int16_t RawData;
-  float s;
-  
-  s = L3GD20_SENSITIVITY * 0.001;
-  
-#ifdef X_AXIS_ENABLE
-  /* Read X axis and check for drift*/ 
-  RawData = L3GD20_read_reg(L3GD20_OUT_X_L);
-  RawData |= L3GD20_read_reg(L3GD20_OUT_X_H) << 8;
-  //Data->X = (float)RawData * s;
-  Data->X = (float)RawData * s - GYRO_OFFSET;
-#endif
-  
-#ifdef Y_AXIS_ENABLE
-  /* Read Y axis */ 
-  RawData = L3GD20_read_reg(L3GD20_OUT_Y_L);
-  RawData |= L3GD20_read_reg(L3GD20_OUT_Y_H) << 8;
-  Data->Y = (float)RawData * s;
-#endif
-  
-#ifdef Z_AXIS_ENABLE
-  /* Read Z axis */ 
-  RawData = L3GD20_read_reg(L3GD20_OUT_Z_L);
-  RawData |= L3GD20_read_reg(L3GD20_OUT_Z_H) << 8;
-  Data->Z = (float)RawData * s;
-#endif
+	uint8_t tmp[2];
+	int16_t RawData;
+	float s;
+	
+	s = L3GD20_SENSITIVITY * 0.001;
+	
+	/* Read X axis and check for drift*/  
+	L3GD20_read_reg_multi(L3GD20_OUT_X_L, tmp, 2);
+	RawData = tmp[0];
+	RawData |= tmp[1] << 8;
+	Data->X = (float)RawData * s - GYRO_OFFSET;
 }
 
-void L3GD20_read_reg_multi(uint8_t addr, void* data, int size)
+static void SPI_slaveSelect_ctrl(uint8_t state)
 {
-  int i;
-  uint8_t* buffer = (uint8_t*)data;
-  
-  SPI_slaveSelect_ctrl(select);
-  Spi_sendrecv(addr);
-  
-  for (i = 0; i < size - 1; i++) 
-    buffer[i] = Spi_sendrecv(0xff);
-  SPI_slaveSelect_ctrl(deselect);
+	if(state)
+	{
+		GPIO_ClearPin(&SS);
+	}
+	else 
+	{
+		while(SPI1->SR & SPI_SR_BSY);
+		GPIO_SetPin(&SS);
+	}
 }
+
+static void L3GD20_SPI_Init()
+{
+	GPIO_Config_t	SPI_Pins_Config;
+	GPIO_Handle_t	Miso, Mosi, Sck;
+	
+	/* Configure PA6(MISO), PA7(MOSI) and PA5(SCK) */
+	SPI_Pins_Config.Mode 	= GPIO_Mode_AF;
+	SPI_Pins_Config.Speed	= GPIO_Speed_Low;
+	SPI_Pins_Config.PuPd	= GPIO_PuPd_NOPULL;
+	SPI_Pins_Config.OType	= GPIO_OType_PP;
+	SPI_Pins_Config.AltFun 	= 5;
+	
+	Miso.Base = Mosi.Base = Sck.Base = GPIOA;
+	Miso.Pin = 6;
+	Mosi.Pin = 7;
+	Sck.Pin  = 5;
+	
+	GPIO_Init(&Miso, &SPI_Pins_Config);
+	GPIO_Init(&Mosi, &SPI_Pins_Config);
+	GPIO_Init(&Sck, &SPI_Pins_Config);
+	
+	/* Configure PE3 (SS) - Slave Select */
+	SPI_Pins_Config.Mode 	= GPIO_Mode_OUT;
+	SPI_Pins_Config.Speed	= GPIO_Speed_Low;
+	SPI_Pins_Config.PuPd	= GPIO_PuPd_UP;
+	SPI_Pins_Config.OType	= GPIO_OType_PP;
+	
+	SS.Base = GPIOE;
+	SS.Pin  = 3;
+	
+	GPIO_Init(&SS, &SPI_Pins_Config);
+	SPI_slaveSelect_ctrl (deselect);
+	
+	/* Configure SPI1 */
+	SPI_Config_t SPI_Config;
+	
+	SPI_Config.MODE = SPI_Mode_Master;
+	SPI_Config.DFF	= SPI_DFF_8;
+	SPI_Config.CPOL	= SPI_CPOL_1;
+	SPI_Config.CPHA	= SPI_CPHA_Second;
+	SPI_Config.SSM	= SPI_SSM_Enabled;
+	SPI_Config.SSI	= SPI_SSI_Master;
+	SPI_Config.BR	= SPI_BR_2;			// 4MHz
+	
+	SPI_Init(SPI1, &SPI_Config);
+}
+

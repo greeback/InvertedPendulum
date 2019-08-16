@@ -1,33 +1,28 @@
+/** 
+ * @author  Aleksander Dykman
+ * @email   aleksanderdykman@gmail.com
+ * @version v1.0
+ * @ide     IAR Embedded Wokbench for ARM
+ * @brief   LSM303DLHC Library for STM32F4xx devices
+ *
+\verbatim
+   ----------------------------------------------------------------------
+    Copyright (c) 2019 Aleksander Dykman
+   ----------------------------------------------------------------------
+\endverbatim
+ */
 #ifndef __LSM303DLHC_H__
 #define __LSM303DLHC_H__
 
 /**
- * @brief  LSM303DLHC main working structure
+ * @defgroup LSM303DLHC_Typedefs
+ * @brief    LSM303DLHC Typedefs used for Accelerometer initialiation, reading and writing
  */
-typedef struct
-{
-  int16_t X;
-  int16_t Y;
-  volatile int16_t Z;
-}LSM303DLHC_Data_t;
 
-
-typedef enum {READ, WRITE}read_write_typedef;
-typedef enum {ACK, NACK}ack_typedef;
-
-/* Fuctions prototypes */
-static void I2C_Start (void);
-static void I2C_Stop (void);
-static void I2C_Addr(uint8_t, read_write_typedef);
-static void I2C_Clear_Addr_Flag(void);
-static void I2C_Write (uint8_t);
-static uint8_t I2C_Read (ack_typedef ack_nack);
-static void LSM303DLHC_set_reg(uint8_t);
-void LSM303DLHC_write_reg (uint8_t, uint8_t);
-void LSM303DLHC_read_reg (uint8_t, uint8_t*, uint8_t);
-void LSM303DLHC_init (void);
-void LSM303DLHC_read_rates (LSM303DLHC_Data_t*);
-
+ /**
+ * @defgroup LSM303DLHC Macros
+ * @brief    Library defines
+ */
 /* LSM303DLHC registers */
 #define LSM303DLHC_CTRL_REG1_A			0x20
 #define LSM303DLHC_CTRL_REG2_A			0x21
@@ -48,16 +43,16 @@ void LSM303DLHC_read_rates (LSM303DLHC_Data_t*);
 #define LSM303DLHC_INT1_CFG_A   		0x30
 #define LSM303DLHC_INT1_SOURCE_A   		0x31
 #define LSM303DLHC_INT1_THS_A   		0x32
-#define LSM303DLHC_INT1_DURATION_A   		0x33
+#define LSM303DLHC_INT1_DURATION_A   	0x33
 #define LSM303DLHC_INT2_CFG_A   		0x34
 #define LSM303DLHC_INT2_SOURCE_A   		0x35
 #define LSM303DLHC_INT2_THS_A   		0x36
-#define LSM303DLHC_INT2_DURATION_A   		0x37
+#define LSM303DLHC_INT2_DURATION_A   	0x37
 #define LSM303DLHC_CLICK_CFG_A   		0x38
 #define LSM303DLHC_CLICK_SRC_A   		0x39
 #define LSM303DLHC_CLICK_THS_A   		0x3A
 #define LSM303DLHC_TIME_LIMIT_A   		0x3B
-#define LSM303DLHC_TIME_LATENCY_A   		0x3C
+#define LSM303DLHC_TIME_LATENCY_A   	0x3C
 #define LSM303DLHC_TIME_WINDOW_A   		0x3D
 #define LSM303DLHC_CRA_REG_M       		0x00
 #define LSM303DLHC_CRB_REG_M       		0x01
@@ -76,11 +71,42 @@ void LSM303DLHC_read_rates (LSM303DLHC_Data_t*);
 #define LSM303DLHC_TEMP_OUT_L_M			0x32
 
 #define LSM303D_ADDR			        0x32
-#define X_A_Enable                              0x01
-#define Y_A_Enable                              0x02
-#define Z_A_Enable                              0x04
-#define Data_rate_100Hz                         0x50
-#define HIGH_RESOLUTION_EN                      0X08
+#define X_A_Enable                      0x01
+#define Y_A_Enable                      0x02
+#define Z_A_Enable                      0x04
+#define Data_rate_100Hz                 0x50
+#define HIGH_RESOLUTION_EN              0X08
+
+/**
+ * @defgroup LSM303DLHC_Structures
+ * @brief    LSM303DLHC Structures use for handling reading from accelerometer
+ */
+
+/**
+ * @brief  LSM303DLHC main working structure
+ */
+typedef struct
+{
+  int16_t X;
+  int16_t Y;
+  volatile int16_t Z;
+}LSM303DLHC_Data_t;
+
+/**
+ * @defgroup LSM303DLHC_Functions
+ * @brief    LSM303DLHC Functions used for gyro handling
+ */
+void LSM303DLHC_write_reg (uint8_t, uint8_t);
+void LSM303DLHC_read_reg (uint8_t, uint8_t*, uint8_t);
+/**
+ * @brief  Initializes LSM303DLHC
+ * @note   This function initialize I2C1 with apropriate GPIO pins,
+ * 		   sets accelerometer to read all axes with max Output Data Rate
+ * @retval None
+ */
+void LSM303DLHC_Init (void);
+void LSM303DLHC_read_rates (LSM303DLHC_Data_t*);
+
 
 
 #endif //__LSM303DLHC_H__

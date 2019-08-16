@@ -203,6 +203,10 @@ void TIM1_CC_IRQHandler(void)
 }      
 
 
+void SPI1_IRQHandler(void)
+{
+}
+
 
 /**
 * @brief  This function handles EXTI15_10_IRQ Handler.

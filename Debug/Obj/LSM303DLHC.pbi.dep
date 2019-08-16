@@ -14,4 +14,6 @@ LSM303DLHC.pbi: C:\Users\aldy\Documents\InvertedPendulum\LSM303DLHC.c \
   C:\Users\aldy\Documents\InvertedPendulum\core_cm4_simd.h \
   C:\Users\aldy\Documents\InvertedPendulum/system_stm32f4xx.h \
   C:\Users\aldy\Documents\InvertedPendulum/LSM303DLHC.h \
-  C:\Users\aldy\Documents\InvertedPendulum/Led.h
+  C:\Users\aldy\Documents\InvertedPendulum/Led.h \
+  C:\Users\aldy\Documents\InvertedPendulum/stm32f4_gpio.h \
+  C:\Users\aldy\Documents\InvertedPendulum/stm32f4_i2c.h

@@ -2408,6 +2408,15 @@
             <name>$PROJ_DIR$\pid.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\stm32f4_gpio.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\stm32f4_i2c.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\stm32f4_spi.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\stm32f4xx_it.c</name>
         </file>
     </group>
