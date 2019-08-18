@@ -112,8 +112,22 @@ static void LSM303DLHC_I2C_Init(void);
 void LSM303DLHC_Init ()
 {
   LSM303DLHC_I2C_Init();
+  LSM303DLHC_write_reg(LSM303DLHC_CTRL_REG1_A, Y_A_Enable | Z_A_Enable | Data_rate_100Hz); 
 }
 
+void LSM303DLHC_write_reg (uint8_t reg, uint8_t data)
+{
+  uint8_t TxBuffer[2];
+  TxBuffer[0] = reg;
+  TxBuffer[1] = data;
+  I2C_MasterSendData(I2C1, TxBuffer, 2, LSM303D_ADDR, I2C_RS_NO);
+}
+
+void LSM303DLHC_read_reg (uint8_t reg, uint8_t *RxBuffer, uint32_t Len)
+{
+  I2C_MasterSendData(I2C1, &reg, 1, (LSM303D_ADDR | 0x80), I2C_RS_YES);
+  I2C_MasterReceiveData(I2C1, RxBuffer, Len, LSM303D_ADDR, I2C_RS_NO);
+}
 static void LSM303DLHC_I2C_Init()
 {
 	GPIO_Config_t	I2C_Pins_Config;

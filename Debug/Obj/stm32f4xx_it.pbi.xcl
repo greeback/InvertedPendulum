@@ -1,17 +1,17 @@
-"C:\Users\aleks\Documents\Embedded\MasterThesis\stm32f4xx_it.c"
+"C:\Users\aleks\Documents\Embedded\InvertedPendulum\stm32f4xx_it.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -I
-C:\Users\aleks\Documents\Embedded\MasterThesis
+C:\Users\aleks\Documents\Embedded\InvertedPendulum
 -I
-C:\Users\aleks\Documents\Embedded\MasterThesis
+C:\Users\aleks\Documents\Embedded\InvertedPendulum
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\inc\c
 -I
-C:\Users\aleks\Documents\Embedded\MasterThesis
+C:\Users\aleks\Documents\Embedded\InvertedPendulum
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

@@ -96,8 +96,8 @@ typedef struct
  * @defgroup LSM303DLHC_Functions
  * @brief    LSM303DLHC Functions used for gyro handling
  */
-void LSM303DLHC_write_reg (uint8_t, uint8_t);
-void LSM303DLHC_read_reg (uint8_t, uint8_t*, uint8_t);
+void LSM303DLHC_write_reg (uint8_t reg, uint8_t data);
+void LSM303DLHC_read_reg (uint8_t reg, uint8_t *RxBuffer, uint32_t Len);
 /**
  * @brief  Initializes LSM303DLHC
  * @note   This function initialize I2C1 with apropriate GPIO pins,

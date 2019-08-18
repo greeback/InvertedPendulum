@@ -1,212 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>2999221719</fileChecksum>
+    <fileChecksum>552170552</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\delay.h</file>
-            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-            <file>$PROJ_DIR$\core_cmFunc.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\startup_stm32f401xc.o</file>
-            <file>$PROJ_DIR$\system_stm32f4xx.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_it.xcl</file>
-            <file>$PROJ_DIR$\stm32f4_spi.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f4_spi.xcl</file>
-            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
-            <file>$PROJ_DIR$\pid.c</file>
-            <file>$PROJ_DIR$\Led.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f4_spi.o</file>
             <file>$PROJ_DIR$\stm32f401xc.h</file>
-            <file>$PROJ_DIR$\main.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
             <file>$PROJ_DIR$\Debug\Obj\pid.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
-            <file>$PROJ_DIR$\stm32f4_gpio.c</file>
-            <file>$PROJ_DIR$\motors.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_it.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\L3GD20.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\delay.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\pid.xcl</file>
             <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-            <file>$PROJ_DIR$\LSM303DLHC.c</file>
             <file>$PROJ_DIR$\core_cm4_simd.h</file>
-            <file>$PROJ_DIR$\stm32f4xx_it.c</file>
-            <file>$PROJ_DIR$\Led.c</file>
-            <file>$PROJ_DIR$\Debug\List\MasterThesis.map</file>
-            <file>$PROJ_DIR$\stm32f4_i2c.c</file>
-            <file>$PROJ_DIR$\L3GD20.c</file>
-            <file>$PROJ_DIR$\system_stm32f4xx.c</file>
-            <file>$PROJ_DIR$\startup_stm32f401xc.s</file>
-            <file>$PROJ_DIR$\delay.c</file>
-            <file>$PROJ_DIR$\fuzzy_pid.c</file>
-            <file>$PROJ_DIR$\main.h</file>
             <file>$PROJ_DIR$\Debug\Obj\fuzzy_pid.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\delay.o</file>
             <file>$PROJ_DIR$\stm32f4xx_it.h</file>
             <file>$TOOLKIT_DIR$\config\linker\ST\stm32f401xC.icf</file>
-            <file>$PROJ_DIR$\Debug\Obj\fuzzy_pid.xcl</file>
-            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-            <file>$PROJ_DIR$\LSM303DLHC.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\LSM303DLHC.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\system_stm32f4xx.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_it.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4_spi.xcl</file>
+            <file>$PROJ_DIR$\motors.c</file>
+            <file>$PROJ_DIR$\core_cmFunc.h</file>
+            <file>$PROJ_DIR$\system_stm32f4xx.h</file>
+            <file>$PROJ_DIR$\Led.h</file>
+            <file>$PROJ_DIR$\stm32f4xx_it.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_it.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\pid.xcl</file>
+            <file>$PROJ_DIR$\Debug\List\MasterThesis.map</file>
+            <file>$PROJ_DIR$\stm32f4_spi.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4_spi.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\L3GD20.o</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\delay.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\main.h</file>
+            <file>$PROJ_DIR$\pid.c</file>
+            <file>$PROJ_DIR$\stm32f4_gpio.c</file>
+            <file>$PROJ_DIR$\stm32f4_i2c.c</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_stm32f401xc.o</file>
+            <file>$PROJ_DIR$\delay.c</file>
+            <file>$PROJ_DIR$\fuzzy_pid.c</file>
+            <file>$PROJ_DIR$\L3GD20.c</file>
+            <file>$PROJ_DIR$\Led.c</file>
+            <file>$PROJ_DIR$\LSM303DLHC.c</file>
+            <file>$PROJ_DIR$\system_stm32f4xx.c</file>
+            <file>$PROJ_DIR$\startup_stm32f401xc.s</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4_gpio.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\motors.xcl</file>
+            <file>$PROJ_DIR$\L3GD20.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\stm32f4_spi.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4_i2c.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4_gpio.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4_i2c.xcl</file>
+            <file>$PROJ_DIR$\stm32f4_i2c.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\delay.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\motors.o</file>
             <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\Led.xcl</file>
+            <file>$PROJ_DIR$\motors.h</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\L3GD20.xcl</file>
+            <file>$PROJ_DIR$\core_cm4.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
             <file>$PROJ_DIR$\Debug\Obj\system_stm32f4xx.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fuzzy_pid.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\LSM303DLHC.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\Led.xcl</file>
             <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
             <file>$PROJ_DIR$\pid.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$PROJ_DIR$\core_cm4.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f4xx.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\L3GD20.xcl</file>
             <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
             <file>$PROJ_DIR$\fuzzy_pid.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
             <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
-            <file>$PROJ_DIR$\motors.h</file>
             <file>$PROJ_DIR$\Debug\Obj\LSM303DLHC.o</file>
             <file>$PROJ_DIR$\Debug\Obj\MasterThesis.pbd</file>
+            <file>$PROJ_DIR$\LSM303DLHC.h</file>
             <file>$PROJ_DIR$\core_cmInstr.h</file>
             <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
             <file>$PROJ_DIR$\Debug\Exe\MasterThesis.out</file>
             <file>$PROJ_DIR$\stm32f4_gpio.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
             <file>$PROJ_DIR$\Debug\Obj\Led.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-            <file>$PROJ_DIR$\stm32f4_i2c.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\delay.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f4_gpio.xcl</file>
-            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\motors.xcl</file>
-            <file>$PROJ_DIR$\stm32f4_spi.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f4_gpio.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f4_i2c.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\motors.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f4_i2c.xcl</file>
-            <file>$PROJ_DIR$\L3GD20.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4_spi.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4_gpio.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4_i2c.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\motors.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\pid.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\Led.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\LSM303DLHC.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\L3GD20.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f4xx.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\delay.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\fuzzy_pid.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f4xx_it.pbi</file>
         </outputs>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 65 28</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\stm32f4_spi.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 11</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 7</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 75 12 55 54 40 58 69 16 68 63 46 64 2 25 4 66</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\pid.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 22</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 12 55 54 40 58 69 16 68 63 46 64 2 25 4 53 60 35</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\main.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 15</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 49</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 12 55 54 40 58 69 16 68 63 46 64 2 25 4 0 80 35 10 66 37 41 8 59 57 53 60</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\stm32f4_gpio.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 76</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 72</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 66 12 55 54 40 58 69 16 68 63 46 64 2 25 4</file>
-                </tool>
-            </inputs>
-        </file>
         <file>
             <name>$PROJ_DIR$\motors.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 78</file>
+                    <file> 49</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 74</file>
+                    <file> 85</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 12 55 54 40 58 69 16 68 63 46 64 2 25 4 45 44 48 8 59 60 10 66</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\LSM303DLHC.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 61</file>
+                    <file> 0 53 70 79 71 55 3 54 75 50 76 13 5 14 64 65 52 1 63 51 15 78</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 42</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 12 55 54 40 58 69 16 68 63 46 64 2 25 4 41 10 66 70</file>
+                    <file> 3 14 50 15 71 1 70 65 63 64 51 53 13 54 79 0 75 5 55 76 52 78</file>
                 </tool>
             </inputs>
         </file>
@@ -215,103 +128,26 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 19</file>
+                    <file> 17</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 5</file>
+                    <file> 93</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 37 12 55 54 40 58 69 16 68 63 46 64 2 25 4 0 10 66</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Led.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 67</file>
+                    <file> 8 0 53 70 79 71 55 3 54 75 50 76 13 5 14 24 15 78</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 47</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 10 12 55 54 40 58 69 16 68 63 46 64 2 25 4 66</file>
+                    <file> 0 54 15 14 75 79 24 53 70 5 3 50 8 13 71 55 76 78</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\stm32f4_i2c.c</name>
-            <outputs>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 79</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 70 12 55 54 40 58 69 16 68 63 46 64 2 25 4 66</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\L3GD20.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 20</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 50</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 12 55 54 40 58 69 16 68 63 46 64 2 25 4 73 44 80 35 75 66</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\system_stm32f4xx.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 43</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 51</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 12 55 54 40 58 69 16 68 63 46 64 2 25 4</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\startup_stm32f401xc.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 3</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\delay.c</name>
+            <name>$PROJ_DIR$\stm32f4_spi.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -319,13 +155,116 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 71</file>
+                    <file> 11 81</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 0 12 55 54 40 58 69 16 68 63 46 64 2 25 4</file>
+                    <file> 43 0 53 70 79 71 55 3 54 75 50 76 13 5 14 78</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 25</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 84</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 53 70 79 71 55 3 54 75 50 76 13 5 14 24 41 26 15 78 8 74 1 63 69 62 51</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 13 71 69 15 70 41 74 51 53 54 0 24 26 8 1 62 14 3 50 63 75 5 79 55 76 78</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\pid.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 2</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 86</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 53 70 79 71 55 3 54 75 50 76 13 5 14 62 51 26</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 50 70 5 71 55 51 53 75 62 26 14 13 79 3 54 0 76</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\stm32f4_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 45</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 39 82</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 78 0 53 70 79 71 55 3 54 75 50 76 13 5 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\stm32f4_i2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 44</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 46 83</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 47 0 53 70 79 71 55 3 54 75 50 76 13 5 14 78</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\delay.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 7</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 48 91</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 24 0 53 70 79 71 55 3 54 75 50 76 13 5 14</file>
                 </tool>
             </inputs>
         </file>
@@ -334,32 +273,142 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 36</file>
+                    <file> 6</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 39</file>
+                    <file> 92</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 57 53</file>
+                    <file> 69 62</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62 69</file>
                 </tool>
             </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\L3GD20.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 22</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 89</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 53 70 79 71 55 3 54 75 50 76 13 5 14 42 65 41 26 43 78</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 43 3 50 41 14 70 65 78 42 26 53 13 71 54 79 0 75 5 55 76</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Led.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 87</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 15 0 53 70 79 71 55 3 54 75 50 76 13 5 14 78</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 14 70 55 0 78 53 13 71 50 76 15 75 5 79 3 54</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\LSM303DLHC.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 72</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 88</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 53 70 79 71 55 3 54 75 50 76 13 5 14 74 15 78 47</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 0 75 79 78 15 14 54 74 47 53 70 5 3 50 13 71 55 76</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\system_stm32f4xx.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 66</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 56 90</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 0 53 70 79 71 55 3 54 75 50 76 13 5 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup_stm32f401xc.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 31</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 77 19</file>
+                </tool>
+            </outputs>
         </file>
         <file>
             <name>$PROJ_DIR$\Debug\Exe\MasterThesis.out</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 28</file>
+                    <file> 19</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 38 21 36 20 67 61 15 78 14 3 76 77 11 19 43 1 23 52 56</file>
+                    <file> 9 7 6 22 80 72 25 49 2 31 45 44 21 17 66 30 4 61 68</file>
                 </tool>
             </inputs>
         </file>

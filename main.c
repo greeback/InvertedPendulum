@@ -24,6 +24,9 @@ uint32_t i = 0;
 int main()
 {	
 	Init();
+        uint8_t RxBuffer;
+        LSM303DLHC_read_reg (LSM303DLHC_CTRL_REG1_A, &RxBuffer, 1);
+
 	while (1)
 	{
 		
@@ -103,12 +106,12 @@ void Init()
 	/******  I2C1 - LSM303DLHC (Accelerometer) - I2C1 communication ******/
 	LSM303DLHC_Init();
 	
-	I2C1->CR2 |= 8; //Assign 8MHz peripherial clock
-	I2C1->CCR |= 40; //Standard mode, SCL frequency = 100kHz
-	I2C1->TRISE = 9; //Calculated according to reference manual
-	I2C1->CR1 |= I2C_CR1_PE | I2C_CR1_ACK; //Enable I2C and Acknowledges
-	//I2C1->CR1 |= I2C_CR1_PE; //Enable I2C
-	//LSM303DLHC_init ();
+//	I2C1->CR2 |= 8; //Assign 8MHz peripherial clock
+//	I2C1->CCR |= 40; //Standard mode, SCL frequency = 100kHz
+//	I2C1->TRISE = 9; //Calculated according to reference manual
+//	I2C1->CR1 |= I2C_CR1_PE | I2C_CR1_ACK; //Enable I2C and Acknowledges
+//	//I2C1->CR1 |= I2C_CR1_PE; //Enable I2C
+//	//LSM303DLHC_init ();
 	
 	/******  TIM10 (1KHz) - Integration period calculation ******/
 	TIM10->DIER |= TIM_DIER_UIE; //Update interrupt enable
