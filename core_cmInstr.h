@@ -1,3 +1,4 @@
+/// \cond DO_NOT_DOCUMENT
 /**************************************************************************//**
  * @file     core_cmInstr.h
  * @brief    CMSIS Cortex-M Core Instruction Access Header File
@@ -583,3 +584,4 @@ __attribute__( ( always_inline ) ) static __INLINE uint8_t __CLZ(uint32_t value)
 /*@}*/ /* end of group CMSIS_Core_InstructionInterface */
 
 #endif /* __CORE_CMINSTR_H */
+/// \endcond

@@ -1,4 +1,5 @@
 /** 
+ * @file    L3GD20.h
  * @author  Aleksander Dykman
  * @email   aleksanderdykman@gmail.com
  * @version v1.0
@@ -15,8 +16,13 @@
 #define __L3GD20_H__
 
 /**
+ * @addtogroup L3GD20_Driver
+ * @{
+ */
+/**
  * @defgroup L3GD20_Typedefs
  * @brief    L3GD20 Typedefs used for Gyro initialiation, reading and writing
+ * @{
  */
 
 /**
@@ -24,9 +30,14 @@
  */
 enum {deselect=0, select = 1};
 
+/**
+ * @}
+ */
+
  /**
  * @defgroup L3GD20_Macros
  * @brief    Library defines
+ * @{
  */
 
 /* Register addresses */
@@ -115,8 +126,13 @@ enum {deselect=0, select = 1};
 //#define Z_AXIS_ENABLE
 
 /**
+ * @}
+ */
+
+/**
  * @defgroup L3GD20_Structures
  * @brief    L3GD20 Structures use for handling reading from gyro
+ * @{
  */
 
 /**
@@ -130,15 +146,19 @@ typedef struct
 }L3GD20_Data_t;
 
 /**
+ * @}
+ */
+
+/**
  * @defgroup L3GD20_Functions
  * @brief    L3GD20 Functions used for gyro handling
+ * @{
  */
 
 /**
  * @brief  Reads one byte from given register
  * @note   No need to set 8th bit, function does that
  * @param  addr: gyro addres from which data is read
- * @retval None
  */
 uint8_t L3GD20_read_reg(uint8_t addr);
 
@@ -146,7 +166,6 @@ uint8_t L3GD20_read_reg(uint8_t addr);
  * @brief  Writes one byte to given register
  * @param  addr: gyro addres to which data is written
  * @param  value: it will be written to given address
- * @retval None
  */
 void L3GD20_write_reg(uint8_t addr, uint8_t value);
 
@@ -154,7 +173,6 @@ void L3GD20_write_reg(uint8_t addr, uint8_t value);
  * @brief  Reads multiple bytes to given register
  * @param  addr: gyro addres from which data will be read
  * @param  data: pointer to the table to which data will be written
- * @retval None
  */
 void L3GD20_read_reg_multi (uint8_t addr, uint8_t* data, uint32_t Len);
 
@@ -162,15 +180,19 @@ void L3GD20_read_reg_multi (uint8_t addr, uint8_t* data, uint32_t Len);
  * @brief  Initializes L3GD20
  * @note   This function initialize SPI1 with apropriate GPIO pins,
  * 		   sets gyro to read all axes with max Output Data Rate
- * @retval None
  */
 void L3GD20_Init(void);
 
 /**
  * @brief  Reads Data from X axis and then condition data to degrees/s
  * @param  Data: pointer to main working structure
- * @retval None
  */
 void L3GD20_read_rates (L3GD20_Data_t* Data);
 
+/**
+ * @}
+ */
+/**
+ * @}
+ */
 #endif //__L3GD20_H__

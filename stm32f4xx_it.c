@@ -1,3 +1,4 @@
+/// \cond DO_NOT_DOCUMENT
 /**
 ******************************************************************************
 * @file    stm32f4xx_it.c
@@ -23,7 +24,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
-#include "delay.h"
+//#include "delay.h"
 #include "Led.h"
 
 uint8_t dt_flag = 0;
@@ -127,7 +128,7 @@ void PendSV_Handler(void)
 */
 void SysTick_Handler(void)
 {
-  TimeTick_Decrement(); 
+  //TimeTick_Decrement(); 
 }
 
 /******************************************************************************/
@@ -215,3 +216,4 @@ void SPI1_IRQHandler(void)
 */
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
+/// \endcond

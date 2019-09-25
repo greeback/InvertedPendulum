@@ -1,3 +1,4 @@
+/// \cond DO_NOT_DOCUMENT
 /**
   ******************************************************************************
   * @file    stm32f4xx.h
@@ -7006,3 +7007,4 @@ typedef struct
   */
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
+/// \endcond

@@ -1,4 +1,5 @@
 /** 
+ * @file    stm32f4_spi.h
  * @author  Aleksander Dykman
  * @email   aleksanderdykman@gmail.com
  * @version v1.0
@@ -17,10 +18,14 @@
 #include "stm32f401xc.h"
 #include "stm32f4_gpio.h"
 
-
+/**
+ * @addtogroup SPI_Driver
+ * @{
+ */
 /**
  * @defgroup SPI_Typedefs
  * @brief    SPI Typedefs used for SPI library for initialization purposes
+ * @{
  */
 
 /**
@@ -101,14 +106,24 @@ typedef enum
 	SPI_BUSY_RX	= 0x1,	/*!< Ongoing receiving */
 	SPI_BUSY_TX = 0x2	/*!< Ongoing transmitting */	
 } SPI_APP_STATE_t;
+/**
+ * @}
+ */
+
  /**
  * @defgroup SPI_Macros
  * @brief    Library defines
+ * @{
+ */
+
+/**
+ * @}
  */
 
 /**
  * @defgroup SPI_Structures
  * @brief    SPI Structures used for SPI library initialization purposes
+ * @{
  */
 
 /**
@@ -116,18 +131,22 @@ typedef enum
  */
 typedef struct
 {
-	SPI_Mode_t		MODE;
-	SPI_DFF_t 		DFF;
-	SPI_CPOL_t 		CPOL;
-	SPI_CPHA_t		CPHA;
-	SPI_SSM_t 		SSM;
-	SPI_SSI_t		SSI;
-	SPI_BR_t		BR;
+	SPI_Mode_t		MODE;	/*!< Slave or Master */
+	SPI_DFF_t 		DFF;	/*!< 8 or 16 bit data frame format */
+	SPI_CPOL_t 		CPOL;	/*!< Clock polarity */
+	SPI_CPHA_t		CPHA;	/*!< Clock phase */
+	SPI_SSM_t 		SSM;	/*!< Software slave management ON/OFF */
+	SPI_SSI_t		SSI;	/*!< Internal slave select */
+	SPI_BR_t		BR;		/*!< Baud rate */
 }SPI_Config_t;
+/**
+ * @}
+ */
 
 /**
  * @defgroup SPI_Functions
  * @brief    SPI Functions used for SPI handling
+ * @{
  */
 
 /**
@@ -135,7 +154,6 @@ typedef struct
  * @note   This function also enables clock for SPI port
  * @param  Handle: Pointer to SPI handle
  * @param  Config: Pointer to SPI Configuration data
- * @retval None
  */
 void SPI_Init (SPI_TypeDef* SPIx, SPI_Config_t* Config);
 
@@ -145,7 +163,6 @@ void SPI_Init (SPI_TypeDef* SPIx, SPI_Config_t* Config);
  * @param  SPIx: Pointer to SPIx peripheral you will use, where x is between 1 to 3
  * @param  *TxBuffer: Pointer to array with data to send over SPI
  * @param  Len: Number of elements to send over SPI
- * @retval None
  */
 void SPI_SendData (SPI_TypeDef* SPIx, uint8_t *TxBuffer, uint32_t Len);
 
@@ -155,10 +172,13 @@ void SPI_SendData (SPI_TypeDef* SPIx, uint8_t *TxBuffer, uint32_t Len);
  * @param  SPIx: Pointer to SPIx peripheral you will use, where x is between 1 to 3
  * @param  *RxBuffer: Pointer to 8-bit array to save data into
  * @param  Len: Number of bytes you want read from device
- * @retval None
  */
 void SPI_ReceiveData (SPI_TypeDef* SPIx, uint8_t *RxBuffer, uint32_t Len);
 
-
-
+/**
+ * @}
+ */
+/**
+ * @}
+ */
 #endif /* STM32F4_SPI_H */

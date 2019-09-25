@@ -1,3 +1,4 @@
+/// \cond DO_NOT_DOCUMENT
 /**
   ******************************************************************************
   * @file    TIM/7PWM_Output/stm32f4xx_it.h 
@@ -49,3 +50,4 @@ extern uint8_t dt_flag;
 #endif /* __STM32F4xx_IT_H */
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
+/// \endcond

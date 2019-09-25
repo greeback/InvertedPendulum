@@ -1,4 +1,3 @@
-
 #include "delay.h"
 static __IO uint32_t sysTickCounter;
 

@@ -1,3 +1,4 @@
+/// \cond DO_NOT_DOCUMENT
 /**************************************************************************//**
  * @file     core_cmFunc.h
  * @brief    CMSIS Cortex-M Core Function Access Header File
@@ -607,3 +608,4 @@ __attribute__( ( always_inline ) ) static __INLINE void __set_FPSCR(uint32_t fps
 
 
 #endif /* __CORE_CMFUNC_H */
+/// \endcond

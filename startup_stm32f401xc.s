@@ -1,3 +1,4 @@
+/// \cond DO_NOT_DOCUMENT
 ;/******************** (C) COPYRIGHT 2017 STMicroelectronics ********************
 ;* File Name          : startup_stm32f401xc.s
 ;* Author             : MCD Application Team
@@ -513,3 +514,4 @@ SPI4_IRQHandler
         
         END
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+/// \endcon

@@ -1,3 +1,4 @@
+/// \cond DO_NOT_DOCUMENT
 /**
   ******************************************************************************
   * @file    system_stm32f4xx.h
@@ -97,3 +98,4 @@ extern void SystemCoreClockUpdate(void);
   * @}
   */  
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/
+/// \endcond

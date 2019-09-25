@@ -12,51 +12,45 @@
 
 L3GD20_Data_t Gyro_Data;
 LSM303DLHC_Data_t Accelerometer_Data;
-float Tilt, Tilt_A, Tilt_G;
-float dt = 0.0;
+float Tilt, Tilt_A, Tilt_G, dt,Processed_value;
 pidData_typedef pidData;
-float Processed_value;
 
-uint8_t zmienna = 0;
-float srednia = 0.0;
-long double suma = 0.0;
-uint32_t i = 0;
+uint8_t zmienna;
+float srednia;
+long double suma;
+uint32_t i;
+
 int main()
 {	
 	Init();
-        uint8_t RxBuffer;
-        LSM303DLHC_read_reg (LSM303DLHC_CTRL_REG1_A, &RxBuffer, 1);
-
+	
 	while (1)
 	{
-		
-		GPIO_TogglePin(&led_red);
-		
 		i++;
-		//L3GD20_read_rates (&Gyro_Data);
+		L3GD20_read_rates (&Gyro_Data);
 		suma += Gyro_Data.X;
 		srednia = suma / i;
 		
 		if(dt_flag)
 		{
-			//LED(ORANGE, TOGGLE);
+			LED(ORANGE, TOGGLE);
 			dt_flag = 0;
 			/* Read data from Gyro and Accelerometer */
 			L3GD20_read_rates (&Gyro_Data);
-			//LSM303DLHC_read_rates(&Accelerometer_Data);
+			LSM303DLHC_read_rates(&Accelerometer_Data);
 			
 			/* Calculate Tilt from Gyro and Accelerometer */
 			Tilt_G = Tilt + (-1)*Gyro_Data.X * INTEGERATION_TIME_MS * 0.001;
 			Tilt_A = atanf((float)Accelerometer_Data.Y / (float)Accelerometer_Data.Z) * RAD_TO_DEG;
 			
 			/* Complementary filter */
-			Tilt=(0.98*Tilt_G+0.02*Tilt_A);
+			Tilt=(0.9 * Tilt_G + 0.1 * Tilt_A);
 			
 			/* Control motors output */
 			Processed_value = pid_Controller (0, (Tilt + ROBOT_OFF_BALANCE), &pidData);
 			//Processed_value = fuzzy_pid_Controller (0, (Tilt + ROBOT_OFF_BALANCE), &pidData);
-			Motors (Processed_value);
 			
+			Motors (Processed_value);
 		}
 	}
 	return 0;
@@ -70,48 +64,24 @@ void Init()
 	while (RCC->CR & RCC_CR_HSERDY != RCC_CR_HSERDY); 
 	RCC->CR |= RCC_CR_HSEON; 
 	RCC->CFGR |= RCC_CFGR_SW_HSE;
+	
 	/*Enable peripherials*/
-	RCC->AHB1ENR |= RCC_AHB1ENR_GPIOEEN | RCC_AHB1ENR_GPIOAEN | RCC_AHB1ENR_GPIOBEN;
-	RCC->APB2ENR |= RCC_APB2ENR_TIM1EN | RCC_APB2ENR_SPI1EN | RCC_APB2ENR_TIM10EN;
-	RCC->APB1ENR |= RCC_APB1ENR_I2C1EN;
+	RCC->APB2ENR |= RCC_APB2ENR_TIM10EN;
 	
 	/******  LEDS ******/
 	LED_Init();
 	
-	/******  Motor Direction ******/
-	GPIOE->MODER |= GPIO_MODER_MODER9_0 | GPIO_MODER_MODER13_0; //PE9, PE13
-	GPIOD->MODER |= GPIO_MODER_MODER0_0; //PD0
-	GPIOA->MODER |= GPIO_MODER_MODER10_0; //PA10
+	/******  Motors - TIM1 for PWM and GPIOs for direction ******/
+	Motors_Init();
 	
 	/******  Systick - every 1ms ******/
 	SysTick_Config(8000);
 	
-	/******  TIM1 - Motor PWM ******/
-	GPIOA->MODER |= GPIO_MODER_MODER8_1; //PA8
-	GPIOA->AFR[1] = 0x00000001;
-	GPIOE->MODER |= GPIO_MODER_MODER11_1; //PE11
-	GPIOE->AFR[1] = 0x00001000;
-	TIM1->CCMR1 |= TIM_CCMR1_OC1PE | TIM_CCMR1_OC1M_1 | TIM_CCMR1_OC1M_2;
-	TIM1->CCMR1 |= TIM_CCMR1_OC2PE | TIM_CCMR1_OC2M_1 | TIM_CCMR1_OC2M_2;
-	TIM1->CCER |= TIM_CCER_CC1E | TIM_CCER_CC2E;
-	TIM1->BDTR |= TIM_BDTR_MOE;
-	TIM1->ARR = 99;
-	TIM1->PSC = 15; //10kHz
-	TIM1->EGR |= TIM_EGR_UG;
-	TIM1->CR1 |= TIM_CR1_ARPE | TIM_CR1_CEN;
-	
-	/******  L3GD20 (Gyro) - SPI1 communication ******/
+	/****** L3GD20 (Gyro) - SPI1 communication ******/
 	L3GD20_Init();
 	
-	/******  I2C1 - LSM303DLHC (Accelerometer) - I2C1 communication ******/
+	/****** LSM303DLHC (Accelerometer) - I2C1 communication ******/
 	LSM303DLHC_Init();
-	
-//	I2C1->CR2 |= 8; //Assign 8MHz peripherial clock
-//	I2C1->CCR |= 40; //Standard mode, SCL frequency = 100kHz
-//	I2C1->TRISE = 9; //Calculated according to reference manual
-//	I2C1->CR1 |= I2C_CR1_PE | I2C_CR1_ACK; //Enable I2C and Acknowledges
-//	//I2C1->CR1 |= I2C_CR1_PE; //Enable I2C
-//	//LSM303DLHC_init ();
 	
 	/******  TIM10 (1KHz) - Integration period calculation ******/
 	TIM10->DIER |= TIM_DIER_UIE; //Update interrupt enable

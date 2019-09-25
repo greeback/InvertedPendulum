@@ -9,7 +9,7 @@ static void SPI_slaveSelect_ctrl(uint8_t state);
 static void L3GD20_SPI_Init();
 
 /* Private variables */
-static GPIO_Handle_t SS;	/*!< Slave Select Pin >*/
+static GPIO_Handle_t SS;
 
 uint8_t L3GD20_read_reg(uint8_t addr)
 {

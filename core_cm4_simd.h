@@ -1,3 +1,4 @@
+/// \cond DO_NOT_DOCUMENT
 /**************************************************************************//**
  * @file     core_cm4_simd.h
  * @brief    CMSIS Cortex-M4 SIMD Header File
@@ -699,3 +700,4 @@ __attribute__( ( always_inline ) ) static __INLINE uint32_t __QSUB(uint32_t op1,
 #ifdef __cplusplus
 }
 #endif
+/// \endcond

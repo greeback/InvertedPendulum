@@ -1,3 +1,4 @@
+/// \cond DO_NOT_DOCUMENT
 /**
   ******************************************************************************
   * @file    system_stm32f4xx.c
@@ -510,4 +511,4 @@ void SystemInit_ExtMemCtl(void)
   * @}
   */    
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
-
+/// \endcond

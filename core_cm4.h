@@ -1,3 +1,4 @@
+/// \cond DO_NOT_DOCUMENT
 /**************************************************************************//**
  * @file     core_cm4.h
  * @brief    CMSIS Cortex-M4 Core Peripheral Access Layer Header File
@@ -1376,3 +1377,4 @@ static __INLINE int32_t ITM_CheckChar (void) {
 #ifdef __cplusplus
 }
 #endif
+/// \endcond

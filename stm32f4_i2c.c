@@ -1,7 +1,6 @@
 /**	
 * |----------------------------------------------------------------------
 * | Copyright (c) 2019 Aleksander Dykman
-* |
 * |----------------------------------------------------------------------
 */
 #include "stm32f4_i2c.h"
@@ -90,7 +89,7 @@ void I2C_MasterReceiveData (I2C_TypeDef* I2Cx, uint8_t *RxBuffer, uint32_t Len, 
 	I2C_Addr(I2Cx, Addr, I2C_Read);
 	
 	/* procedure to read only 1 byte from slave */
-	while (Len == 1)
+	if (Len == 1)
 	{
 		/* Disable Ack */
 		I2Cx->CR1 &= ~I2C_CR1_ACK;

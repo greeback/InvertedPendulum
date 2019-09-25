@@ -1,4 +1,5 @@
 /** 
+ * @file    stm32f4_gpio.h
  * @author  Aleksander Dykman
  * @email   aleksanderdykman@gmail.com
  * @version v1.0
@@ -16,10 +17,15 @@
 
 #include "stm32f401xc.h"
 
+/**
+ * @addtogroup GPIO_Driver
+ * @{
+ */
 
 /**
  * @defgroup GPIO_Typedefs
  * @brief    GPIO Typedefs used for GPIO library for initialization purposes
+ * @{
  */
 
 /**
@@ -62,12 +68,14 @@ typedef enum
 	GPIO_PuPd_UP 		= 0x01,	/*!< Pull up resistor enabled */
 	GPIO_PuPd_DOWN 		= 0x02	/*!< Pull down resistor enabled */
 } GPIO_PuPd_t;
-
-
+/**
+ * @}
+ */
 
 /**
  * @defgroup GPIO_Structures
  * @brief    GPIO Structures used for GPIO library initialization purposes
+ * @{
  */
 
 /**
@@ -75,11 +83,11 @@ typedef enum
  */
 typedef struct
 {
-	GPIO_Mode_t		Mode;			
-	GPIO_Speed_t 	Speed;			
-	GPIO_PuPd_t 	PuPd;
-	GPIO_OType_t 	OType;
-	uint8_t 		AltFun;
+	GPIO_Mode_t		Mode;	/*!< Port mode >*/		
+	GPIO_Speed_t 	Speed;	/*!< Output speed >*/			
+	GPIO_PuPd_t 	PuPd;	/*!< Pull_up, Pull_down >*/
+	GPIO_OType_t 	OType;	/*!< Output type >*/
+	uint8_t 		AltFun;	/*!< Alternate function >*/
 }GPIO_Config_t;
 
 /**
@@ -90,10 +98,14 @@ typedef struct
 	GPIO_TypeDef*	Base;			/*!< This holds the base address of the GPIO port to which the pin belongs >*/
 	uint8_t 		Pin;			/*!< This holds GPIO pin configuration settings >*/
 }GPIO_Handle_t;
+/**
+ * @}
+ */
 
 /**
  * @defgroup GPIO_Functions
  * @brief    GPIO Functions used for GPIO handling
+ * @{
  */
 
 /**
@@ -101,7 +113,6 @@ typedef struct
  * @note   This function also enables clock for GPIO port
  * @param  Handle: Pointer to GPIO handle
  * @param  Config: Pointer to GPIO Configuration data
- * @retval None
  */
 void GPIO_Init (GPIO_Handle_t* Handle, GPIO_Config_t* Config);
 
@@ -109,7 +120,6 @@ void GPIO_Init (GPIO_Handle_t* Handle, GPIO_Config_t* Config);
  * @brief  Sets output state as 1
  * @note   It's atomic operation
  * @param  Handle: Pointer to GPIO handle
- * @retval None
  */
 void GPIO_SetPin (GPIO_Handle_t* Handle);
 
@@ -117,15 +127,12 @@ void GPIO_SetPin (GPIO_Handle_t* Handle);
  * @brief  Clears output state to 0
  * @note   It's atomic operation
  * @param  Handle: Pointer to GPIO handle
- * @retval None
  */
 void GPIO_ClearPin (GPIO_Handle_t* Handle);
 
 /**
  * @brief  Toggle output state between 1 and 0
- * @note   
  * @param  Handle: Pointer to GPIO handle
- * @retval None
  */
 void GPIO_TogglePin (GPIO_Handle_t* Handle);
 
@@ -136,4 +143,11 @@ void GPIO_TogglePin (GPIO_Handle_t* Handle);
  * @retval 1 - High state, 0 - low state
  */
 uint8_t GPIO_ReadPin (GPIO_Handle_t* Handle);
+/**
+ * @}
+ */
+/**
+ * @}
+ */
+
 #endif /* STM32F4_GPIO_H */

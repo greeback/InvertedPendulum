@@ -1,4 +1,5 @@
 /** 
+ * @file    LSM303DLHC.h
  * @author  Aleksander Dykman
  * @email   aleksanderdykman@gmail.com
  * @version v1.0
@@ -15,13 +16,23 @@
 #define __LSM303DLHC_H__
 
 /**
+ * @addtogroup LSM303DLHC_Driver
+ * @{
+ */
+/**
  * @defgroup LSM303DLHC_Typedefs
  * @brief    LSM303DLHC Typedefs used for Accelerometer initialiation, reading and writing
+ * @{
+ */
+	 
+/**
+ * @}
  */
 
  /**
  * @defgroup LSM303DLHC Macros
  * @brief    Library defines
+ * @{
  */
 /* LSM303DLHC registers */
 #define LSM303DLHC_CTRL_REG1_A			0x20
@@ -78,8 +89,13 @@
 #define HIGH_RESOLUTION_EN              0X08
 
 /**
+ * @}
+ */	 
+	 
+/**
  * @defgroup LSM303DLHC_Structures
  * @brief    LSM303DLHC Structures use for handling reading from accelerometer
+ * @{
  */
 
 /**
@@ -93,20 +109,57 @@ typedef struct
 }LSM303DLHC_Data_t;
 
 /**
+ * @}
+ */
+
+/**
  * @defgroup LSM303DLHC_Functions
  * @brief    LSM303DLHC Functions used for gyro handling
+ * @{
+ */
+
+/**
+ * @brief  Writes one byte to given register
+ * @param  reg:		SubAddress to which data is written
+ * @param  data:	It will be written to SubAddress
  */
 void LSM303DLHC_write_reg (uint8_t reg, uint8_t data);
-void LSM303DLHC_read_reg (uint8_t reg, uint8_t *RxBuffer, uint32_t Len);
+
+/**
+ * @brief  Reads one byte from given register
+ * @note   No need to set 8th bit, function does that
+ * @param  reg:			SubAddress from which data is read
+ * @param  *RxBuffer:	pointer to table where data will be stored
+ */
+void LSM303DLHC_read_reg (uint8_t reg, uint8_t *RxBuffer);
+
+/**
+ * @brief  Reads many bytes from given register
+ * @note   No need to set 8th bit, function does that, it also autoincrement
+ *			subaddress, so you can read subsequent registers
+ * @param  reg:			SubAddress from which data is read
+ * @param  *RxBuffer:	pointer to table where data will be stored
+ * @param  Len:			How many registers are to be read
+ */
+void LSM303DLHC_read_multi_reg (uint8_t reg, uint8_t *RxBuffer, uint32_t Len);
+
+/**
+ * @brief  Reads acceleration on Y and Z axis
+ * @param  *Data: Pointer to structure where output accelerations will be written
+ */
+void LSM303DLHC_read_rates (LSM303DLHC_Data_t* Data);
+
 /**
  * @brief  Initializes LSM303DLHC
  * @note   This function initialize I2C1 with apropriate GPIO pins,
  * 		   sets accelerometer to read all axes with max Output Data Rate
- * @retval None
  */
 void LSM303DLHC_Init (void);
-void LSM303DLHC_read_rates (LSM303DLHC_Data_t*);
 
-
-
+/**
+ * @}
+ */
+/**
+ * @}
+ */
 #endif //__LSM303DLHC_H__
